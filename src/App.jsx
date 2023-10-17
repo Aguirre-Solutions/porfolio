@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navigation from './pages/navigation/navigation.component';
 import Home from "./pages/home/home.component"
 import About from "./pages/about/about.component"
-import Resume from './pages/resume/resume.component';
+import Resume from './components/resume/resume.component';
 import Portfolio from './pages/portfolio/portfolio.component';
 
 const App = () => {

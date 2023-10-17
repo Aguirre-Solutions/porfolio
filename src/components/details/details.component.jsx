@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { Box, Grid } from '@mui/material';
 import { StyledVerticalDivider, StyledHorizontalDivider, StyledTypography, StyledButton } from '../../utils/styledComponents';
-import {TbBrandNodejs} from 'react-icons/tb';
-import {SiMongodb, SiFirebase, SiReact, SiTypescript, SiGithub, SiRedux, SiMui} from 'react-icons/si';
+import Icons from "../icons/icons.component";
+
 
 const Details = () => {
     const navigate = useNavigate();
@@ -50,22 +50,7 @@ const Details = () => {
                        junior full stack developer
                     </StyledTypography>
 
-                    <Box mt={3} display="flex" justifyContent="center" gap={2}>
-                        <SiTypescript size={40} />
-                        <SiReact size={40} />
-                        <SiMui size={40} />
-                        <SiRedux size={40} />
-                        <TbBrandNodejs size={40} />
-                        <SiMongodb size={40} />
-                        <SiFirebase size={40} />
-                        <SiGithub size={40} />
-                    </Box>
-                    <StyledHorizontalDivider sx={{margin: '20px'}} />
-                    <Box mt={3} justifyContent='space-between' display='flex'>
-                        <StyledButton variant="contained" color="primary" size="large" onClick={goToAbout}> About Me</StyledButton>
-                        <StyledButton variant="contained" color="primary" size="large" onClick={goToResume}> Resume</StyledButton>
-                        <StyledButton variant="contained" color="primary" size="large" onClick={goToPortfolio}> Portfolio</StyledButton>
-                    </Box>    
+                    <Icons/>
                  </Grid>
             </Grid>
         </Box>

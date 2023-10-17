@@ -5,7 +5,7 @@ import {StyledTypography} from '../../utils/styledComponents'
 const Portfolio = () => {
     return (
         <Box>
-            <StyledTypography variant="h1">Portfolio</StyledTypography>
+            <StyledTypography variant="h1"sx={{textAlign:'center'}}>Portfolio</StyledTypography>
         </Box>
     )
     

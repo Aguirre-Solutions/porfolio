@@ -1,12 +1,17 @@
-import { useTheme, Card, CardContent, List } from '@mui/material';
+import { Box, Card, CardContent, List } from '@mui/material';
 import { StyledTypography, StyledHorizontalDivider } from '../../utils/styledComponents';
 import ExperienceItem from '../experience-item/experience-item.component';
 import EducationItem from '../education-item/education-item.component';
 
 
-const Experience = () => {
-    const theme = useTheme();
+const Experience = ({theme}) => {
+  
+
     return (
+      <>
+        <Box mb={3}>
+        <StyledTypography variant="h1" sx={{textAlign:'center'}}>Resumé</StyledTypography>
+        </Box>
         <Card elevation={12} sx={{backgroundColor: theme.palette.additional.lightPastelPink, paddingLeft: '30px'}}> 
           <CardContent >
             <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.darkGrey, paddingTop:'20px'}} >
@@ -73,6 +78,7 @@ const Experience = () => {
             </List>
           </CardContent>
         </Card>
+      </>
       );
     }
 

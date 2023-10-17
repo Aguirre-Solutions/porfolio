@@ -12,7 +12,7 @@ const ExperienceItem = ({ title, organization, duration, description }) => {
             {organization ? organization + ' • ' : ''}{duration}
           </StyledTypography>
 
-          <Box mt={2} maxWidth="80%">
+          <Box mt={2}>
             {description.map((desc, idx) => (
               <StyledTypography key={idx} variant="body" paragraph sx={{ color: theme.palette.info.main, lineHeight:'.9em', marginBottom:'10px', fontSize: '18px', paddingLeft:'20px' }}>
                 • {desc}
