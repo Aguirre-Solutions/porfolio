@@ -1,7 +1,11 @@
 import { Box, Grid } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Home from "./pages/home/home.component"
+
 import Navigation from './pages/navigation/navigation.component';
+import Home from "./pages/home/home.component"
+import About from "./pages/about/about.component"
+import Resume from './pages/resume/resume.component';
+import Portfolio from './pages/portfolio/portfolio.component';
 
 const App = () => {
   return (
@@ -14,6 +18,9 @@ const App = () => {
             <Grid container justifyContent="center" alignItems="center">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/About" element={<About/>}/>
+                <Route path="/Resume" element={<Resume />} />
+                <Route path="/Portfolio" element={<Portfolio/>} />
               </Routes>
             </Grid>
           </Grid>

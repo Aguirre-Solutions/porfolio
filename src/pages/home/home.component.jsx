@@ -1,11 +1,9 @@
-import React from 'react';
+import {Box, Grid, Typography} from '@mui/material';
+import Details from '../../components/details/details.component';
 
 const Home = () => {
     return (
-        <div>
-            <h1>Welcome to my Portfolio</h1>
-            <p>Here you can find information about me and my projects.</p>
-        </div>
+        <Details />
     );
 };
 
