@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import { Toolbar, Divider, Button, Typography} from "@mui/material";
+import { Toolbar, Divider, Button, Typography, Link} from "@mui/material";
 
 
 
@@ -33,6 +33,11 @@ export const StyledHorizontalDivider = styled(Divider)(({ theme }) => ({
 export const StyledButton = styled(Button)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     fontFamily: 'Cormorant',
+    color: theme.palette.primary.contrastText,
+    '&:hover': {
+        backgroundColor: theme.palette.error.main,
+        color: theme.palette.error.contrastText,
+    },
 }));
 
 export const StyledTypography = styled(Typography)(({ theme }) => ({
@@ -40,5 +45,15 @@ export const StyledTypography = styled(Typography)(({ theme }) => ({
     textAlign: 'left',
     [theme.breakpoints.down("md")]: {
         textAlign: 'center',
+    },
+}));
+
+export const StyledLink= styled(Link)(({ theme }) => ({
+    cursor: 'pointer',
+    textDecoration: 'none',
+    color: theme.palette.primary.contrastText,
+    '&:hover': {
+        textDecoration: 'none',
+        color: theme.palette.error.main,
     },
 }));

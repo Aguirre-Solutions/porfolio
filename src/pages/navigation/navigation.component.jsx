@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import { Outlet, Link, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { AppBar, Box, Typography, Toolbar } from "@mui/material";
-import {StyledToolbar} from "../../utils/styledComponents";
+import {StyledToolbar, StyledLink} from "../../utils/styledComponents";
 import { useTheme } from "@mui/material/styles";
 
 const Navigation = () => {
@@ -12,7 +12,7 @@ const Navigation = () => {
                 <StyledToolbar>
                     <Box sx={{ flexGrow: 1 }}>
                         <Typography variant="h6" noWrap component="div">
-                            <Link to="/" style={{ textDecoration: 'none', color: theme.palette.primary.contrastText, }}>Home</Link>
+                            <StyledLink to="/">Home</StyledLink>
                         </Typography>
                     </Box>
                 </StyledToolbar>
