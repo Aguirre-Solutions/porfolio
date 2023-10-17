@@ -1,9 +1,10 @@
-import { Typography, Box } from '@mui/material';
+import { Box } from '@mui/material';
+import {StyledTypography} from '../../utils/styledComponents'
 
 const About = () => {
     return (
         <Box>
-            <Typography variant="h1">About</Typography>
+            <StyledTypography variant="h1">About</StyledTypography>
         </Box>
     )
 }

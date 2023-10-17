@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { Box, Grid, Typography, Button, Divider } from '@mui/material';
-import { StyledDivider } from '../../utils/styledComponents';
+import { Box, Grid } from '@mui/material';
+import { StyledVerticalDivider, StyledHorizontalDivider, StyledTypography, StyledButton } from '../../utils/styledComponents';
 import {TbBrandNodejs} from 'react-icons/tb';
 import {SiMongodb, SiFirebase, SiReact, SiTypescript, SiGithub, SiRedux, SiMui} from 'react-icons/si';
 
@@ -37,20 +37,19 @@ const Details = () => {
 
                     <Grid container direction="row" alignItems="center" justifyContent="center">
                         <Grid item>
-                            <Typography variant="h2" fontFamily={"Cormorant"}>
+                            <StyledTypography variant="h2" >
                                 Ruben Aguirre
-                            </Typography>
+                            </StyledTypography>
                         </Grid>
                         <Grid item>
-                            <StyledDivider />
+                            <StyledVerticalDivider />
                         </Grid>
                     </Grid>
 
-                    <Typography variant="h5" fontFamily={"Cormorant"} fontStyle={"italic"} >
+                    <StyledTypography variant="h5" fontStyle={"italic"} paddingBottom={3} textAlign={'center !important'}>
                        junior full stack developer
-                    </Typography>
+                    </StyledTypography>
 
-                    {/* Icons for Technologies */}
                     <Box mt={3} display="flex" justifyContent="center" gap={2}>
                         <SiTypescript size={40} />
                         <SiReact size={40} />
@@ -61,11 +60,11 @@ const Details = () => {
                         <SiFirebase size={40} />
                         <SiGithub size={40} />
                     </Box>
-                    <Divider sx={{margin: '20px'}} />
+                    <StyledHorizontalDivider sx={{margin: '20px'}} />
                     <Box mt={3} justifyContent='space-between' display='flex'>
-                        <Button variant="contained" color="primary" size="large" onClick={goToAbout}> About Me</Button>
-                        <Button variant="contained" color="primary" size="large" onClick={goToResume}> Resume</Button>
-                        <Button variant="contained" color="primary" size="large" onClick={goToPortfolio}> Portfolio</Button>
+                        <StyledButton variant="contained" color="primary" size="large" onClick={goToAbout}> About Me</StyledButton>
+                        <StyledButton variant="contained" color="primary" size="large" onClick={goToResume}> Resume</StyledButton>
+                        <StyledButton variant="contained" color="primary" size="large" onClick={goToPortfolio}> Portfolio</StyledButton>
                     </Box>    
                  </Grid>
             </Grid>

@@ -15,17 +15,22 @@ const theme = createTheme({
       contrastText: '#F7E1D7',
     },
     warning: {
-      main: '#DEDBD2',
-      contrastText: '#2F2F2F',
+      main: '#AA4465',
+      contrastText: '#F7E1D7',
     },
     info: {
-      main: '#4A5759',
+      main: '#3185fc',
       contrastText: '#F7E1D7',
     },
     success: {
-      main: '#B0C4B1',
+      main: '#DEDBD2',
       contrastText: '#2F2F2F',
     },
+    additional: {
+      deepPurple: '#7D2E68',
+      darkGrey: '#4A5759',
+      lightPastelPink: '#F7E1D7',
+    }
   },
 });
 
