@@ -35,13 +35,9 @@ const Details = ({theme}) => {
                     >
                         <img src="https://res.cloudinary.com/recipeb00k/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1697509646/IMG_20180515_153635186_npoe2j.jpg" alt="Profile" width="100%" />
                     </Box>
-
-
-                            <StyledTypography variant={ isMobile ? 'h4': 'h2'}  textAlign={'center !important'}>
-                                Ruben Aguirre
-                            </StyledTypography>
-
-
+                    <StyledTypography variant={ isMobile ? 'h4': 'h2'}  textAlign={'center !important'}>
+                        Ruben Aguirre
+                    </StyledTypography>
                     <StyledTypography variant="h5" fontStyle={"italic"} paddingBottom={3} textAlign={'center !important'}>
                        junior full stack developer
                     </StyledTypography>

@@ -10,11 +10,11 @@ const Experience = ({theme}) => {
     return (
       <>
         <Box mb={3}>
-        <StyledTypography variant="h1" sx={{textAlign:'center'}}>Resumé</StyledTypography>
+        <StyledTypography variant="h2" sx={{textAlign:'center'}}>Resumé</StyledTypography>
         </Box>
-        <Card elevation={12} sx={{backgroundColor: theme.palette.additional.lightPastelPink, paddingLeft: isMobile ? '0px' : '30px'}}> 
+        <Card elevation={5} sx={{backgroundColor: theme.palette.additional.lightPastelPink, padding:'17px'}}> 
           <CardContent >
-            <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.darkGrey, paddingTop:'20px'}} >
+            <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.darkGrey}} >
               Experience
             </StyledTypography>
             <List>
@@ -30,7 +30,6 @@ const Experience = ({theme}) => {
                   "Carefully design and implement a multi-language learning program over the course of 7 years."
               ]}
               />
-              <StyledHorizontalDivider variant="inset" component="li"  sx={{width: '80%'}} />
                <ExperienceItem
                 theme={theme}
                 title="Community Center"
@@ -41,9 +40,10 @@ const Experience = ({theme}) => {
                   "Designed and implemented workshops related to parent’s school, sexuality, and coping mechanisms for teenagers."
                   ]}
               />
+              <StyledHorizontalDivider variant="inset" component="li"  sx={{width: '80%'}} />
             </List>
     
-            <StyledTypography variant="h5" gutterBottom style={{ marginTop: '20px' }} fontWeight={900}>
+            <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.darkGrey, paddingTop:'17px'}} >
               Education
             </StyledTypography>
             <List>
