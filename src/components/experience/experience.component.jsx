@@ -13,7 +13,7 @@ const Experience = ({theme}) => {
         </Box>
         <Card elevation={5} sx={{backgroundColor: theme.palette.additional.lightPastelPink, padding:'10px', minHeight:'842px'}}> 
           <CardContent >
-            <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.darkGrey}} >
+            <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.deepPurple}} >
               Experience
             </StyledTypography>
             <List>
@@ -42,7 +42,7 @@ const Experience = ({theme}) => {
               <StyledHorizontalDivider variant="inset" component="li"  sx={{width: '80%'}} />
             </List>
     
-            <StyledTypography variant="h4"  fontWeight={900} sx={{color: theme.palette.additional.darkGrey, paddingTop:'17px'}} >
+            <StyledTypography variant="h4"  fontWeight={900} sx={{color: theme.palette.additional.deepPurple, paddingTop:'17px'}} >
               Education
             </StyledTypography>
             <List>

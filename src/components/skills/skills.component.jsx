@@ -3,16 +3,19 @@ import { StyledTypography, StyledHorizontalDivider } from '../../utils/styledCom
 
 const Skills = ({ theme }) => {
 
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   const fontSize = '18px'
+  const margin = 2
 
 
   const skills = [
     "Javascript",
     "Typescript",
-    "NodeJS",
-    "ExpressJS",
+    "React",
+    "NodeJs",
     "NoSQL databases",
-    "ReactJS",
+    "ExpressJs",
     "Redux",
     "GIT",
   ]
@@ -55,49 +58,60 @@ const Skills = ({ theme }) => {
             variant="h4"
             gutterBottom
             fontWeight={900}
-            sx={{ color: theme.palette.additional.darkGrey, paddingTop: fontSize }}
+            sx={{ color: theme.palette.error.main }}
           >
             Technical Skills
           </StyledTypography>
           <StyledTypography variant="body1" gutterBottom sx={{fontSize:fontSize}}>
-
-            <ul>
-              {skills.map((skill, index) => (
-                <li key={index}>{skill}</li>
+            <Box m={margin} >
+              {skills.map((skill, idx) => (
+                <StyledTypography key={idx} variant="body" paragraph sx={{ color: theme.palette.additional.darkGrey, lineHeight:'.9em', marginBottom:'10px', fontSize: '20px' }}>
+                  {isMobile ?  null :
+                  <Box component={'span'}>•</Box>} {skill}
+                </StyledTypography>
               ))}
-            </ul>
+            </Box>
          </StyledTypography>
+
+         <StyledHorizontalDivider sx={{ mx:'auto', my:'20px' }} />
 
           <StyledTypography
             variant="h4"
             gutterBottom
             fontWeight={900}
-            sx={{ color: theme.palette.additional.darkGrey, paddingTop: fontSize }}
+            sx={{ color: theme.palette.error.main }}
           >
             Languages
           </StyledTypography>
           <StyledTypography variant="body1" gutterBottom sx={{fontSize:fontSize}}>
-            <ul>
-              {languageSkills.map((skill, index) => (
-                <li key={index}>{skill}</li>
+            <Box m={margin} >
+              {languageSkills.map((skill, idx) => (
+                <StyledTypography key={idx} variant="body" paragraph sx={{ color: theme.palette.additional.darkGrey, lineHeight:'.9em', marginBottom:'10px', fontSize: '20px' }}>
+                  {isMobile ?  null :
+                  <Box component={'span'}>•</Box>} {skill}
+                </StyledTypography>
               ))}
-            </ul>
+            </Box>
           </StyledTypography>
+          <StyledHorizontalDivider sx={{ mx:'auto', my:'20px' }} />
 
           <StyledTypography
             variant="h4"
             gutterBottom
             fontWeight={900}
-            sx={{ color: theme.palette.additional.darkGrey, paddingTop: fontSize }}
+            sx={{ color: theme.palette.error.main }}
           >
             Core Competencies
           </StyledTypography>
           <StyledTypography variant="body1" gutterBottom sx={{fontSize:fontSize}}>
-            <ul>
-              {softSkills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>            
+          <Box m={margin} >
+              {softSkills.map((skill, idx) => (
+              <StyledTypography key={idx} variant="body" paragraph sx={{ color: theme.palette.additional.darkGrey, lineHeight:'.9em', marginBottom:'10px', fontSize: '20px' }}>
+                {isMobile ?  null :
+                <Box component={'span'}>•</Box>} {skill}
+              </StyledTypography>
+            ))}
+          </Box>      
           </StyledTypography>
         </CardContent>
       </Card>
