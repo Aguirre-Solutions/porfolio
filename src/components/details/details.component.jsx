@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { Box, Grid } from '@mui/material';
-import { StyledVerticalDivider, StyledHorizontalDivider, StyledTypography, StyledButton } from '../../utils/styledComponents';
+import { Box, Grid, useMediaQuery } from '@mui/material';
+import { StyledHorizontalDivider, StyledTypography, StyledButton } from '../../utils/styledComponents';
 import Icons from "../icons/icons.component";
 
+const Details = ({theme}) => {
 
-const Details = () => {
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     const navigate = useNavigate();
 
     const goToAbout = () => {
@@ -18,7 +20,6 @@ const Details = () => {
     const goToPortfolio = () => {
         navigate('/Portfolio');
     }
-
 
     return (
         <Box>
@@ -35,23 +36,18 @@ const Details = () => {
                         <img src="https://res.cloudinary.com/recipeb00k/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1697509646/IMG_20180515_153635186_npoe2j.jpg" alt="Profile" width="100%" />
                     </Box>
 
-                    <Grid container direction="row" alignItems="center" justifyContent="center">
-                        <Grid item>
-                            <StyledTypography variant="h2" >
+
+                            <StyledTypography variant={ isMobile ? 'h4': 'h2'}  textAlign={'center !important'}>
                                 Ruben Aguirre
                             </StyledTypography>
-                        </Grid>
-                        <Grid item>
-                            <StyledVerticalDivider />
-                        </Grid>
-                    </Grid>
+
 
                     <StyledTypography variant="h5" fontStyle={"italic"} paddingBottom={3} textAlign={'center !important'}>
                        junior full stack developer
                     </StyledTypography>
 
                     <Icons/>
-                 </Grid>
+                </Grid>
             </Grid>
         </Box>
     );

@@ -20,48 +20,26 @@ const Experience = ({theme}) => {
             <List>
               <ExperienceItem
                 theme={theme}
-                title="English as a Second Language Teacher"
-                organization="Harmon Hall"
-                duration="October 2013 – 2016"
+                title="Owner"
+                organization="Melifluent"
+                duration="August 2016 – Present"
                 description={[
-                  "Taught every English level to different age groups in groups ranging from 5 to 20 people.",
-                  "Specialized in teaching conversational English and TOEFL Prep courses.",
-                ]}
+                  "Launched a student-centric teaching start-up focused on maximizing student ouputs for effective, real life communication.",
+                  "Hire and supervise of a 5 person team, including scheduling sessions across many timezones for over 50 contiguous students.",
+                  "Assess and communicate employee performance to adjust payroll and bonuses to align employee incentives to student experience and outcomes.",
+                  "Carefully design and implement a multi-language learning program over the course of 7 years."
+              ]}
               />
-              <StyledHorizontalDivider variant="inset" component="li" sx={{width:'80%'}} />
-              <ExperienceItem
+              <StyledHorizontalDivider variant="inset" component="li"  sx={{width: '80%'}} />
+               <ExperienceItem
                 theme={theme}
                 title="Community Center"
                 organization="IEST"
                 duration="August 2014 – 2017"
                 description={[
-                  "Started as a therapist in speech therapy, later moving on to psychotherapy with 4600 hours of therapy.",
-                  "Designed and carried out workshops related to parent's school, sexuality, and coping mechanisms for teens.",
-                ]}
-              />
-              <StyledHorizontalDivider variant="inset" component="li" sx={{width:'80%'}} />
-              <ExperienceItem
-                theme={theme}
-                title="Freelance Translator / Interpreter"
-                duration="October 2015 – Present"
-                description={[
-                  "Worked as a translator in various sectors including real estate contracts, legal documents, and marketing campaigns.",
-                  "Served as a simultaneous interpreter in the aforementioned sectors.",
-                ]}
-              />
-              <StyledHorizontalDivider variant="inset" component="li"  sx={{width:'80%'}} />
-              <ExperienceItem
-                theme={theme}
-                title="Owner"
-                organization="Melifluent"
-                duration="August 2016 – Present"
-                description={[
-                  "Managed a 5-person team, including scheduling sessions across many timezones for over 50 students and handling payroll and bonuses",
-                  "Designed and successfully implemented a multi-language learning program over 7 years.",
-                  "Worked as a community manager.",
-                  "Led a marketing campaign for international student outreach during the COVID-19 pandemic.",
-                  "Trained teachers in language-teaching skills and technical skills for Melifluent's online method.",
-                ]}
+                  "Completed 4600 hours of therapy, including speech therapy and psychotherapy.",
+                  "Designed and implemented workshops related to parent’s school, sexuality, and coping mechanisms for teenagers."
+                  ]}
               />
             </List>
     

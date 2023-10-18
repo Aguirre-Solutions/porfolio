@@ -16,10 +16,10 @@ export const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 export const StyledVerticalDivider = styled(Divider)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.warning.main,
     marginLeft: '10px',
     marginRight: '10px',
-    height: '50px',    // change as needed
+    height: '150px',    
     width: '2px',
 }));
 
