@@ -34,16 +34,20 @@ const Skills = ({ theme }) => {
   ];
 
   return (
-    <Box mt={3}>
+    <>
+      <Box>
       <StyledTypography variant="h2" sx={{ textAlign: 'center' }}>
         Skills
       </StyledTypography>
+      </Box>
 
       <Card
         elevation={5}
         sx={{
           backgroundColor: theme.palette.additional.lightPastelPink,
           padding: '10px',
+          minHeight: '842px',
+        
         }}
       >
         <CardContent>
@@ -97,7 +101,7 @@ const Skills = ({ theme }) => {
           </StyledTypography>
         </CardContent>
       </Card>
-    </Box>
+    </>
   );
 }
 
