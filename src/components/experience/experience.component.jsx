@@ -6,7 +6,6 @@ import EducationItem from '../education-item/education-item.component';
 
 const Experience = ({theme}) => {
 
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     return (
       <>
         <Box mb={3}>
