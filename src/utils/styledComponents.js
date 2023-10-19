@@ -25,8 +25,7 @@ export const StyledVerticalDivider = styled(Divider)(({ theme }) => ({
 
 export const StyledHorizontalDivider = styled(Divider)(({ theme }) => ({
     backgroundColor: theme.palette.warning.main,
-    marginTop: '5px',
-    marginBottom: '5px',
+    marginX: '5px',
     height: '2px',
     width: '90%',
 }));
