@@ -62,7 +62,6 @@ const Skills = ({ theme }) => {
           >
             Technical Skills
           </StyledTypography>
-          <StyledTypography variant="body1" gutterBottom sx={{fontSize:fontSize}}>
             <Box m={margin} >
               {skills.map((skill, idx) => (
                 <StyledTypography key={idx} variant="body" paragraph sx={{ color: theme.palette.additional.darkGrey, lineHeight:'.9em', marginBottom:'10px', fontSize: '20px' }}>
@@ -71,7 +70,6 @@ const Skills = ({ theme }) => {
                 </StyledTypography>
               ))}
             </Box>
-         </StyledTypography>
 
          <StyledHorizontalDivider sx={{ mx:'auto', my:'20px' }} />
 
@@ -83,7 +81,6 @@ const Skills = ({ theme }) => {
           >
             Languages
           </StyledTypography>
-          <StyledTypography variant="body1" gutterBottom sx={{fontSize:fontSize}}>
             <Box m={margin} >
               {languageSkills.map((skill, idx) => (
                 <StyledTypography key={idx} variant="body" paragraph sx={{ color: theme.palette.additional.darkGrey, lineHeight:'.9em', marginBottom:'10px', fontSize: '20px' }}>
@@ -92,7 +89,6 @@ const Skills = ({ theme }) => {
                 </StyledTypography>
               ))}
             </Box>
-          </StyledTypography>
           <StyledHorizontalDivider sx={{ mx:'auto', my:'20px' }} />
 
           <StyledTypography
@@ -103,7 +99,6 @@ const Skills = ({ theme }) => {
           >
             Core Competencies
           </StyledTypography>
-          <StyledTypography variant="body1" gutterBottom sx={{fontSize:fontSize}}>
           <Box m={margin} >
               {softSkills.map((skill, idx) => (
               <StyledTypography key={idx} variant="body" paragraph sx={{ color: theme.palette.additional.darkGrey, lineHeight:'.9em', marginBottom:'10px', fontSize: '20px' }}>
@@ -112,7 +107,6 @@ const Skills = ({ theme }) => {
               </StyledTypography>
             ))}
           </Box>      
-          </StyledTypography>
         </CardContent>
       </Card>
     </>
