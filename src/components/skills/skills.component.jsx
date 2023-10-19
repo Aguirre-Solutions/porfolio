@@ -38,12 +38,9 @@ const Skills = ({ theme }) => {
 
   return (
     <>
-      <Box>
-      <StyledTypography variant="h2" sx={{ textAlign: 'center' }}>
+       <StyledTypography variant="h2" sx={{ textAlign: 'center' }}>
         Skills
       </StyledTypography>
-      </Box>
-
       <Card
         elevation={5}
         sx={{

@@ -8,9 +8,7 @@ const Experience = ({theme}) => {
 
     return (
       <>
-        <Box>
         <StyledTypography variant="h2" sx={{textAlign:'center'}}>Resumé</StyledTypography>
-        </Box>
         <Card elevation={5} sx={{backgroundColor: theme.palette.additional.lightPastelPink, padding:'10px', minHeight:'842px'}}> 
           <CardContent >
             <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.deepPurple}} >
