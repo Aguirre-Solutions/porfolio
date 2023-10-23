@@ -4,12 +4,17 @@ import ExperienceItem from '../experience-item/experience-item.component';
 import EducationItem from '../education-item/education-item.component';
 
 
-const Experience = ({theme}) => {
-
+const Experience = ({theme, maxCardHeight, experienceRef}) => {
     return (
+      
       <>
         <StyledTypography variant="h2" sx={{textAlign:'center'}}>Resumé</StyledTypography>
-        <Card elevation={5} sx={{backgroundColor: theme.palette.additional.lightPastelPink, padding:'10px', minHeight:'842px'}}> 
+        <Card 
+        elevation={5} 
+        sx={{backgroundColor: theme.palette.additional.lightPastelPink, 
+        padding:'10px', 
+        maxHeight: `${maxCardHeight}px`}}
+        ref={experienceRef}> 
           <CardContent >
             <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.deepPurple}} >
               Experience
