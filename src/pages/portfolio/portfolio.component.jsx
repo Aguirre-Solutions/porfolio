@@ -14,8 +14,8 @@ const Portfolio = ({ checks}) => {
     const imageSrc = 'https://res.cloudinary.com/recipeb00k/image/upload/v1696527867/R_r6jv9x.jpg'
 
     return (
-        <Box>
-            <StyledTypography variant={ isMobile ? 'h3': 'h2'} sx={{ textAlign: 'center' }}>
+        <Box component={Grid} item xs={12} sm={12} md={12} lg={10} xl={8}>
+        <StyledTypography variant={ isMobile ? 'h3': 'h2'} sx={{ textAlign: 'center' }}>
                 Portfolio
             </StyledTypography>            
             <Grid container spacing={3}>

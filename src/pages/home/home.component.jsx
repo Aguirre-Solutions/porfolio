@@ -1,6 +1,5 @@
 import {Box, Grid} from '@mui/material';
 
-import Experience from '../../components/experience/experience.component';
 import Portfolio from '../portfolio/portfolio.component';
 import Brief from '../brief/brief.component';
 import { useContext, useState, useEffect } from 'react';
@@ -8,8 +7,8 @@ import { useContext, useState, useEffect } from 'react';
 import { ThemeValuesContext } from '../../context/theme-values.context';
 
 import { StyledVerticalDivider, StyledHorizontalDivider } from '../../utils/styledComponents';
-import Skills from '../../components/skills/skills.component';
 
+import CV from '../cv/cv.component';
 
 const Home = () => {
 
@@ -47,16 +46,8 @@ const Home = () => {
                 <StyledHorizontalDivider sx={{ width:'80%' }} checks={checks}/>
             </Box>
             
-            {/* Skills and Experience Component */}
-            <Grid container item xs={12} sm={12} md={12} lg={10} xl={8} spacing={3}>
-                <Box component={Grid} item xs={12} md={4}>
-                    <Skills theme={theme} maxCardHeight={maxSkillCardHeight}  checks={checks}/>
-                </Box>
+            <CV theme={theme} maxSkillCardHeight={maxSkillCardHeight} maxExperienceCardHeight={maxSkillCardHeight} checks={checks}/>
 
-                <Box component={Grid} item xs={12} md={8}>
-                    <Experience theme={theme} maxCardHeight={maxExperienceCardHeight} checks={checks}/>
-                </Box>
-            </Grid>
             <Box 
                 component={Grid} 
                 item xs={12} 
@@ -66,9 +57,8 @@ const Home = () => {
             >
                 <StyledHorizontalDivider sx={{ margin: '20px', width:'80%' }} />
             </Box>
-            <Box component={Grid} item xs={12} sm={12} md={12} lg={10} xl={8}>
+
                 <Portfolio theme={theme} checks={checks} />
-            </Box>
         </Grid>
     );
 };
