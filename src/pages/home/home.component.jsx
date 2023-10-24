@@ -36,25 +36,13 @@ const Home = () => {
             
             <Brief theme={theme} checks={checks} />
 
-            <Box 
-                component={Grid} 
-                item xs={12} 
-                display="flex" 
-                justifyContent="center" 
-                alignItems="center"
-            >
+            <Box component={Grid} item xs={12} display="flex" justifyContent="center" alignItems="center">
                 <StyledHorizontalDivider sx={{ width:'80%' }} checks={checks}/>
             </Box>
             
             <CV theme={theme} maxSkillCardHeight={maxSkillCardHeight} maxExperienceCardHeight={maxSkillCardHeight} checks={checks}/>
 
-            <Box 
-                component={Grid} 
-                item xs={12} 
-                display="flex" 
-                justifyContent="center" 
-                alignItems="center"
-            >
+            <Box component={Grid} item xs={12} display="flex" justifyContent="center" alignItems="center">
                 <StyledHorizontalDivider sx={{ margin: '20px', width:'80%' }} />
             </Box>
 

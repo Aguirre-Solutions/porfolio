@@ -13,7 +13,7 @@ const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
       <>
         <StyledTypography variant={ isMobile ? 'h3': 'h2'} sx={{textAlign:'center'}}>Resumé</StyledTypography>
         <Card 
-        elevation={5} 
+        elevation={0} 
         sx={{backgroundColor: theme.palette.additional.lightPastelPink, 
         padding:'10px', 
         height: `${maxCardHeight}px`}}

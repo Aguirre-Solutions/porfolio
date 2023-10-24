@@ -18,9 +18,11 @@ const Portfolio = ({ checks}) => {
         <StyledTypography variant={ isMobile ? 'h3': 'h2'} sx={{ textAlign: 'center' }}>
                 Portfolio
             </StyledTypography>            
-            <Grid container spacing={3}>
+            <Grid container spacing={4}>
                 <Grid item xs={12} md={6} lg={4}>
                     <PortfolioItem
+                        link={'google'}
+                        githubLink={'google'}
                         checks={checks} 
                         image={imageSrc}
                         title="Recipes 2.0"
@@ -39,45 +41,48 @@ const Portfolio = ({ checks}) => {
                 </Grid>
                 <Grid item xs={12} md={6} lg={4}>
                     <PortfolioItem
-                            checks={checks} 
-                            image={imageSrc}
-                            title="Clothing Store"
-                            description="An interactive recipe management application..."
-                            technologies={[
-                                { name: 'React', icon: <SiReact /> },
-                                { name: 'Node.js', icon: <FaNodeJs /> },
-                                { name: 'Firebase', icon: <SiFirebase /> },
-                                { name: 'Material Ui', icon: <SiMui /> },
-                            ]}
-                        />
+                        link={'google'}
+                        checks={checks} 
+                        image={imageSrc}
+                        title="Clothing Store"
+                        description="An interactive recipe management application..."
+                        technologies={[
+                            { name: 'React', icon: <SiReact /> },
+                            { name: 'Node.js', icon: <FaNodeJs /> },
+                            { name: 'Firebase', icon: <SiFirebase /> },
+                            { name: 'Material Ui', icon: <SiMui /> },
+                        ]}
+                    />
                 </Grid>
                 <Grid item xs={12} md={6} lg={4}>
                     <PortfolioItem
-                            checks={checks} 
-                            image={imageSrc}
-                            title="YelpCamp"
-                            description="An interactive recipe management application..."
-                            technologies={[
-                                { name: 'React', icon: <SiReact /> },
-                                { name: 'Node.js', icon: <FaNodeJs /> },
-                                { name: 'Firebase', icon: <SiFirebase /> },
-                                { name: 'Material Ui', icon: <SiMui /> },
-                            ]}
-                        />        
+                        link={'google'}
+                        checks={checks} 
+                        image={imageSrc}
+                        title="YelpCamp"
+                        description="An interactive recipe management application..."
+                        technologies={[
+                            { name: 'React', icon: <SiReact /> },
+                            { name: 'Node.js', icon: <FaNodeJs /> },
+                            { name: 'Firebase', icon: <SiFirebase /> },
+                            { name: 'Material Ui', icon: <SiMui /> },
+                        ]}
+                    />        
                 </Grid>
                 <Grid item xs={12} md={6} lg={4}>
                     <PortfolioItem
-                            checks={checks} 
-                            image={imageSrc}
-                            title="Portfolio"
-                            description="An interactive recipe management application..."
-                            technologies={[
-                                { name: 'React', icon: <SiReact /> },
-                                { name: 'Node.js', icon: <FaNodeJs /> },
-                                { name: 'Firebase', icon: <SiFirebase /> },
-                                { name: 'Material Ui', icon: <SiMui /> },
-                            ]}
-                        />        
+                        link={'google'}
+                        checks={checks} 
+                        image={imageSrc}
+                        title="Portfolio"
+                        description="An interactive recipe management application..."
+                        technologies={[
+                            { name: 'React', icon: <SiReact /> },
+                            { name: 'Node.js', icon: <FaNodeJs /> },
+                            { name: 'Firebase', icon: <SiFirebase /> },
+                            { name: 'Material Ui', icon: <SiMui /> },
+                        ]}
+                    />        
                 </Grid>
             </Grid>      
         </Box>   

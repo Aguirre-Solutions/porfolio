@@ -27,9 +27,10 @@ const theme = createTheme({
       contrastText: '#2F2F2F',
     },
     additional: {
+      magenta: '#d30c7b',
       deepPurple: '#7D2E68',
       darkGrey: '#4A5759',
-      lightPastelPink: '#F7E1D7',
+      lightPastelPink: '#FCF2EE',
     }
   },
   breakpoints: {

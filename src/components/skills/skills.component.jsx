@@ -42,7 +42,7 @@ const Skills = ({ theme, maxCardHeight, skillsRef, checks}) => {
         Skills
       </StyledTypography>
       <Card
-        elevation={5}
+        elevation={0}
         sx={{
           backgroundColor: theme.palette.additional.lightPastelPink,
           padding: '10px',

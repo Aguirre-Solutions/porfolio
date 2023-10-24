@@ -16,7 +16,7 @@ export const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 export const StyledVerticalDivider = styled(Divider)(({ theme }) => ({
-    backgroundColor: theme.palette.warning.main,
+    backgroundColor: theme.palette.secondary.main,
     marginLeft: '10px',
     marginRight: '10px',
     height: '150px',    
@@ -24,7 +24,7 @@ export const StyledVerticalDivider = styled(Divider)(({ theme }) => ({
 }));
 
 export const StyledHorizontalDivider = styled(Divider)(({ theme }) => ({
-    backgroundColor: theme.palette.warning.main,
+    backgroundColor: theme.palette.secondary.main,
     marginX: '5px',
     height: '2px',
     width: '90%',
@@ -51,9 +51,9 @@ export const StyledTypography = styled(Typography)(({ theme }) => ({
 export const StyledLink= styled(Link)(({ theme }) => ({
     cursor: 'pointer',
     textDecoration: 'none',
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.additional.lightPastelPink,
     '&:hover': {
         textDecoration: 'none',
-        color: theme.palette.error.main,
+        color: theme.palette.additional.magenta,
     },
 }));
