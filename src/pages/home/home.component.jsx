@@ -1,13 +1,12 @@
 import {Box, Grid} from '@mui/material';
 
-import Details from '../../components/details/details.component';
 import Experience from '../../components/experience/experience.component';
 import Portfolio from '../portfolio/portfolio.component';
+import Brief from '../brief/brief.component';
 import { useContext, useState, useEffect } from 'react';
 
 import { ThemeValuesContext } from '../../context/theme-values.context';
 
-import AboutSnippet from '../../components/about-snippet/about-snippet.component';
 import { StyledVerticalDivider, StyledHorizontalDivider } from '../../utils/styledComponents';
 import Skills from '../../components/skills/skills.component';
 
@@ -36,25 +35,7 @@ const Home = () => {
     return (
         <Grid container justifyContent="center" alignItems="center" spacing={3}>
             
-            {/* Details Component */}
-            <Box component={Grid} item xs={12} md={3}>
-                <Details theme={theme} checks={checks} />
-            </Box>
-
-            {isMobile ? 
-            <Box component={Grid} item xs={12} md={1} display="flex" justifyContent="center">
-                <StyledHorizontalDivider sx={{ width:'80%' }}checks={checks}/>
-             </Box>
-            :
-            <Box component={Grid} item md={1} display="flex" justifyContent="center">
-                <StyledVerticalDivider checks={checks}/>
-            </Box>
-            }
-
-            {/* AboutSnippet Component */}
-            <Box component={Grid} item xs={12} md={5}>
-                <AboutSnippet checks={checks}/>
-            </Box>
+            <Brief theme={theme} checks={checks} />
 
             <Box 
                 component={Grid} 
