@@ -19,7 +19,7 @@ const Portfolio = ({theme, checks}) => {
                 Portfolio
             </StyledTypography>            
             <Grid container spacing={4}>
-                <Grid item xs={12} md={6} lg={4}>
+                <Grid item xs={12} md={6} lg={3}>
                     <PortfolioItem
                         checks={checks} 
                         image={imageSrc}
@@ -31,13 +31,13 @@ const Portfolio = ({theme, checks}) => {
                             { name: 'Firebase', icon: <SiFirebase /> },
                             { 
                                 name: 'Cloudinary', 
-                                icon: <img src="../../assets/cloudinary.svg" alt="Cloudinary" style={{ width: '24px', height: '24px' }} />
+                                icon: <img src={cloudinaryIconSrc} alt="Cloudinary" style={{ width: '24px', height: '24px' }} />
                             },
-                            { name: 'Material Ui', icon: <SiMui /> },
+                            { name: 'Mui', icon: <SiMui /> },
                         ]}
                     />
                 </Grid>
-                <Grid item xs={12} md={6} lg={4}>
+                <Grid item xs={12} md={6} lg={3}>
                     <PortfolioItem
                             checks={checks} 
                             image={imageSrc}
@@ -51,7 +51,7 @@ const Portfolio = ({theme, checks}) => {
                             ]}
                         />
                 </Grid>
-                <Grid item xs={12} md={6} lg={4}>
+                <Grid item xs={12} md={6} lg={3}>
                     <PortfolioItem
                             checks={checks} 
                             image={imageSrc}
@@ -65,7 +65,7 @@ const Portfolio = ({theme, checks}) => {
                             ]}
                         />        
                 </Grid>
-                <Grid item xs={12} md={6} lg={4}>
+                <Grid item xs={12} md={6} lg={3}>
                     <PortfolioItem
                             checks={checks} 
                             image={imageSrc}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Chip } from "@mui/material";
+import { Card, CardContent, CardMedia, Box, Chip } from "@mui/material";
 import { StyledTypography } from '../../utils/styledComponents';
 
 
@@ -21,17 +21,17 @@ const PortfolioItem = ({ image, title, description, technologies, checks, theme 
                 <StyledTypography variant="body2" color="textSecondary" component="p">
                     {description}
                 </StyledTypography>
-                <div style={{ marginTop: '10px' }}>
+                <Box sx={{ marginTop: '10px' }}>
                     {technologies.map((tech, idx) => (
                         <Chip 
                             key={idx}
                             icon={tech.icon} 
                             label={tech.name} 
                             variant="outlined" 
-                            style={{ margin: '5px' }} 
+                            style={{ margin: '5px', padding: '5px' }} 
                         />
                     ))}
-                </div>
+                </Box>
             </CardContent>
         </Card>
     );
