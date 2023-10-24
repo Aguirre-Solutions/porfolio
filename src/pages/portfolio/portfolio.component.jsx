@@ -15,7 +15,7 @@ const Portfolio = ({ checks}) => {
 
     return (
         <Box component={Grid} item xs={12} sm={12} md={12} lg={10} xl={8}>
-        <StyledTypography variant={ isMobile ? 'h3': 'h2'} sx={{ textAlign: 'center',  marginTop:'-15px', marginBottom:'20px' }}>
+        <StyledTypography variant={ isMobile ? 'h3': 'h2'} sx={{ textAlign: 'center', marginBottom:'20px' }}>
                 Portfolio
             </StyledTypography>            
             <Grid container spacing={4}>

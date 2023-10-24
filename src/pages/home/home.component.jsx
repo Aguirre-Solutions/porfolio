@@ -19,15 +19,11 @@ const Home = () => {
 
 
 
-    const [maxSkillCardHeight, setMaxSkillCardHeight] = useState(1050);
-    const [maxExperienceCardHeight, setMaxExperienceCardHeight] = useState(1050);
+   const [cardHeight, setCardHeight] = useState(1050);
     
     useEffect(() => {
-        const heightForSkills = getCardHeight(isMobile, isTablet, isLaptop, isDesktop);
-        const heightForExperience = getCardHeight(isMobile, isTablet, isLaptop, isDesktop);
-
-        setMaxSkillCardHeight(heightForSkills);
-        setMaxExperienceCardHeight(heightForExperience);
+        const height = getCardHeight(isMobile, isTablet, isLaptop, isDesktop);     
+        setCardHeight(height);
     }, [checks]);
 
 
@@ -41,10 +37,10 @@ const Home = () => {
                 <StyledHorizontalDivider sx={{ width:'80%' }} checks={checks}/>
             </Box>
             
-            <CV theme={theme} maxSkillCardHeight={maxSkillCardHeight} maxExperienceCardHeight={maxExperienceCardHeight} checks={checks}/>
+            <CV theme={theme} cardHeight={cardHeight} checks={checks}/>
 
             <Box component={Grid} item xs={12} display="flex" justifyContent="center" alignItems="center">
-                <StyledHorizontalDivider sx={{ margin: '20px', width:'80%' }} />
+                <StyledHorizontalDivider sx={{ width:'80%' }} />
             </Box>
 
                 <Portfolio theme={theme} checks={checks} />
