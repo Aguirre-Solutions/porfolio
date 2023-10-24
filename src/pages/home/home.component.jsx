@@ -1,4 +1,4 @@
-import {Box, Grid, useMediaQuery} from '@mui/material';
+import {Box, Grid} from '@mui/material';
 
 import Details from '../../components/details/details.component';
 import Experience from '../../components/experience/experience.component';
