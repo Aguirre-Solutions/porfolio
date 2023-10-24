@@ -5,7 +5,7 @@ import { Box, Grid } from '@mui/material';
 
 const Brief = ({theme, checks}) => {
 
-    const [isMobile, isTablet, isLaptop, isDesktop] = checks;	
+    const {isMobile, isTablet, isLaptop, isDesktop} = checks;
 
     return (
         <>

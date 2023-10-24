@@ -3,7 +3,7 @@ import { StyledTypography } from "../../utils/styledComponents"
 
 const ExperienceItem = ({ title, organization, duration, description, theme, checks }) => {
 
-  const [isMobile, isTablet, isLaptop, isDesktop] = checks;
+  const {isMobile, isTablet, isLaptop, isDesktop} = checks;
 
   return (
       <ListItem alignItems="flex-start">

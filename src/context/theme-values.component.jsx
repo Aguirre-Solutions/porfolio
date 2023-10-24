@@ -10,7 +10,7 @@ const ThemeValuesProvider = ({ children }) => {
     const isDesktop = useMediaQuery(theme.breakpoints.up('xxl'));
 
     return (
-        <ThemeValuesContext.Provider value={{ theme, checks: [isMobile, isTablet, isLaptop, isDesktop] }}>
+        <ThemeValuesContext.Provider value={{ theme, checks: { isMobile, isTablet, isLaptop, isDesktop } }}>
             {children}
         </ThemeValuesContext.Provider>
     );

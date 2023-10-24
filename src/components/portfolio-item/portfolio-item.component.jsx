@@ -5,7 +5,7 @@ import { StyledTypography } from '../../utils/styledComponents';
 
 const PortfolioItem = ({ image, title, description, technologies, checks, theme }) => {
 
-    const [isMobile, isTablet, isLaptop, isDesktop] = checks;
+    const {isMobile, isTablet, isLaptop, isDesktop} = checks;
 
     return (
         <Card>

@@ -3,7 +3,7 @@ import { StyledTypography, StyledHorizontalDivider } from '../../utils/styledCom
 
 const Skills = ({ theme, maxCardHeight, skillsRef, checks}) => {
 
-  const [isMobile, isTablet, isLaptop, isDesktop] = checks;
+  const {isMobile, isTablet, isLaptop, isDesktop} = checks;
 
   const fontSize = '18px'
   const margin = 2

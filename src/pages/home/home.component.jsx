@@ -15,7 +15,7 @@ const Home = () => {
 
     const {theme, checks} = useContext(ThemeValuesContext);
 
-    const [isMobile, isTablet, isLaptop, isDesktop] = checks;
+    const {isMobile, isTablet, isLaptop, isDesktop} = checks;
 
 
 

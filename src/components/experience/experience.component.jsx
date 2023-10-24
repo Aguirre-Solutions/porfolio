@@ -6,7 +6,7 @@ import EducationItem from '../education-item/education-item.component';
 
 const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
 
-  const [ isMobile, isTablet, isLaptop, isDesktop ] = checks;
+  const {isMobile, isTablet, isLaptop, isDesktop} = checks;
 
     return (
       

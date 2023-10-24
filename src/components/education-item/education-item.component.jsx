@@ -3,7 +3,7 @@ import { StyledTypography } from "../../utils/styledComponents";
 
 const EducationItem = ({ degree, institution, graduationDate, theme, checks }) => {
 
-  const [isMobile, isTablet, isLaptop, isDesktop] = checks;
+  const {isMobile, isTablet, isLaptop, isDesktop} = checks;
 
 
   return (

@@ -5,7 +5,7 @@ import Icons from "../icons/icons.component";
 
 const Details = ({theme, checks}) => {
 
-    const { isMobile, isTablet } = checks;
+    const {isMobile} = checks;
 
     const navigate = useNavigate();
 
