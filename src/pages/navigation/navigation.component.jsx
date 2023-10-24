@@ -1,14 +1,14 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
-import { AppBar, Box, Typography, Toolbar } from "@mui/material";
-import {StyledToolbar, StyledLink} from "../../utils/styledComponents";
+import { Box, Typography, Toolbar } from "@mui/material";
+import {StyledToolbar, StyledLink, StyledAppBar} from "../../utils/styledComponents";
 import { useTheme } from "@mui/material/styles";
 
 const Navigation = () => {
     const theme = useTheme();
     return (
         <Fragment>
-            <AppBar position="fixed" style={{ height: '48px' }}>
+            <StyledAppBar position="fixed" style={{ height: '48px' }}>
                 <StyledToolbar>
                     <Box sx={{ flexGrow: 1 }}>
                         <Typography variant="h6" noWrap component="div">
@@ -16,7 +16,7 @@ const Navigation = () => {
                         </Typography>
                     </Box>
                 </StyledToolbar>
-            </AppBar>
+            </StyledAppBar>
             <Toolbar />
             <Outlet />
         </Fragment>

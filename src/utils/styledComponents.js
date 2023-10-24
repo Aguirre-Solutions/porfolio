@@ -1,10 +1,12 @@
 import {styled} from "@mui/material/styles";
-import { Toolbar, Divider, Button, Typography} from "@mui/material";
+import { Toolbar, Divider, Button, Typography, AppBar} from "@mui/material";
 import { Link } from "react-router-dom";
 
 
 
-
+export const StyledAppBar = styled(AppBar)(({ theme }) => ({
+    boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2)',
+}));
 
 export const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     minHeight: '48px !important',
