@@ -1,23 +1,37 @@
 import React from 'react';
-import {Card, CardContent, CardMedia, Typography} from "@mui/material"
+import { Card, CardContent, CardMedia, Typography, Chip } from "@mui/material";
+import { StyledTypography } from '../../utils/styledComponents';
 
 
-const  PortfolioItem = ({ imageSrc, title, description }) => {
+const PortfolioItem = ({ image, title, description, technologies, checks, theme }) => {
+
+    const [isMobile, isTablet, isLaptop, isDesktop] = checks;
 
     return (
-        <Card >
+        <Card>
             <CardMedia
                 sx={{ height: 0, paddingTop: '56.25%' }}
-                image={imageSrc}
+                image={image}
                 title={title}
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <StyledTypography gutterBottom variant="h5" component="h2">
                     {title}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                </StyledTypography>
+                <StyledTypography variant="body2" color="textSecondary" component="p">
                     {description}
-                </Typography>
+                </StyledTypography>
+                <div style={{ marginTop: '10px' }}>
+                    {technologies.map((tech, idx) => (
+                        <Chip 
+                            key={idx}
+                            icon={tech.icon} 
+                            label={tech.name} 
+                            variant="outlined" 
+                            style={{ margin: '5px' }} 
+                        />
+                    ))}
+                </div>
             </CardContent>
         </Card>
     );

@@ -86,7 +86,7 @@ const Home = () => {
                 <StyledHorizontalDivider sx={{ margin: '20px', width:'80%' }} />
             </Box>
             <Box component={Grid} item xs={12} sm={12} md={12} lg={10} xl={8}>
-                <Portfolio />
+                <Portfolio theme={theme} checks={checks} />
             </Box>
         </Grid>
     );
