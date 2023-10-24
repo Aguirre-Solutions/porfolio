@@ -24,11 +24,11 @@ const Home = () => {
     const [maxExperienceCardHeight, setMaxExperienceCardHeight] = useState(1050);
 
     useEffect(() => {
-        isMobile ? setMaxSkillCardHeight('auto') : isTablet ? setMaxSkillCardHeight(1350) : setMaxSkillCardHeight(1050);
-        isMobile ? setMaxExperienceCardHeight('auto') : isTablet ? setMaxExperienceCardHeight(1350) : setMaxExperienceCardHeight(1050);
+        isMobile ? setMaxSkillCardHeight('auto') : isTablet ? setMaxSkillCardHeight(900) : isLaptop ? setMaxSkillCardHeight(950) : isDesktop ? setMaxSkillCardHeight(850) : setMaxSkillCardHeight(850)
 
+        isMobile ? setMaxExperienceCardHeight('auto') : isTablet ? setMaxExperienceCardHeight(900) : isLaptop ? setMaxExperienceCardHeight(950) : isDesktop ? setMaxExperienceCardHeight(850) : setMaxExperienceCardHeight(850)
         }
-    , [isMobile, isTablet]);
+    , [checks]);
 
 
 

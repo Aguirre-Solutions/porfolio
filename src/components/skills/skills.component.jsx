@@ -1,10 +1,9 @@
-import { Box, Card, CardContent, useMediaQuery } from '@mui/material';
+import { Box, Card, CardContent } from '@mui/material';
 import { StyledTypography, StyledHorizontalDivider } from '../../utils/styledComponents';
 
 const Skills = ({ theme, maxCardHeight, skillsRef, checks}) => {
 
-  const { isMobile, isTablet } = checks;
-
+  const [isMobile, isTablet, isLaptop, isDesktop] = checks;
 
   const fontSize = '18px'
   const margin = 2
@@ -53,7 +52,7 @@ const Skills = ({ theme, maxCardHeight, skillsRef, checks}) => {
       >
         <CardContent>
           <StyledTypography
-            variant="h4"
+            variant={isDesktop ? 'h4' : isLaptop ?  'h5' : isTablet ? 'h5' : isMobile ? 'h4' :'h6'} 
             gutterBottom
             fontWeight={900}
             sx={{ color: theme.palette.error.main }}
@@ -72,7 +71,7 @@ const Skills = ({ theme, maxCardHeight, skillsRef, checks}) => {
          <StyledHorizontalDivider sx={{ mx:'auto', my:'20px' }} />
 
           <StyledTypography
-            variant="h4"
+            variant={isDesktop ? 'h4' : isLaptop ?  'h5' : isTablet ? 'h5' : isMobile ? 'h4' :'h6'} 
             gutterBottom
             fontWeight={900}
             sx={{ color: theme.palette.error.main }}
@@ -90,7 +89,7 @@ const Skills = ({ theme, maxCardHeight, skillsRef, checks}) => {
           <StyledHorizontalDivider sx={{ mx:'auto', my:'20px' }} />
 
           <StyledTypography
-            variant="h4"
+            variant={isDesktop ? 'h4' : isLaptop ?  'h5' : isTablet ? 'h5' : isMobile ? 'h4' :'h6'} 
             gutterBottom
             fontWeight={900}
             sx={{ color: theme.palette.error.main }}

@@ -5,8 +5,8 @@ import EducationItem from '../education-item/education-item.component';
 
 
 const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
-  const { isMobile, isTablet } = checks;
 
+  const [ isMobile, isTablet, isLaptop, isDesktop ] = checks;
 
     return (
       
@@ -19,12 +19,16 @@ const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
         height: `${maxCardHeight}px`}}
         ref={experienceRef}> 
           <CardContent >
-            <StyledTypography variant="h4"  fontWeight={900} sx={{color: theme.palette.additional.deepPurple}} >
+            <StyledTypography 
+            variant={isDesktop ? 'h4' : isLaptop ?  'h5' : isTablet ? 'h5' : isMobile ? 'h4' :'h6'} 
+            fontWeight={900} 
+            sx={{color: theme.palette.additional.deepPurple}} >
               Experience
             </StyledTypography>
             <List>
               <ExperienceItem
                 theme={theme}
+                checks={checks}
                 title="Owner"
                 organization="Melifluent"
                 duration="August 2016 – Present"
@@ -37,6 +41,7 @@ const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
               />
                <ExperienceItem
                 theme={theme}
+                checks={checks}
                 title="Community Center"
                 organization="IEST"
                 duration="August 2014 – 2017"
@@ -48,18 +53,23 @@ const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
               <StyledHorizontalDivider variant="inset" component="li"  sx={{width: '80%'}} />
             </List>
     
-            <StyledTypography variant="h4"  fontWeight={900} sx={{color: theme.palette.additional.deepPurple, paddingTop:'17px'}} >
+            <StyledTypography 
+            variant={isDesktop ? 'h4' : isLaptop ?  'h5' : isTablet ? 'h5' : isMobile ? 'h4' :'h6'} 
+            fontWeight={900} 
+            sx={{color: theme.palette.additional.deepPurple, paddingTop:'17px'}} >
               Education
             </StyledTypography>
             <List>
               <EducationItem
                 theme={theme}
+                checks={checks}
                 degree="Bachelor’s Degree in Psychology"
                 institution="Instituto de Estudios Superiores de Tamaulipas"
                 graduationDate="May 2016"
               />
               <EducationItem
                 theme={theme}
+                checks={checks}
                 degree="Clinical Psychology Specialty"
                 institution="Instituto de Estudios Superiores de Tamaulipas"
                 graduationDate="May 2017"
