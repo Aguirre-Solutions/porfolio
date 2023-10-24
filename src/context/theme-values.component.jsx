@@ -1,13 +1,16 @@
-import { createContext } from "react";
-import { useTheme } from "@mui/material";
-
-export const ThemeValuesContext = createContext();
+import React from "react";
+import theme from "../utils/theme";
+import { useMediaQuery } from '@mui/material';
+import { ThemeValuesContext } from "./theme-values.context";
 
 const ThemeValuesProvider = ({ children }) => {
-    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
+    const isLaptop = useMediaQuery(theme.breakpoints.up('xl'));
+    const isDesktop = useMediaQuery(theme.breakpoints.up('xxl'));
 
     return (
-        <ThemeValuesContext.Provider value={theme}>
+        <ThemeValuesContext.Provider value={{ theme, checks: [isMobile, isTablet, isLaptop, isDesktop] }}>
             {children}
         </ThemeValuesContext.Provider>
     );

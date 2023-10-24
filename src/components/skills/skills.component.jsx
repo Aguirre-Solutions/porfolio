@@ -1,9 +1,10 @@
 import { Box, Card, CardContent, useMediaQuery } from '@mui/material';
 import { StyledTypography, StyledHorizontalDivider } from '../../utils/styledComponents';
 
-const Skills = ({ theme, maxCardHeight, skillsRef }) => {
+const Skills = ({ theme, maxCardHeight, skillsRef, checks}) => {
 
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const { isMobile, isTablet } = checks;
+
 
   const fontSize = '18px'
   const margin = 2
@@ -46,8 +47,7 @@ const Skills = ({ theme, maxCardHeight, skillsRef }) => {
         sx={{
           backgroundColor: theme.palette.additional.lightPastelPink,
           padding: '10px',
-          maxHeight: `${maxCardHeight}px`,	
-        
+          height: `${maxCardHeight}px`,	
         }}
         ref={skillsRef}
       >

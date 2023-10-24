@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { Box, Grid, useMediaQuery } from '@mui/material';
-import { StyledHorizontalDivider, StyledTypography, StyledButton } from '../../utils/styledComponents';
+import { Box, Grid,  } from '@mui/material';
+import { StyledTypography } from '../../utils/styledComponents';
 import Icons from "../icons/icons.component";
 
-const Details = ({theme}) => {
+const Details = ({theme, checks}) => {
 
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const { isMobile, isTablet } = checks;
 
     const navigate = useNavigate();
 

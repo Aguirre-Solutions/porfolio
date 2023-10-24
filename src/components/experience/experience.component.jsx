@@ -4,7 +4,10 @@ import ExperienceItem from '../experience-item/experience-item.component';
 import EducationItem from '../education-item/education-item.component';
 
 
-const Experience = ({theme, maxCardHeight, experienceRef}) => {
+const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
+  const { isMobile, isTablet } = checks;
+
+
     return (
       
       <>
@@ -13,7 +16,7 @@ const Experience = ({theme, maxCardHeight, experienceRef}) => {
         elevation={5} 
         sx={{backgroundColor: theme.palette.additional.lightPastelPink, 
         padding:'10px', 
-        maxHeight: `${maxCardHeight}px`}}
+        height: `${maxCardHeight}px`}}
         ref={experienceRef}> 
           <CardContent >
             <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.deepPurple}} >
