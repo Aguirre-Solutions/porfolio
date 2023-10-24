@@ -19,7 +19,7 @@ const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
         height: `${maxCardHeight}px`}}
         ref={experienceRef}> 
           <CardContent >
-            <StyledTypography variant="h4" gutterBottom fontWeight={900} sx={{color: theme.palette.additional.deepPurple}} >
+            <StyledTypography variant="h4"  fontWeight={900} sx={{color: theme.palette.additional.deepPurple}} >
               Experience
             </StyledTypography>
             <List>
