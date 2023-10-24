@@ -21,17 +21,29 @@ const PortfolioItem = ({ image, title, description, technologies, checks, theme 
                 <StyledTypography variant="body2" color="textSecondary" component="p">
                     {description}
                 </StyledTypography>
-                <Box sx={{ marginTop: '10px' }}>
+                <Box 
+                    sx={{ 
+                        marginTop: '10px', 
+                        display: 'flex', 
+                        justifyContent: isMobile ? 'center' : 'flex-start', 
+                        flexWrap: 'wrap',
+                        alignContent: isMobile ? 'center' : 'flex-start',
+                        flexDirection: 'row',  // Stacking chips vertically for mobile
+                        gap: 0  // Adjusting gap based on device type
+                    }}>
                     {technologies.map((tech, idx) => (
                         <Chip 
                             key={idx}
                             icon={tech.icon} 
                             label={tech.name} 
                             variant="outlined" 
-                            style={{ margin: '5px', padding: '5px' }} 
+                            sx={{ margin: '2px', padding: '2px' }} 
                         />
                     ))}
                 </Box>
+
+
+
             </CardContent>
         </Card>
     );

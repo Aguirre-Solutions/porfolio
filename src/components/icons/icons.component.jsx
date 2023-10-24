@@ -7,22 +7,22 @@ const Icons = () => {
 
     return (
         <Box display="flex" justifyContent="center" gap={2}>
-            <Grid container spacing={4} justifyContent="center">
-                {/* First Row */}
-                <Grid item xs={1} sm={1} md={3} lg={1}>
-                    <SiTypescript size={iconSize} />
-                </Grid>
+            <Grid container spacing={5} justifyContent="center">
+                {/* First Row: Front-end */}
                 <Grid item xs={1} sm={1} md={3} lg={1}>
                     <SiReact size={iconSize} />
                 </Grid>
                 <Grid item xs={1} sm={1} md={3} lg={1}>
-                    <SiMui size={iconSize} />
-                </Grid>
-                <Grid item xs={1} sm={1} md={3} lg={1}>
                     <SiRedux size={iconSize} />
                 </Grid>
+                <Grid item xs={1} sm={1} md={3} lg={1}>
+                    <SiMui size={iconSize} />
+                </Grid>
 
-                {/* Second Row */}
+                {/* Second Row: Languages, Back-end, Databases, Tools */}
+                <Grid item xs={1} sm={1} md={3} lg={1}>
+                    <SiTypescript size={iconSize} />
+                </Grid>
                 <Grid item xs={1} sm={1} md={3} lg={1}>
                     <TbBrandNodejs size={iconSize} />
                 </Grid>
@@ -39,5 +39,6 @@ const Icons = () => {
         </Box>
     )
 }
+
 
 export default Icons;

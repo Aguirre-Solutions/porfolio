@@ -11,7 +11,7 @@ const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
     return (
       
       <>
-        <StyledTypography variant="h2" sx={{textAlign:'center'}}>Resumé</StyledTypography>
+        <StyledTypography variant={ isMobile ? 'h3': 'h2'} sx={{textAlign:'center'}}>Resumé</StyledTypography>
         <Card 
         elevation={5} 
         sx={{backgroundColor: theme.palette.additional.lightPastelPink, 

@@ -6,20 +6,20 @@ import {FaNodeJs} from 'react-icons/fa';
 
 import cloudinaryIconSrc from '../../assets/cloudinary.svg';
 
-const Portfolio = ({theme, checks}) => {
+const Portfolio = ({ checks}) => {
+
+    const {isMobile} = checks;   
 
 
     const imageSrc = 'https://res.cloudinary.com/recipeb00k/image/upload/v1696527867/R_r6jv9x.jpg'
-    const title = 'Recipe Book';
-    const description = 'A recipe book app built with React, Redux, and Firebase.';
 
     return (
         <Box>
-            <StyledTypography variant="h2" sx={{ textAlign: 'center' }}>
+            <StyledTypography variant={ isMobile ? 'h3': 'h2'} sx={{ textAlign: 'center' }}>
                 Portfolio
             </StyledTypography>            
-            <Grid container spacing={4}>
-                <Grid item xs={12} md={6} lg={3}>
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <PortfolioItem
                         checks={checks} 
                         image={imageSrc}
@@ -37,7 +37,7 @@ const Portfolio = ({theme, checks}) => {
                         ]}
                     />
                 </Grid>
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <PortfolioItem
                             checks={checks} 
                             image={imageSrc}
@@ -51,7 +51,7 @@ const Portfolio = ({theme, checks}) => {
                             ]}
                         />
                 </Grid>
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <PortfolioItem
                             checks={checks} 
                             image={imageSrc}
@@ -65,7 +65,7 @@ const Portfolio = ({theme, checks}) => {
                             ]}
                         />        
                 </Grid>
-                <Grid item xs={12} md={6} lg={3}>
+                <Grid item xs={12} md={6} lg={4}>
                     <PortfolioItem
                             checks={checks} 
                             image={imageSrc}

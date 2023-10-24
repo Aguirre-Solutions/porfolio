@@ -1,11 +1,14 @@
 import { Box } from '@mui/material';
 import {StyledTypography} from '../../utils/styledComponents'
 
-const AboutSnippet = () => {
+const AboutSnippet = ({checks}) => {
+
+    const {isMobile, isTablet, isLaptop, isDesktop} = checks;
+
     return (
         <Box mt={2}>
             <Box mb={3}>
-                <StyledTypography variant="h3">About Me</StyledTypography>
+                <StyledTypography variant={ isMobile ? 'h4': 'h3'}>About Me</StyledTypography>
             </Box>
             <Box>   
                 <StyledTypography variant="body1" sx={{fontSize:'20px'}}>

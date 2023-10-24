@@ -38,7 +38,7 @@ const Skills = ({ theme, maxCardHeight, skillsRef, checks}) => {
 
   return (
     <>
-       <StyledTypography variant="h2" sx={{ textAlign: 'center' }}>
+       <StyledTypography variant={ isMobile ? 'h3': 'h2'} sx={{ textAlign: 'center' }}>
         Skills
       </StyledTypography>
       <Card
