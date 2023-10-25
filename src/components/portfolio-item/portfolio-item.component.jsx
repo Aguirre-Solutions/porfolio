@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Box, Chip, IconButton, Link } from "@mui/material";
+import { Card, CardContent, CardMedia, Box, Chip, Tooltip, Link } from "@mui/material";
 import { StyledTypography, StyledIconButton } from '../../utils/styledComponents';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';  // Globe icon
@@ -26,26 +26,30 @@ const PortfolioItem = ({ image, title, description, technologies, checks, theme,
 
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                         {link && (
-                            <StyledIconButton 
-                                component={Link}
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                sx={{ padding: '2px' }}
-                            >
-                                <LanguageIcon />
-                            </StyledIconButton>
+                            <Tooltip title={link}> 
+                                <StyledIconButton 
+                                    component={Link}
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    sx={{ padding: '2px' }}
+                                    >
+                                    <LanguageIcon />
+                                </StyledIconButton>
+                            </Tooltip>
                         )}
                         {githubLink && (
-                            <StyledIconButton 
-                                component={Link}
-                                href={githubLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                sx={{ padding: '2px' }}
-                            >
-                                <GitHubIcon />
-                            </StyledIconButton>
+                            <Tooltip title={githubLink}>
+                                <StyledIconButton 
+                                    component={Link}
+                                    href={githubLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    sx={{ padding: '2px' }}
+                                    >
+                                    <GitHubIcon />
+                                </StyledIconButton>
+                            </Tooltip>
                         )}
                     </Box>
                 </Box>

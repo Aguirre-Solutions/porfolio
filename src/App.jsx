@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navigation from './pages/navigation/navigation.component';
 import Home from "./pages/home/home.component"
 import About from "./pages/about/about.component"
-import Resume from './components/resume/resume.component';
 import Portfolio from './pages/portfolio/portfolio.component';
 
 const App = () => {
@@ -19,7 +18,6 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/About" element={<About/>}/>
-                <Route path="/Resume" element={<Resume />} />
                 <Route path="/Portfolio" element={<Portfolio/>} />
               </Routes>
             </Grid>
