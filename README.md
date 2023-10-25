@@ -3,6 +3,7 @@
 portfolio
 ├─ .eslintrc.cjs
 ├─ .git
+
 ├─ .gitignore
 ├─ index.html
 ├─ package.json
@@ -43,6 +44,10 @@ portfolio
 │  ├─ pages
 │  │  ├─ about
 │  │  │  └─ about.component.jsx
+│  │  ├─ brief
+│  │  │  └─ brief.component.jsx
+│  │  ├─ cv
+│  │  │  └─ cv.component.jsx
 │  │  ├─ home
 │  │  │  └─ home.component.jsx
 │  │  ├─ navigation
@@ -50,6 +55,7 @@ portfolio
 │  │  └─ portfolio
 │  │     └─ portfolio.component.jsx
 │  └─ utils
+│     ├─ deviceHelpers.js
 │     ├─ styledComponents.js
 │     └─ theme.js
 ├─ vite.config.js

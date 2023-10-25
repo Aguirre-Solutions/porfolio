@@ -22,7 +22,7 @@ const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
             <StyledTypography 
             variant={isDesktop ? 'h4' : isLaptop ?  'h5' : isTablet ? 'h5' : isMobile ? 'h4' :'h6'} 
             fontWeight={900} 
-            sx={{color: theme.palette.additional.deepPurple}} >
+            sx={{color: theme.palette.error.main}} >
               Experience
             </StyledTypography>
             <List>
@@ -56,7 +56,7 @@ const Experience = ({theme, checks, maxCardHeight, experienceRef}) => {
             <StyledTypography 
             variant={isDesktop ? 'h4' : isLaptop ?  'h5' : isTablet ? 'h5' : isMobile ? 'h4' :'h6'} 
             fontWeight={900} 
-            sx={{color: theme.palette.additional.deepPurple, paddingTop:'17px'}} >
+            sx={{color: theme.palette.error.main, paddingTop:'17px'}} >
               Education
             </StyledTypography>
             <List>
