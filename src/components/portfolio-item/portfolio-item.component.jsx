@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, CardContent, CardMedia, Box, Chip, IconButton, Link } from "@mui/material";
-import { StyledTypography } from '../../utils/styledComponents';
+import { StyledTypography, StyledIconButton } from '../../utils/styledComponents';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';  // Globe icon
+
 
 const PortfolioItem = ({ image, title, description, technologies, checks, theme, link, githubLink }) => {
     
@@ -17,10 +18,37 @@ const PortfolioItem = ({ image, title, description, technologies, checks, theme,
                 image={image}
                 title={title}
             />
-            <CardContent>
-                <StyledTypography gutterBottom variant="h5" component="h2">
-                    {title}
-                </StyledTypography>
+            <CardContent sx={{paddingBottom:'5px !important'}}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <StyledTypography gutterBottom variant="h5" component="h2">
+                        {title}
+                    </StyledTypography>
+
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                        {link && (
+                            <StyledIconButton 
+                                component={Link}
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                sx={{ padding: '2px' }}
+                            >
+                                <LanguageIcon />
+                            </StyledIconButton>
+                        )}
+                        {githubLink && (
+                            <StyledIconButton 
+                                component={Link}
+                                href={githubLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                sx={{ padding: '2px' }}
+                            >
+                                <GitHubIcon />
+                            </StyledIconButton>
+                        )}
+                    </Box>
+                </Box>
                 <StyledTypography variant="body2" color="textSecondary" component="p">
                     {description}
                 </StyledTypography>
@@ -42,31 +70,9 @@ const PortfolioItem = ({ image, title, description, technologies, checks, theme,
                             label={tech.name} 
                             variant="filled" 
                             color= 'secondary'
-                            sx={{ margin: '2px', padding: '2px' }} 
+                            sx={{ margin: '2px', marginY: '5px', padding: '2px' }} 
                         />
                     ))}
-                </Box>
-                <Box sx={{ marginTop: '10px', display: 'flex', justifyContent: 'flex-end' }}>
-                    {link && (
-                        <IconButton 
-                            component={Link}
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <LanguageIcon />
-                        </IconButton>
-                    )}
-                    {githubLink && (
-                        <IconButton 
-                            component={Link}
-                            href={githubLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <GitHubIcon />
-                        </IconButton>
-                    )}
                 </Box>
             </CardContent>
         </Card>

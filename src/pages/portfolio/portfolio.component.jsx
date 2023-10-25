@@ -21,11 +21,11 @@ const Portfolio = ({ checks}) => {
             <Grid container spacing={4}>
                 <Grid item xs={12} md={6} lg={4}>
                     <PortfolioItem
-                        link={'google'}
-                        githubLink={'google'}
+                        link={'https://www.nibblenotebook.com'}
+                        githubLink={'https://github.com/louderthanme/recipes-second-version'}
                         checks={checks} 
                         image={imageSrc}
-                        title="Recipes 2.0"
+                        title="Nibble Notebook"
                         description="An interactive recipe management application..."
                         technologies={[
                             { name: 'React', icon: <SiReact /> },
