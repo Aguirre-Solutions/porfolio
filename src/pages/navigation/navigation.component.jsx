@@ -43,7 +43,13 @@ const Navigation = () => {
                             noWrap 
                             component="div"
                         >
-                        <StyledLink to="/" isScrolled={isScrolled}>Home</StyledLink>
+                        <StyledLink 
+                        to="/" 
+                        sx={{ color: isScrolled ? theme.palette.common.white : `${theme.palette.secondary.main}`,
+                    }}>
+                        
+                            Home
+                        </StyledLink>
                         </Typography>
                     </Box>
                 </StyledToolbar>

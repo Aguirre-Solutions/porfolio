@@ -55,10 +55,9 @@ export const StyledTypography = styled(Typography)(({ theme }) => ({
     },
 }));
 
-export const StyledLink = styled(Link)(({ theme, isScrolled }) => ({
+export const StyledLink = styled(Link)(({ theme }) => ({
     cursor: 'pointer',
     textDecoration: 'none',
-    color: isScrolled ? theme.palette.common.white : `${theme.palette.secondary.main} !important`,
     '&:hover': {
         textDecoration: 'none',
         color: theme.palette.additional.magenta,
