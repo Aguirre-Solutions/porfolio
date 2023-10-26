@@ -64,3 +64,4 @@ export const StyledLink = styled(Link)(({ theme, isScrolled }) => ({
         color: theme.palette.additional.magenta,
     },
 }));
+

@@ -78,6 +78,11 @@ const PortfolioItem = ({ image, title, description, technologies, checks, theme,
                         />
                     ))}
                 </Box>
+                <Box>
+                    <StyledTypography> 
+                        'READ MORE ABOUT THIS PROJECT'
+                    </StyledTypography>
+                </Box>
             </CardContent>
         </Card>
     );
