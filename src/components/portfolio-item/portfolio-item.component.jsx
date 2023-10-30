@@ -1,15 +1,15 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Box, Chip, Tooltip, Link } from "@mui/material";
-import { StyledTypography, StyledIconButton } from '../../utils/styledComponents';
+import { Card, CardContent, CardMedia, Box, Chip, Tooltip, Link, Button } from "@mui/material";
+import { StyledTypography, StyledIconButton, StyledButton } from '../../utils/styledComponents';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';  // Globe icon
 
 
-const PortfolioItem = ({ image, title, description, technologies, checks, theme, link, githubLink }) => {
+const PortfolioItem = ({ image, title, description, technologies, checks, link, githubLink }) => {
     
 
 
-    const {isMobile, isTablet, isLaptop, isDesktop} = checks;
+    const {isMobile} = checks;
 
     return (
         <Card elevation={0}>
@@ -20,7 +20,7 @@ const PortfolioItem = ({ image, title, description, technologies, checks, theme,
             />
             <CardContent sx={{paddingBottom:'5px !important'}}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <StyledTypography gutterBottom variant="h5" component="h2">
+                    <StyledTypography gutterBottom variant="h5" component="h2" sx={{fontWeight:600}}>
                         {title}
                     </StyledTypography>
 
@@ -53,10 +53,10 @@ const PortfolioItem = ({ image, title, description, technologies, checks, theme,
                         )}
                     </Box>
                 </Box>
-                <StyledTypography variant="body2" color="textSecondary" component="p">
+                <StyledTypography variant="body2" color="textSecondary" component="p" mb={1}>
                     {description}
                 </StyledTypography>
-                <StyledTypography> Technologies: </StyledTypography>
+                <StyledTypography sx={{fontWeight: 500}}> Technologies: </StyledTypography>
                 <Box 
                     sx={{ 
                         marginTop: '10px', 
@@ -78,10 +78,10 @@ const PortfolioItem = ({ image, title, description, technologies, checks, theme,
                         />
                     ))}
                 </Box>
-                <Box>
-                    <StyledTypography> 
-                        'READ MORE ABOUT THIS PROJECT'
-                    </StyledTypography>
+                <Box sx={{ mt: 2 }}>
+                    <StyledButton variant="filled" color="primary" component={Link} fullWidth >
+                        READ MORE 
+                    </StyledButton>
                 </Box>
             </CardContent>
         </Card>

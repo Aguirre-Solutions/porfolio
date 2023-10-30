@@ -40,6 +40,7 @@ export const StyledHorizontalDivider = styled(Divider)(({ theme }) => ({
 export const StyledButton = styled(Button)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     fontFamily: 'Cormorant',
+    fontWeight: 'bold',
     color: theme.palette.primary.contrastText,
     '&:hover': {
         backgroundColor: theme.palette.error.main,
