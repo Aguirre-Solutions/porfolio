@@ -1,4 +1,4 @@
-import {Box, Grid, Typography} from '@mui/material'
+import {Paper, Grid, Typography, Link} from '@mui/material'
 import { StyledTypography, StyledButton } from '../../utils/styledComponents'
 
 const ProjectOverview = ({ project }) => {
@@ -38,13 +38,14 @@ const ProjectOverview = ({ project }) => {
               </Grid>
             ))}
           </Grid>
-        </Grid>
-  
-        {/* Highlights */}
+                  {/* Highlights */}
         <Grid item xs={12}>
           <Typography variant="h6">Highlights</Typography>
         </Grid>
   
+        </Grid>
+  
+
         {/* Description */}
         <Grid item xs={12}>
           <Typography variant="h6">Description</Typography>

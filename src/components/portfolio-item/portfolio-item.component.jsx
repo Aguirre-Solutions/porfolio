@@ -1,14 +1,20 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardMedia, Box, Chip, Tooltip, Link, Button } from "@mui/material";
 import { StyledTypography, StyledIconButton, StyledButton } from '../../utils/styledComponents';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LanguageIcon from '@mui/icons-material/Language';  // Globe icon
+import LanguageIcon from '@mui/icons-material/Language';  
 
 
 const PortfolioItem = ({ project, checks, technologyIcons }) => {
     
-    const {image, title, shortDescription, highlightedTechnologies, link, githubLink} = project;
+    const navigate = useNavigate();
+    const {image, title, shortDescription, highlightedTechnologies, link, githubLink, id} = project;
     const {isMobile} = checks;
+    
+
+    const goToProject = (id) => {
+        navigate(`/Project/${id}`);
+    }
 
     const getIcon = (tech) => {
         return technologyIcons[tech];
@@ -82,9 +88,16 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
                     ))}
                 </Box>
                 <Box sx={{ mt: 2 }}>
-                    <StyledButton variant="filled" color="primary" component={Link} fullWidth >
-                        READ MORE 
-                    </StyledButton>
+                <StyledButton
+                    variant="filled"
+                    color="primary"
+                    component={Link}
+                    onClick={() => {goToProject(id)}} 
+                    fullWidth
+                >
+                    READ MORE
+                </StyledButton>
+
                 </Box>
             </CardContent>
         </Card>

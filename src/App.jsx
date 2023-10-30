@@ -5,6 +5,7 @@ import Navigation from './pages/navigation/navigation.component';
 import Home from "./pages/home/home.component"
 import About from "./pages/about/about.component"
 import Portfolio from './pages/portfolio/portfolio.component';
+import Project from './pages/project/project.component';
 
 const App = () => {
   return (
@@ -19,6 +20,8 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/About" element={<About/>}/>
                 <Route path="/Portfolio" element={<Portfolio/>} />
+                <Route path="/Project/:id" element={<Project/>} />
+
               </Routes>
             </Grid>
           </Grid>
