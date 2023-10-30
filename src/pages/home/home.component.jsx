@@ -42,7 +42,6 @@ const Home = () => {
             <Box component={Grid} item xs={12} display="flex" justifyContent="center" alignItems="center">
                 <StyledHorizontalDivider sx={{ width:'80%' }} />
             </Box>
-
                 <Portfolio theme={theme} checks={checks} />
         </Grid>
     );

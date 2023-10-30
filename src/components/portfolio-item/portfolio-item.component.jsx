@@ -5,11 +5,14 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';  // Globe icon
 
 
-const PortfolioItem = ({ image, title, description, technologies, checks, link, githubLink }) => {
+const PortfolioItem = ({ project, checks, technologyIcons }) => {
     
-
-
+    const {image, title, shortDescription, highlightedTechnologies, link, githubLink} = project;
     const {isMobile} = checks;
+
+    const getIcon = (tech) => {
+        return technologyIcons[tech];
+    }
 
     return (
         <Card elevation={0}>
@@ -54,7 +57,7 @@ const PortfolioItem = ({ image, title, description, technologies, checks, link, 
                     </Box>
                 </Box>
                 <StyledTypography variant="body2" color="textSecondary" component="p" mb={1}>
-                    {description}
+                    {shortDescription}
                 </StyledTypography>
                 <StyledTypography sx={{fontWeight: 500}}> Technologies: </StyledTypography>
                 <Box 
@@ -67,11 +70,11 @@ const PortfolioItem = ({ image, title, description, technologies, checks, link, 
                         flexDirection: 'row',
                         gap: 0
                     }}>
-                    {technologies.map((tech, idx) => (
+                    {highlightedTechnologies.map((tech, idx) => (
                         <Chip 
                             key={idx}
-                            icon={tech.icon} 
-                            label={tech.name} 
+                            icon={getIcon(tech)} 
+                            label={tech} 
                             variant="filled" 
                             color= 'secondary'
                             sx={{ margin: '2px', marginY: '5px', padding: '2px' }} 
