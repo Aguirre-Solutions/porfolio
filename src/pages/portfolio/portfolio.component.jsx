@@ -8,7 +8,7 @@ import cloudinaryIconSrc from '../../assets/cloudinary.svg';
 
 import { ProjectDataContext } from '../../context/project-data.component';
 
-const Portfolio = ({ checks}) => {
+const Portfolio = ({checks}) => {
 
     const projectsData = useContext(ProjectDataContext);
 
@@ -25,8 +25,6 @@ const Portfolio = ({ checks}) => {
       
     
 
-
-    const imageSrc = 'https://res.cloudinary.com/recipeb00k/image/upload/v1696527867/R_r6jv9x.jpg'
 
     return (
         <Box component={Grid} item xs={12} sm={12} md={12} lg={10} xl={8}>

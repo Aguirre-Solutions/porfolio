@@ -21,7 +21,7 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
     }
 
     return (
-        <Card elevation={0}>
+        <Card elevation={0} sx={{backgroundColor:'#efefef'}}>
             <CardMedia
                 sx={{ height: 0, paddingTop: '56.25%' }}
                 image={image}
@@ -87,7 +87,7 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
                         />
                     ))}
                 </Box>
-                <Box sx={{ mt: 2 }}>
+                <Box sx={{ my: 2 }}>
                 <StyledButton
                     variant="filled"
                     color="primary"

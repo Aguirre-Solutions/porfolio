@@ -2,6 +2,8 @@ export const projectsData = [
     {
         id: 1,
         title: "Nibble Notebook",
+        link: "https://nibblenotebook.com",
+        githubLink: "https://github.com/louderthanme/recipes-second-version",
         image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
         shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
         description: [
