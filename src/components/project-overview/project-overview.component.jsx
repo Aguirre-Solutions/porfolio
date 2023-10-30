@@ -1,7 +1,8 @@
 import {  Box, Chip, Grid } from '@mui/material'
 import { StyledTypography, StyledLink, StyledVerticalDivider, StyledHorizontalDivider } from '../../utils/styledComponents'
 
-const ProjectOverview = ({ project, technologyIcons, checks }) => {
+
+const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
 
     const { isMobile, isTablet } = checks;
     const { title, image, link, githubLink, highlightedTechnologies, description, techStack, highlights } = project
@@ -33,15 +34,19 @@ const ProjectOverview = ({ project, technologyIcons, checks }) => {
                 <StyledTypography variant="h3">{title}</StyledTypography>
                 
                 {/* Links */}
-                <StyledTypography sx={{fontWeight:'500'}}>
-                    Web Page: 
-                    <StyledLink href={link}>{link}</StyledLink>
-                </StyledTypography>
-                <StyledTypography sx={{fontWeight:'500'}}>
-                    Github:
-                    <StyledLink href={githubLink}>{githubLink}</StyledLink>
-                </StyledTypography>
-        
+                <Box sx={{ padding: '10px', margin: '5px 0' }}>
+                    <StyledTypography sx={{fontWeight:'500'}}>
+                        Web Page:  
+                        <StyledLink href={link} sx={{color:theme.palette.primary.main, fontWeight: 900, marginLeft:'0.5em'}}>{link}</StyledLink>
+                    </StyledTypography>
+                </Box>
+                <Box sx={{ padding: '10px', margin: '5px 0' }}>
+                    <StyledTypography sx={{fontWeight:'500'}}>
+                        Github: 
+                        <StyledLink href={githubLink} sx={{color:theme.palette.primary.main, fontWeight: 900, marginLeft:'0.5em'}}>{githubLink}</StyledLink>
+                    </StyledTypography>
+                </Box>
+
                 {/* Tech Stack */}
                 <StyledTypography variant='h4' sx={{fontWeight: 500}}>Technologies:</StyledTypography>
                 <Box 
@@ -75,7 +80,7 @@ const ProjectOverview = ({ project, technologyIcons, checks }) => {
     
             {/* Description */}
             <Box item xs={12} component={Grid}>
-                <StyledTypography variant="h6" sx={{ textAlign: 'center' }}>Description</StyledTypography>
+                <StyledTypography variant="h3" sx={{ textAlign: 'center' }}>Description</StyledTypography>
                 <StyledTypography>
                     {description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum."}
                 </StyledTypography>

@@ -3,7 +3,7 @@ import {StyledTypography} from '../../utils/styledComponents'
 
 const AboutSnippet = ({checks}) => {
 
-    const {isMobile, isTablet, isLaptop, isDesktop} = checks;
+    const {isMobile } = checks;
 
     return (
         <Box mt={2}>

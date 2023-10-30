@@ -3,7 +3,7 @@ import { Box, Grid,  } from '@mui/material';
 import { StyledTypography } from '../../utils/styledComponents';
 import Icons from "../icons/icons.component";
 
-const Details = ({theme, checks}) => {
+const Details = ({ checks}) => {
 
     const {isMobile} = checks;
 

@@ -14,9 +14,9 @@ import cloudinaryIconSrc from '../../assets/cloudinary.svg';
 
 const Project = () => {
     const { id } = useParams();
-    const projectsData = useContext(ProjectDataContext);  
-    const {checks} = useContext(ThemeValuesContext);
-    const projectData = projectsData.find((p) => p.id === parseInt(id, 10));
+    const projects = useContext(ProjectDataContext);  
+    const {checks, theme} = useContext(ThemeValuesContext);
+    const project = projects.find((p) => p.id === parseInt(id, 10));
 
     
     const technologyIcons = {
@@ -32,8 +32,8 @@ const Project = () => {
     
     return (   
         <Box>   
-            <ProjectOverview project={projectData} technologyIcons={technologyIcons} checks={checks}/>
-            <ProjectDetailed project={projectData} />        
+            <ProjectOverview project={project} technologyIcons={technologyIcons} checks={checks} theme={theme}/>
+            <ProjectDetailed project={project} />        
         </Box>
         )
 }
