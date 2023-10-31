@@ -31,7 +31,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
             {/* Right Side */}
             <Box item xs={12} lg={5} component={Grid}>
                 {/* Title */}
-                <StyledTypography variant={isDesktop ? 'h3' : 'h4'} >{title}</StyledTypography>
+                <StyledTypography variant={isDesktop ? 'h3' : 'h4'} sx={{textAlign: isLaptop ? 'center' : 'center'}}>{title}</StyledTypography>
                 
                 {/* Links */}
                 <Box sx={{ padding: '10px', margin: '5px 0' }}>
@@ -117,7 +117,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                     <StyledTypography><strong>Frontend:</strong> {setup.frontend}</StyledTypography>
                     <StyledTypography><strong>Live Build:</strong> {setup.liveBuild}</StyledTypography>
                     <Box sx={{marginTop:'5px'}}>
-                    <StyledTypography variant="h7" sx={{textAlign:'center'}}> <strong> Notes: </strong> </StyledTypography>
+                    <StyledTypography variant="h6" sx={{textAlign:'center'}}>  Notes: </StyledTypography>
                     {setup.notes.map((note, index) => (
                         <StyledTypography key={index} paragraph>
                             {note}
