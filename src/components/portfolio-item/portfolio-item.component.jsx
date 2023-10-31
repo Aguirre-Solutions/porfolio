@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { Card, CardContent, CardMedia, Box, Chip, Tooltip, Link, Button } from "@mui/material";
-import { StyledTypography, StyledIconButton, StyledButton } from '../../utils/styledComponents';
+import { Card, CardContent, CardMedia, Box, Chip, Tooltip, Link } from "@mui/material";
+import { StyledTypography, StyledIconButton, StyledButton, StyledChip } from '../../utils/styledComponents';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';  
 
@@ -77,7 +77,7 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
                         gap: 0
                     }}>
                     {highlightedTechnologies.map((tech, idx) => (
-                        <Chip 
+                        <StyledChip 
                             key={idx}
                             icon={getIcon(tech)} 
                             label={tech} 

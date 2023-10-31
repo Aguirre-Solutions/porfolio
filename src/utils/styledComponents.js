@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import { Toolbar, Divider, Button, Typography, AppBar, IconButton} from "@mui/material";
+import { Toolbar, Divider, Button, Typography, AppBar, IconButton, Chip} from "@mui/material";
 import { Link } from "react-router-dom";
 
 
@@ -51,7 +51,7 @@ export const StyledButton = styled(Button)(({ theme }) => ({
 export const StyledTypography = styled(Typography)(({ theme }) => ({
     fontFamily: 'Cormorant',
     textAlign: 'left',
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
         textAlign: 'center',
     },
 }));
@@ -65,3 +65,13 @@ export const StyledLink = styled(Link)(({ theme }) => ({
     },
 }));
 
+export const StyledChip = styled(Chip)(({ theme }) => ({
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.primary.contrastText,
+    fontFamily: 'Cormorant',
+    fontWeight: 'bold',
+    variant: "filled",
+    margin: '2px',
+    marginY: '5px',
+    padding : '2px', 
+}));

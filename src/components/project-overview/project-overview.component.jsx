@@ -1,10 +1,10 @@
 import {  Box, Chip, Grid } from '@mui/material'
-import { StyledTypography, StyledLink, StyledVerticalDivider, StyledHorizontalDivider } from '../../utils/styledComponents'
+import { StyledTypography, StyledLink, StyledVerticalDivider, StyledHorizontalDivider, StyledChip } from '../../utils/styledComponents'
 
 
 const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
 
-    const { isMobile, isTablet } = checks;
+    const { isMobile, isTablet, isLaptop, isDesktop } = checks;
     const { title, image, link, githubLink, highlightedTechnologies, description, setup, usage, contributions, license } = project
 
     const getIcon = (tech) => {
@@ -12,43 +12,43 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
     }
 
     return (
-        <Box container component={Grid} spacing={3} alignItems="center">
+        <Box container component={Grid} spacing={3}  alignItems="center" xs={12} md={9} sx={{margin: '0 auto'}}>
             {/* Left Side - Image */}
-            <Box item xs={12} md={6} component={Grid}>
+            <Box item xs={12} lg={5} component={Grid}>
                 <img src={image} alt={title} style={{ width: '100%' }} />
             </Box>
            
-            {isMobile ? 
-            <Box item xs={12} md={1} component={Grid} display="flex" justifyContent="center">
+            {isTablet ? 
+            <Box item xs={12} lg={1} component={Grid} display="flex" justifyContent="center">
                 <StyledHorizontalDivider sx={{ width:'80%' }} checks={checks} />
              </Box>
             :
-            <Box item xs={false} md={1} component={Grid} ml={isTablet ? 3 : 0} display="flex" justifyContent="center" alignItems="center">
+            <Box item xs={false} lg={1} component={Grid} ml={isTablet ? 3 : 0} display="flex" justifyContent="center" alignItems="center">
                 <StyledVerticalDivider checks={checks} />
             </Box>
             }
     
             {/* Right Side */}
-            <Box item xs={12} md={5} component={Grid}>
+            <Box item xs={12} lg={5} component={Grid}>
                 {/* Title */}
-                <StyledTypography variant="h3">{title}</StyledTypography>
+                <StyledTypography variant={isDesktop ? 'h3' : 'h4'} >{title}</StyledTypography>
                 
                 {/* Links */}
                 <Box sx={{ padding: '10px', margin: '5px 0' }}>
                     <StyledTypography sx={{fontWeight:'500'}}>
-                        Web Page:  
+                    <strong>Web Page:</strong> 
                         <StyledLink href={link} sx={{color:theme.palette.primary.main, fontWeight: 900, marginLeft:'0.5em'}}>{link}</StyledLink>
                     </StyledTypography>
                 </Box>
                 <Box sx={{ padding: '10px', margin: '5px 0' }}>
                     <StyledTypography sx={{fontWeight:'500'}}>
-                        Github: 
+                        <strong>Github:</strong> 
                         <StyledLink href={githubLink} sx={{color:theme.palette.primary.main, fontWeight: 900, marginLeft:'0.5em'}}>{githubLink}</StyledLink>
                     </StyledTypography>
                 </Box>
 
                 {/* Tech Stack */}
-                <StyledTypography variant='h4' sx={{fontWeight: 500}}>Technologies:</StyledTypography>
+                <StyledTypography variant='h6' sx={{fontWeight: 500}}>Technologies:</StyledTypography>
                 <Box 
                     sx={{ 
                         marginTop: '10px', 
@@ -60,13 +60,10 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                         gap: 0
                     }}>
                     {highlightedTechnologies.map((tech, idx) => (
-                        <Chip 
+                        <StyledChip 
                             key={idx}
                             icon={getIcon(tech)} 
                             label={tech} 
-                            variant="filled" 
-                            color='secondary'
-                            sx={{ margin: '2px', marginY: '5px', padding: '2px' }} 
                         />
                     ))}
                 </Box>
@@ -77,11 +74,15 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                     {/* ... other highlight components */}
                 </Box>
             </Box>
+
+            <Box item xs={12} md={12} component={Grid} display="flex" justifyContent="center">
+                <StyledHorizontalDivider checks={checks} sx={{marginBottom:'30px'}} />
+             </Box>
     
             {/* Description */}
-            <Box component={Grid} container spacing={3}>
-                <Box item xs={12} mt={2}>
-                    <StyledTypography variant="h3" sx={{textAlign:'center'}}>Description</StyledTypography>
+            <Box component={Grid} container spacing={2}>
+                <Box component={Grid}  item xs={12} mt={2}>
+                    <StyledTypography variant="h4" sx={{textAlign:'center', marginBottom: '20px'}}>Description</StyledTypography>
                     {description.map((paragraph, index) => (
                         <StyledTypography key={index} paragraph>
                             {paragraph}
@@ -90,15 +91,16 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                 </Box>
 
                  {/* Usage Information */}
-                 <Box item xs={12}>
-                    <StyledTypography variant="h5">Usage</StyledTypography>
+                 <Box component={Grid}  item xs={12} md={6}>
+                    <StyledTypography variant="h4" sx={{textAlign:'center', marginBottom: '10px'}}>Usage</StyledTypography>
                     {Object.entries(usage).map(([key, value], index) => (
-                    <StyledTypography key={index} paragraph>
+                    <StyledTypography key={index} paragraph sx={{lineHeight:'1em'}}>
                         <strong>
                         {key
-                            .replace(/([A-Z])/g, ' $1')
-                            .replace(/^./, function(str) { return str.toUpperCase(); })
-                            .trim()}:
+                            .replace(/([A-Z])/g, ' $1') // insert a space before all caps. $1 is the first match of the regex. A-Z is any capital letter in the string, /g is a global flag to tell it to search through the whole string
+                            .replace(/^./, function(str) { return str.toUpperCase(); }) // uppercase the first character
+                            .trim() //trim any whitespace
+                        }: 
                         </strong> {value}
                     </StyledTypography>
                     ))}
@@ -108,27 +110,22 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
 
 
                 {/* Setup Instructions */}
-                <Box item xs={12}>
-                    <StyledTypography variant="h5">Setup</StyledTypography>
-                    <StyledTypography>Dependencies: {setup.dependencies}</StyledTypography>
-                    <StyledTypography>Dev Server: {setup.devServer}</StyledTypography>
-                    <StyledTypography>Frontend: {setup.frontend}</StyledTypography>
-                    <StyledTypography>Live Build: {setup.liveBuild}</StyledTypography>
+                <Box component={Grid}  item xs={12} md={6}>
+                    <StyledTypography variant="h4" sx={{textAlign:'center', marginBottom: '10px'}} >Setup</StyledTypography>
+                    <StyledTypography><strong>Dependencies:</strong> {setup.dependencies}</StyledTypography>
+                    <StyledTypography><strong>Dev Server:</strong> {setup.devServer}</StyledTypography>
+                    <StyledTypography><strong>Frontend:</strong> {setup.frontend}</StyledTypography>
+                    <StyledTypography><strong>Live Build:</strong> {setup.liveBuild}</StyledTypography>
+                    <Box sx={{marginTop:'5px'}}>
+                    <StyledTypography variant="h7" sx={{textAlign:'center'}}> <strong> Notes: </strong> </StyledTypography>
                     {setup.notes.map((note, index) => (
                         <StyledTypography key={index} paragraph>
                             {note}
                         </StyledTypography>
                     ))}
+                    </Box>
                 </Box>
 
-               
-                {/* Contributions and License */}
-                <Box item xs={12}>
-                    <StyledTypography variant="h5">Contributions</StyledTypography>
-                    <StyledTypography paragraph>{contributions}</StyledTypography>
-                    <StyledTypography variant="h5">License</StyledTypography>
-                    <StyledTypography paragraph>{license}</StyledTypography>
-                </Box>
             </Box>
         </Box>
     );
