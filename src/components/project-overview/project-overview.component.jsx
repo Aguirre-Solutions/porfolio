@@ -5,7 +5,7 @@ import { StyledTypography, StyledLink, StyledVerticalDivider, StyledHorizontalDi
 const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
 
     const { isMobile, isTablet } = checks;
-    const { title, image, link, githubLink, highlightedTechnologies, description, techStack, highlights } = project
+    const { title, image, link, githubLink, highlightedTechnologies, description, setup, usage, contributions, license } = project
 
     const getIcon = (tech) => {
         return technologyIcons[tech];
@@ -79,11 +79,56 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
             </Box>
     
             {/* Description */}
-            <Box item xs={12} component={Grid}>
-                <StyledTypography variant="h3" sx={{ textAlign: 'center' }}>Description</StyledTypography>
-                <StyledTypography>
-                    {description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum."}
-                </StyledTypography>
+            <Box component={Grid} container spacing={3}>
+                <Box item xs={12} mt={2}>
+                    <StyledTypography variant="h3" sx={{textAlign:'center'}}>Description</StyledTypography>
+                    {description.map((paragraph, index) => (
+                        <StyledTypography key={index} paragraph>
+                            {paragraph}
+                        </StyledTypography>
+                    ))}
+                </Box>
+
+                 {/* Usage Information */}
+                 <Box item xs={12}>
+                    <StyledTypography variant="h5">Usage</StyledTypography>
+                    {Object.entries(usage).map(([key, value], index) => (
+                    <StyledTypography key={index} paragraph>
+                        <strong>
+                        {key
+                            .replace(/([A-Z])/g, ' $1')
+                            .replace(/^./, function(str) { return str.toUpperCase(); })
+                            .trim()}:
+                        </strong> {value}
+                    </StyledTypography>
+                    ))}
+
+                </Box>
+
+
+
+                {/* Setup Instructions */}
+                <Box item xs={12}>
+                    <StyledTypography variant="h5">Setup</StyledTypography>
+                    <StyledTypography>Dependencies: {setup.dependencies}</StyledTypography>
+                    <StyledTypography>Dev Server: {setup.devServer}</StyledTypography>
+                    <StyledTypography>Frontend: {setup.frontend}</StyledTypography>
+                    <StyledTypography>Live Build: {setup.liveBuild}</StyledTypography>
+                    {setup.notes.map((note, index) => (
+                        <StyledTypography key={index} paragraph>
+                            {note}
+                        </StyledTypography>
+                    ))}
+                </Box>
+
+               
+                {/* Contributions and License */}
+                <Box item xs={12}>
+                    <StyledTypography variant="h5">Contributions</StyledTypography>
+                    <StyledTypography paragraph>{contributions}</StyledTypography>
+                    <StyledTypography variant="h5">License</StyledTypography>
+                    <StyledTypography paragraph>{license}</StyledTypography>
+                </Box>
             </Box>
         </Box>
     );
