@@ -10,7 +10,7 @@ const Brief = ({theme, checks}) => {
     return (
         <>
             {/* Details Component */}
-            <Box component={Grid} item xs={12} md={3}>
+            <Box component={Grid} item xs={12} md={4}>
                 <Details theme={theme} checks={checks} />
             </Box>
 
@@ -19,7 +19,7 @@ const Brief = ({theme, checks}) => {
                 <StyledHorizontalDivider sx={{ width:'80%' }} checks={checks} />
              </Box>
             :
-            <Box component={Grid} item  ml={isTablet ? 3 : 0 }  md={1} display="flex" justifyContent="center">
+            <Box component={Grid} item  ml={isTablet ? 3 : -10 }  md={1} display="flex" justifyContent="center">
                 <StyledVerticalDivider checks={checks} />
             </Box>
             }

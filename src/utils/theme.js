@@ -31,6 +31,8 @@ const theme = createTheme({
       deepPurple: '#7D2E68',
       darkGrey: '#4A5759',
       lightPastelPink: '#FCF2EE',
+      aquamarine: '#a5ffd6',
+      brown: '#DBD1D5',
     }
   },
   breakpoints: {

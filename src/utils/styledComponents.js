@@ -56,6 +56,14 @@ export const StyledTypography = styled(Typography)(({ theme }) => ({
     },
 }));
 
+export const StyledLegend = styled(Typography)(({ theme }) => ({
+    fontFamily: 'Cormorant',
+    lineHeight: '.5em',
+    color: theme.palette.additional.magenta, 
+    fontSize:'12px', 
+    fontWeight:'900'
+}));
+
 export const StyledLink = styled(Link)(({ theme }) => ({
     cursor: 'pointer',
     textDecoration: 'none',
