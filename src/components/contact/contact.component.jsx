@@ -34,7 +34,7 @@ const Contact = ({theme}) => {
                 <Tooltip title='Send me an email'>
                     <StyledIconButton 
                         component={Link}
-                        href=''
+                        href='mailto:rubenaguirrelizcano@gmail.com'
                         target="_blank"
                         rel="noopener noreferrer"
                         sx={{ padding: padding,}}

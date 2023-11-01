@@ -33,7 +33,7 @@ const Project = () => {
     return (   
         <Box>   
             <ProjectOverview project={project} technologyIcons={technologyIcons} checks={checks} theme={theme}/>
-            <ProjectDetailed project={project} />        
+            <ProjectDetailed project={project} checks={checks} />        
         </Box>
         )
 }

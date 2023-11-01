@@ -39,7 +39,51 @@ export const projectsData = [
         search: "Search: Search for recipes using tags or keywords."
         },
         contributions: "This project is not open for contributions as it's intended for portfolio purposes.",
-        license: "This project is for educational and portfolio purposes. Please ensure to give credit if you use any part of the code or design."
+        license: "This project is for educational and portfolio purposes. Please ensure to give credit if you use any part of the code or design.",
+        highlights: {
+            authentication: {
+                description: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
+                image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                codeImage: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                technology: "React: Context and State, Firebase"
+            },
+            search: {
+                description: "Search: Search for recipes using tags or keywords.",
+                image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                codeImage: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                technology: "React: Context and State, Firestore"
+            },
+            sharing: {
+                description: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
+                image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                codeImage: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                technology: "Social Media APIs"
+            },
+            dailyRecipe: {
+                description: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
+                image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                codeImage: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                technology: "React: Carousel Components, Firebase"
+            },
+            profile: {
+                description: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
+                image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                codeImage: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                technology: "React: Private Routes, Firebase Auth"
+            },
+            upload: {
+                description: "Upload: Users can upload recipes with images, instructions, ingredients, and more.",
+                image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                codeImage: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                technology: "React: Forms and Validation, Firebase Storage"
+            },
+            edit: {
+                description: "Edit: Users can edit their recipes.",
+                image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                codeImage: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                technology: "React: State Management, Firestore"
+            }
+        }
   },
   {
     id: 2,
