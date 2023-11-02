@@ -1,4 +1,5 @@
 import {styled} from "@mui/material/styles";
+
 import { Toolbar, Divider, Button, Typography, AppBar, IconButton, Chip} from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -66,11 +67,16 @@ export const StyledLegend = styled(Typography)(({ theme }) => ({
 
 export const StyledLink = styled(Link)(({ theme }) => ({
     cursor: 'pointer',
-    textAlign:'center',
+    display: 'block', // Make the link a block-level element
+    textAlign: 'left',
+    wordBreak: 'break-all', // Break the link at any point if necessary
     textDecoration: 'none',
     '&:hover': {
         textDecoration: 'none',
         color: theme.palette.additional.magenta,
+    },
+    [theme.breakpoints.down("lg")]: {
+        textAlign: 'center',
     },
 }));
 
@@ -86,18 +92,19 @@ export const StyledChip = styled(Chip)(({ theme }) => ({
 }));
 
 export const StyledHighlightChip = styled(Chip)(({ theme }) => ({
-    backgroundColor: theme.palette.additional.aquamarine,
+    backgroundColor: theme.palette.additional.lightPurple,
     color: theme.palette.primary.contrastText,
+    borderRadius: '2px',
     fontFamily: 'Cormorant',
     fontWeight: 'bold',
-    variant: "filled",
-    margin: '2px',
+    margin: '5px',
     marginY: '5px',
-    padding : '2px', 
+    padding : '2px',
+    paddingY: '1px', 
     fontSize:'20px',
+    lineHeight: '1em',
     '&:hover': {
-        backgroundColor: theme.palette.info.main,
-        color: 'white'
-    
+        backgroundColor: theme.palette.additional.deepPurple,
+        color: 'white',
     }
 }));

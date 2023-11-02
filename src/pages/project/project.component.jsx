@@ -33,7 +33,7 @@ const Project = () => {
     return (   
         <Grid container  spacing={3}  alignItems="center" xs={12} md={9} sx={{margin: '0 auto'}}>
             <ProjectOverview project={project} technologyIcons={technologyIcons} checks={checks} theme={theme}/>
-            <ProjectDetailed project={project} checks={checks} />        
+            <ProjectDetailed project={project} theme={theme} checks={checks} />        
         </Grid>
         )
 }

@@ -28,6 +28,7 @@ const theme = createTheme({
     },
     additional: {
       magenta: '#d30c7b',
+      lightPurple: '#D388BF',
       deepPurple: '#7D2E68',
       darkGrey: '#4A5759',
       lightPastelPink: '#FCF2EE',

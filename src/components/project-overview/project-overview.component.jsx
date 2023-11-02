@@ -15,7 +15,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
         <>
             {/* Left Side - Image */}
             <Grid item xs={12} lg={5} display="flex" justifyContent="center">
-                    <img src={image} style={{ maxWidth: '100%', maxHeight: '400px' }} />
+                    <img src={image} style={{ maxWidth: '100%', maxHeight: '400px', borderRadius:'10px' }} />
             </Grid>
            
             {isTablet ? 
