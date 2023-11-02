@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ProjectDataContext } from "../../context/project-data.component";
 import { ThemeValuesContext } from "../../context/theme-values.context";
 
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 
 import ProjectOverview from "../../components/project-overview/project-overview.component";
 import ProjectDetailed from "../../components/project-detailed/project-detailed.component";
@@ -31,10 +31,10 @@ const Project = () => {
     
     
     return (   
-        <Box>   
+        <Grid container  spacing={3}  alignItems="center" xs={12} md={9} sx={{margin: '0 auto'}}>
             <ProjectOverview project={project} technologyIcons={technologyIcons} checks={checks} theme={theme}/>
             <ProjectDetailed project={project} checks={checks} />        
-        </Box>
+        </Grid>
         )
 }
 

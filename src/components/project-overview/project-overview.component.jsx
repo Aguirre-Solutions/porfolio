@@ -12,39 +12,39 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
     }
 
     return (
-        <Box container component={Grid} spacing={3}  alignItems="center" xs={12} md={9} sx={{margin: '0 auto'}}>
+        <>
             {/* Left Side - Image */}
-            <Box item xs={12} lg={5} component={Grid}>
-                <img src={image} alt={title} style={{ width: '100%' }} />
-            </Box>
+            <Grid item xs={12} lg={5} display="flex" justifyContent="center">
+                    <img src={image} style={{ maxWidth: '100%', maxHeight: '400px' }} />
+            </Grid>
            
             {isTablet ? 
-            <Box item xs={12} lg={1} component={Grid} display="flex" justifyContent="center">
+            <Grid item xs={12}  display="flex" justifyContent="center">
                 <StyledHorizontalDivider sx={{ width:'80%' }} checks={checks} />
-             </Box>
+             </Grid>
             :
-            <Box item xs={false} lg={1} component={Grid} ml={isTablet ? 3 : 0} display="flex" justifyContent="center" alignItems="center">
+            <Grid item xs={false} lg={1} ml={isTablet ? 3 : 0} display="flex" justifyContent="center" alignItems="center">
                 <StyledVerticalDivider checks={checks} />
-            </Box>
+            </Grid>
             }
     
             {/* Right Side */}
-            <Box item xs={12} lg={5} component={Grid}>
+            <Grid item xs={12} lg={5} component={Grid}>
                 {/* Title */}
                 <StyledTypography variant={isDesktop ? 'h3' : 'h4'} sx={{textAlign: isLaptop ? 'center' : 'center'}}>{title}</StyledTypography>
                 
                 {/* Links */}
-                <Box sx={{ padding: '10px', margin: '5px 0' }}>
+                <Box>
                     <StyledTypography sx={{fontWeight:'500'}}>
-                    <strong>Web Page:</strong> 
-                        <StyledLink href={link} sx={{color:theme.palette.primary.main, fontWeight: 900, marginLeft:'0.5em'}}>{link}</StyledLink>
+                    Web Page: 
                     </StyledTypography>
+                    <StyledLink href={link} sx={{color:theme.palette.primary.main, fontWeight: 900 }}>{link}</StyledLink>              
                 </Box>
-                <Box sx={{ padding: '10px', margin: '5px 0' }}>
+                <Box>
                     <StyledTypography sx={{fontWeight:'500'}}>
-                        <strong>Github:</strong> 
-                        <StyledLink href={githubLink} sx={{color:theme.palette.primary.main, fontWeight: 900, marginLeft:'0.5em'}}>{githubLink}</StyledLink>
+                        Github: 
                     </StyledTypography>
+                    <StyledLink href={githubLink} sx={{color:theme.palette.primary.main, fontWeight: 900}}>{githubLink}</StyledLink>
                 </Box>
 
                 {/* Tech Stack */}
@@ -69,14 +69,14 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                 </Box>
                 
                 {/* Highlights */}
-                <Box item xs={12} component={Grid}>
+                <Grid item xs={12} component={Grid}>
                     <StyledTypography variant="h6">Highlights</StyledTypography>
-                </Box>
-            </Box>
+                </Grid>
+            </Grid>
 
-            <Box item xs={12} md={12} component={Grid} display="flex" justifyContent="center">
+            <Grid item xs={12} display="flex" justifyContent="space-between">
                 <StyledHorizontalDivider checks={checks} sx={{marginBottom:'30px'}} />
-             </Box>
+             </Grid>
     
             {/* Description */}
             <Box component={Grid} container spacing={2}>
@@ -90,7 +90,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                 </Box>
 
                  {/* Usage Information */}
-                 <Box component={Grid}  item xs={12} md={6}>
+                 <Grid item xs={12} md={6}>
                     <StyledTypography variant="h4" sx={{textAlign:'center', marginBottom: '10px'}}>Usage</StyledTypography>
                     {Object.entries(usage).map(([key, value], index) => (
                     <StyledTypography key={index} paragraph sx={{lineHeight:'1em'}}>
@@ -104,12 +104,12 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                     </StyledTypography>
                     ))}
 
-                </Box>
+                </Grid>
 
 
 
                 {/* Setup Instructions */}
-                <Box component={Grid}  item xs={12} md={6}>
+                <Grid item xs={12} md={6}>
                     <StyledTypography variant="h4" sx={{textAlign:'center', marginBottom: '10px'}} >Setup</StyledTypography>
                     <StyledTypography><strong>Dependencies:</strong> {setup.dependencies}</StyledTypography>
                     <StyledTypography><strong>Dev Server:</strong> {setup.devServer}</StyledTypography>
@@ -123,10 +123,10 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                         </StyledTypography>
                     ))}
                     </Box>
-                </Box>
+                </Grid>
 
             </Box>
-        </Box>
+        </>
     );
 }
   
