@@ -85,7 +85,7 @@ export const StyledChip = styled(Chip)(({ theme }) => ({
 }));
 
 export const StyledHighlightChip = styled(Chip)(({ theme }) => ({
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.additional.aquamarine,
     color: theme.palette.primary.contrastText,
     fontFamily: 'Cormorant',
     fontWeight: 'bold',
@@ -94,4 +94,9 @@ export const StyledHighlightChip = styled(Chip)(({ theme }) => ({
     marginY: '5px',
     padding : '2px', 
     fontSize:'20px',
+    '&:hover': {
+        backgroundColor: theme.palette.info.main,
+        color: 'white'
+    
+    }
 }));

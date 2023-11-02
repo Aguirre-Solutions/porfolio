@@ -1,5 +1,5 @@
 import {  Box, Chip, Grid } from '@mui/material'
-import { StyledTypography, StyledLink, StyledVerticalDivider, StyledHorizontalDivider, StyledChip, StyledHi } from '../../utils/styledComponents'
+import { StyledTypography, StyledLink, StyledVerticalDivider, StyledHorizontalDivider, StyledChip } from '../../utils/styledComponents'
 
 
 const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {

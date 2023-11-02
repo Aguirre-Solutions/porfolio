@@ -1,18 +1,12 @@
 import {useState} from 'react';
 import { Box, Grid, Chip, Stack } from '@mui/material';
-import { StyledTypography, StyledVerticalDivider, StyledHorizontalDivider } from '../../utils/styledComponents';
+import { StyledTypography, StyledHorizontalDivider, StyledHighlightChip } from '../../utils/styledComponents';
 
 const ProjectDetailed = ({ project, checks, }) => {
 
     const [selectedHighlight, setSelectedHighlight] = useState(null)
     
     const {
-        title,
-        description,
-        technologyStack,
-        setup,
-        usage,
-        contributions,
         highlights
     } = project;
 
@@ -25,7 +19,7 @@ const ProjectDetailed = ({ project, checks, }) => {
     }
 
     return (
-        <Box component={Grid} container spacing={3} mb={6}>
+        <Box component={Grid} container spacing={3} mb={6} >
 
 
             <Box item xs={12} component={Grid} display="flex" justifyContent="center">
@@ -39,9 +33,9 @@ const ProjectDetailed = ({ project, checks, }) => {
                 </StyledTypography>
             </Box>
             
-            <Box component={Grid} item xs={12} md={6} display='flex' justifyContent='space-between' sx={{width:'50%', margin:'0 auto'}}>
+            <Box component={Grid} item xs={12} md={6} display='flex' justifyContent='space-around' sx={{width:'50%', margin:'0 auto'}}>
                 {highlightKeys.map((key, index) => (
-                    <Chip 
+                    <StyledHighlightChip 
                     key={index} 
                     label={key}
                     onClick={() => handleChipClick(key)}
