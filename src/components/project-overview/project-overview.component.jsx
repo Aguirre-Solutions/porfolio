@@ -11,6 +11,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
         return technologyIcons[tech];
     }
 
+
     return (
         <>
             {/* Left Side - Image */}

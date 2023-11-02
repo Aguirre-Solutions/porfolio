@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import theme from  './utils/theme.js'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import { ThemeProvider } from '@mui/material/styles'
 import ThemeValuesProvider from './context/theme-values.component.jsx'
