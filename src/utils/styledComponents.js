@@ -66,14 +66,11 @@ export const StyledLegend = styled(Typography)(({ theme }) => ({
 
 export const StyledLink = styled(Link)(({ theme }) => ({
     cursor: 'pointer',
-    textAlign:'left',
+    textAlign:'center',
     textDecoration: 'none',
     '&:hover': {
         textDecoration: 'none',
         color: theme.palette.additional.magenta,
-    },
-    [theme.breakpoints.down("md")]: {
-        alignContent: 'center',
     },
 }));
 
