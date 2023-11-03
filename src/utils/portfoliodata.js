@@ -64,7 +64,7 @@ export const projectsData = [
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
                         description: "In the SignIn component, I've implemented a simple sign-in interface using Firebase for authentication, with options for email or Google login. It smartly redirects users after sign-in and provides immediate feedback on input errors. There's also a quick link for new users to switch to SignUp. The SingUp component is very similar."
                     
-                    },
+                    }
                 ],
                 technology: "React: Context and State, Firebase",
                 githubLink: ""

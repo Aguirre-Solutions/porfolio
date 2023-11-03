@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Box, Grid } from '@mui/material';
 import { StyledTypography, StyledHorizontalDivider, StyledHighlightChip } from '../../utils/styledComponents';
+
 import ProjectImageCarousel from '../project-image-carousel/project-image-carousel.component';
 
 const ProjectDetailed = ({ project, checks, theme }) => {
@@ -76,24 +77,18 @@ const ProjectDetailed = ({ project, checks, theme }) => {
                 <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{marginTop:'50px'}}>
                     
                     {/* Display the description */}
-                    <Grid item xs={12} md={8}>
+                    <Grid item xs={12} md={10} sx={{marginBottom:'20px'}}>
                         <StyledTypography style={{ textAlign: 'center' }}>{selectedHighlight.description}</StyledTypography>
                     </Grid>
 
-                    {/* Display the first image and its description
-                    <Box component={Grid} item xs={12} md={6} display="flex" flexDirection="column" alignItems="center">
-                        <img src={selectedHighlight.images[0].link} alt={selectedHighlight.images[0].description} style={{ maxWidth: '100%', maxHeight: '200px' }} />
-                        <StyledTypography style={{ textAlign: 'center' }}>{selectedHighlight.images[0].description}</StyledTypography>
-                    </Box>
-
-                 
-                    {/* Display the first code image and its description */}
-                    {/* <Box component={Grid} item xs={12} md={6} display="flex" flexDirection="column" alignItems="center">
-                        <img src={selectedHighlight.codeImages[0].link} alt={selectedHighlight.codeImages[0].description} style={{ maxWidth: '100%', maxHeight: '200px' }} />
-                        <StyledTypography style={{ textAlign: 'center' }}>{selectedHighlight.codeImages[0].description}</StyledTypography>
-                    </Box> */}
-
+                    <Grid item xs={12} md={12} lg={5}>
                     <ProjectImageCarousel images={selectedHighlight.images} />
+                    </Grid>
+                    <Grid item xs={12} md={1}> </Grid>
+                    <Grid item xs={12} md={12} lg={5}>
+                    <ProjectImageCarousel images={selectedHighlight.codeImages} />
+                    </Grid>
+
 
 
 

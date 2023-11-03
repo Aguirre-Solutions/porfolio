@@ -108,3 +108,13 @@ export const StyledHighlightChip = styled(Chip)(({ theme }) => ({
         color: 'white',
     }
 }));
+
+export const StyledCaption = styled(Typography)(({ theme }) => ({
+    fontFamily: 'Cormorant',
+    textAlign: 'center',
+    fontSize: '12px',
+    flex: '1',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+}));

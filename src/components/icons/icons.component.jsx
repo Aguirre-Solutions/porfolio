@@ -2,6 +2,8 @@ import {TbBrandNodejs} from 'react-icons/tb';
 import {SiMongodb, SiFirebase, SiReact, SiTypescript, SiGithub, SiRedux, SiMui} from 'react-icons/si';
 import { Box, Grid } from "@mui/material";
 
+import {SlArrowRight, SlArrowLeft} from 'react-icons/sl'
+
 const Icons = ({checks}) => {
     const iconSize = 30;
 

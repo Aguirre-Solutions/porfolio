@@ -1,34 +1,35 @@
-import Slider from "react-slick"
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from "react-slick";
+
+import { Box  } from '@mui/material';
+import {PrevArrow, NextArrow} from '../carousel-ui/carousel-ui.component';
+
+import CarouselImage from '../carousel-image/carousel-image.component';
 
 
+const ProjectImageCarousel = ({images})=> {
 
-
-const ProjectImageCarousel = ({ images }) => {
-
-    // Settings for the carousel
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-    };
-
-    console.log(images);
+    
+  const settings = {
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerPadding: '0',
+    className: 'highlight-slider',
+    nextArrow: <NextArrow size="30px"/>,
+    prevArrow: <PrevArrow size="30px"/>,
+  };
 
     return (
         <Slider {...settings}>
-            {images.map((image, index) => {
-                console.log(image.link);
-                const img = image.link
-                return (
-                    <div key={index}>
-                        <img src={img} alt={`Project image ${index}`} style={{height:'50px'}} />
-                    </div>
-                )
-            })}
+            {images.map((image, index) => (
+                <Box key={index}>
+                    <CarouselImage image={image} />                    
+                </Box>
+            ))} 
         </Slider>
     )
 }
 
-export default ProjectImageCarousel; 
+export default ProjectImageCarousel;

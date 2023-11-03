@@ -3,7 +3,6 @@
 portfolio
 ├─ .eslintrc.cjs
 ├─ .git
-
 ├─ .gitignore
 ├─ index.html
 ├─ package.json
@@ -19,6 +18,10 @@ portfolio
 │  ├─ components
 │  │  ├─ about-snippet
 │  │  │  └─ about-snippet.component.jsx
+│  │  ├─ carousel-arrows
+│  │  │  └─ carousel-arrows.component.jsx
+│  │  ├─ contact
+│  │  │  └─ contact.component.jsx
 │  │  ├─ details
 │  │  │  └─ details.component.jsx
 │  │  ├─ education-item
@@ -31,12 +34,17 @@ portfolio
 │  │  │  └─ icons.component.jsx
 │  │  ├─ portfolio-item
 │  │  │  └─ portfolio-item.component.jsx
-│  │  ├─ resume
-│  │  │  └─ resume.component.jsx
+│  │  ├─ project-detailed
+│  │  │  └─ project-detailed.component.jsx
+│  │  ├─ project-image-carousel
+│  │  │  └─ project-image-carousel.component.jsx
+│  │  ├─ project-overview
+│  │  │  └─ project-overview.component.jsx
 │  │  └─ skills
 │  │     └─ skills.component.jsx
 │  ├─ constants
 │  ├─ context
+│  │  ├─ project-data.component.jsx
 │  │  ├─ theme-values.component.jsx
 │  │  └─ theme-values.context.jsx
 │  ├─ index.css
@@ -52,10 +60,13 @@ portfolio
 │  │  │  └─ home.component.jsx
 │  │  ├─ navigation
 │  │  │  └─ navigation.component.jsx
-│  │  └─ portfolio
-│  │     └─ portfolio.component.jsx
+│  │  ├─ portfolio
+│  │  │  └─ portfolio.component.jsx
+│  │  └─ project
+│  │     └─ project.component.jsx
 │  └─ utils
 │     ├─ deviceHelpers.js
+│     ├─ portfoliodata.js
 │     ├─ styledComponents.js
 │     └─ theme.js
 ├─ vite.config.js
