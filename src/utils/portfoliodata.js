@@ -74,26 +74,36 @@ export const projectsData = [
                 images: [
                     {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
+                        description: "This is the search bar, the placeholder changes to different products as examples. You can search via exact match or keywords."
                     
                     },
                     {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
+                        description: "It can be used in different parts of the app."
                     
                     },
                 ],
                 codeImages: [
                     {
                         link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
+                        description: "I designed SearchBarBox to engage users with rotating prompts, sparking their appetite for adventure in the kitchen. Every few seconds, a new culinary quest appears, inviting them to explore the endless possibilities of recipes." 
                     },
                     {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
+                        description: "My goal was to keep the UI clutter-free, so I implemented a conditional render that switches between showing trending recipes and the user's search results. It ensures a seamless and focused culinary discovery experience."
                     },
-                ],                technology: "React: Context and State, Firestore",
+                    {
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "In the handleChange function, I've set up a straightforward search-trigger mechanism. As users type, it begins the hunt for recipes, making the search process intuitive and dynamic."
+                    },
+                    {
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "With the SearchResults component, I aimed to create a pleasing look. The search yields a tidy grid of recipe cards, each a snapshot and a gateway to a delicious dish, just a click away."
+                    },
+
+
+                ],  
+                technology: "React: Context and State, Firestore",
                 githubLink: ""
             },
             sharing: {
@@ -104,52 +114,44 @@ export const projectsData = [
                         description: "Firebase Authentication"
                     
                     },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
                 ],
                 codeImages: [
                     {
                         link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
+                        description:"I designed a custom  hook to control the visibility and placement of a share window popup. With a click the window appears right where the user needs it, enhancing the interactivity of the UI."
                     },
                     {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
+                        description: "To make useShareWindow work I implemented a React portal to seamlessly render components like modals outside the regular DOM hierarchy. This allows me to place elements exactly where needed on the screen, ensuring a consistent and clean user experience."
+                    },
+                    {
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "The actual share window implements this ideas by using the coordinates for the positioning of the paper. The sharing process is handlged by the library React-Share"
+                    },
+                    {
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "This code showcases the integration of a FacebookShareButton with a custom StopPropagationWrapper for seamless social sharing, ensuring click events don't bubble up unexpectedly in the app."
                     },
                 ],
-                technology: "Social Media APIs",
+                technology: "React, React Hooks, React Portals, React-Share",
                 githubLink: ""
             },
             dailyRecipe: {
-                description: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
+                description: "I developed a DailyRecipe component which enhances user engagement by showcasing a daily featured recipe. I integrated the previously mentioned favourite system that allows users to mark recipes as favourites and incorporated a social sharing functionality with a custom hook for a seamless user experience. To improve performance and responsiveness, I also implemented a utility to optimize image loading. This leads users to share it, or save it to their favorites, or even upload their own recipes.",
                 images: [
                     {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
+                        description: "In designing this UI, I prioritized clarity and visual appeal. I chose a soothing color palette to invite users into a daily culinary exploration. I decided on an intuitive layout, where the day's featured recipe is presented with accessible action buttons—'Go to Recipe' and 'Share'—to encourage user engagement. I incorporated interactive elements like the favorite icon, which animates upon interaction, to create a satisfying user experience."
+                                       
                     },
                 ],
                 codeImages: [
                     {
                         link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
+                        description: "In the useDailyRecipeSelector custom React hook, I designed a function that takes an array of recipes and determines the 'Recipe of the Day' based on the current date. It formats the date into a reader-friendly version and uses it to cycle through the recipe list for a fresh selection every day. If the recipe list is empty, the hook adapts to display a message indicating no available recipe."
                     },
                 ],
-                technology: "React: Carousel Components, Firebase",
+                technology: "React, Custom React Hooks, Cloudinary, React Router",
                 githubLink: ""
             },
             profile: {
@@ -181,55 +183,64 @@ export const projectsData = [
                 githubLink: ""
             },
             upload: {
-                description: "Upload: Users can upload recipes with images, instructions, ingredients, and more.",
+                description: "Recipe Upload: Enables users to contribute their own recipes, complete with images, preparation times, ingredients, instructions, and tags for a rich culinary sharing experience. The Edit component functions similarly, allowing users to update their recipes with ease.",
                 images: [
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/recipe_upload_ui_xf8eax.png",
+                    description: "User Interface for recipe upload, using Material-UI components for a clean and responsive design."
+                  },
                 ],
                 codeImages: [
-                    {
-                        link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/recipe_upload_hooks_xf8eax.png",
+                    description: "Utilization of React's useState and useContext hooks for managing the form's state and user authentication."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/recipe_upload_form_handling_xf8eax.png",
+                    description: "The useForm hook from react-hook-form is used to handle form submission, validation, and resetting the form state."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/recipe_upload_navigation_xf8eax.png",
+                    description: "Leveraging the useNavigate hook from React Router for post-submission navigation to the newly created recipe page."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/recipe_upload_snackbar_xf8eax.png",
+                    description: "Implementation of a Snackbar component for user notifications utilizing a custom useSnackbar hook for enhanced UX."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/recipe_upload_image_upload_xf8eax.png",
+                    description: "Integration of image uploading logic with feedback on progress and error handling for a seamless user experience. Using cloudinary and serverless functions to manage upload."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/recipe_upload_tag_management_xf8eax.png",
+                    description: "Complex tag input functionality, allowing users to add and remove tags dynamically, enriching the recipe metadata."
+                  },
                 ],
-                technology: "React: Forms and Validation, Firebase Storage",
+                technology: "React, React Hooks, Material-UI, React Router, Cloudinary API",
                 githubLink: ""
-            },
-            edit: {
+              },            
+            favouriting: {
                 description: "Edit: Users can edit their recipes.",
                 images: [
                     {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
+                        description: "I made favouriting one click away whenever a recipe is in view."
                     
                     },
                     {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
+                        description: "Favourites show up in the User Profile"
                     
                     },
                 ],
                 codeImages: [
                     {
                         link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
+                        description: "The favorite functionality in UserProvider is the cornerstone of personalizing the user experience. It asynchronously updates the user's favorite recipes, allowing them to effortlessly curate their own collection of go-to dishes, and reflects changes in real-time, thanks to Firebase integration."
                     },
                     {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
+                        description: "This function utilizes Firebase to update a user's favorite recipes list, checking for uniqueness before appending the new choice, all to create a curated culinary journey."
                     
                     },
                 ],
