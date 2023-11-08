@@ -17,8 +17,8 @@ const ProjectImageCarousel = ({images})=> {
     slidesToScroll: 1,
     centerPadding: '0',
     className: 'highlight-slider',
-    nextArrow: <NextArrow size="30px"/>,
-    prevArrow: <PrevArrow size="30px"/>,
+    nextArrow: <NextArrow size="20px"/>,
+    prevArrow: <PrevArrow size="20px"/>,
   };
 
     return (

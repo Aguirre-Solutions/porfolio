@@ -155,32 +155,37 @@ export const projectsData = [
                 githubLink: ""
             },
             profile: {
-                description: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
+                description: "I developed a feature that allows users to manage their own recipes and favorite recipes, enhancing their experience with a personalized dashboard for all CRUD operations.",
                 images: [
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "The User Profile Interface is where you can manage your recipes, delete them, edit them or share them. You can also see your favorite recipes."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "Search functionality within the profile to quickly add more recipes to your favorites."
+                  },
                 ],
                 codeImages: [
-                    {
-                        link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "I made the UserProfile component to act as a central hub for user interactions, integrating React Context for global state management and hooks to manage component lifecycle and state."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "I utilized the useEffect hook to fetch user-specific recipes upon user ID changes, which I implemented to ensure real-time data synchronization with the user's actions."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "I chose a conditional rendering approach for this component, allowing it to display content based on the active tab. This showcases my approach to efficient UI state management. A similar approach is taken to display the delete and edit buttons on the images. Edited for image size, the full code is available in the repository."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "I integrated programmatic navigation using the useNavigate hook from React Router to redirect users to different parts of the app, reflecting my attention to a seamless user journey."
+                  },
                 ],
-                technology: "React: Private Routes, Firebase Auth",
-                githubLink: ""
+                technology: "React, React Hooks, Context API, Material UI, React Router",
+                githubLink: "https://github.com/yourusername/your-repo-name"
             },
             upload: {
                 description: "Recipe Upload: Enables users to contribute their own recipes, complete with images, preparation times, ingredients, instructions, and tags for a rich culinary sharing experience. The Edit component functions similarly, allowing users to update their recipes with ease.",
@@ -215,10 +220,14 @@ export const projectsData = [
                     link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/recipe_upload_tag_management_xf8eax.png",
                     description: "Complex tag input functionality, allowing users to add and remove tags dynamically, enriching the recipe metadata."
                   },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/recipe_upload_ingredient_management_xf8eax.png",
+                    description: "All of the code is extracted into reusable forms, re used in the Edit page."
+                  }
                 ],
                 technology: "React, React Hooks, Material-UI, React Router, Cloudinary API",
                 githubLink: ""
-              },            
+            },            
             favouriting: {
                 description: "Edit: Users can edit their recipes.",
                 images: [
@@ -249,26 +258,14 @@ export const projectsData = [
             },
             convenience: {
                 description: "These are small hooks, or utils that came in handy during coding.",
-                images: [
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    
-                    },
-                ],
                 codeImages: [
                     {
-                        link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
-                    },
-                    {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Firebase Authentication"
+                        description: "Observing Firebase's interchangeable handling of user sign-ins and registrations, I deliberately employed the handleGoogleAuthentication hook across the SignIn and SignUpForm components. This integration takes advantage of Firebase's backend logic, providing a uniform authentication route for users. My decision underscores a thoughtful design choice that not only streamlines the user's journey but also simplifies the development process by aligning closely with Firebase's inherent functionality."
+                    
+                    },                    {
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "Oding a uniform authentication route for users. My decision underscores a thoughtful design choice that not only streamlines the user's journey but also simplifies the development process by aligning closely with Firebase's inherent functionality."
                     
                     },
                 ],
@@ -783,18 +780,6 @@ export const projectsData = [
         },
         convenience: {
             description: "These are small hooks, or utils that came in handy during coding.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
             codeImages: [
                 {
                     link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",

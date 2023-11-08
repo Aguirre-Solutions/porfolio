@@ -39,7 +39,7 @@ const ProjectDetailed = ({ project, checks, theme }) => {
             </Grid>
             
             {/* Highlight chips */}
-            <Grid item xs={12} md={6} display='flex' justifyContent='space-around' sx={{margin:'0 auto'}}>
+            <Grid item xs={12} md={6} display='flex' justifyContent='space-around' sx={{mx:'auto'}}>
                 <Box 
                     sx={{ 
                         marginTop: '10px', 
@@ -71,30 +71,31 @@ const ProjectDetailed = ({ project, checks, theme }) => {
             </Grid>
 
             {/* Selected highlight */}
-            {/* Selected highlight */}
             {selectedHighlight && (
-                
-                <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{marginTop:'50px'}}>
-                    
-                    {/* Display the description */}
-                    <Grid item xs={12} md={10} sx={{marginBottom:'20px'}}>
-                        <StyledTypography style={{ textAlign: 'center' }}>{selectedHighlight.description}</StyledTypography>
-                    </Grid>
+  <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{ marginTop: '50px' }}>
+    
+    {/* Display the description */}
+    <Grid item xs={12} sx={{ marginBottom: '20px' }}>
+      <StyledTypography sx={{textAlign: 'center'}}>{selectedHighlight.description}</StyledTypography>
+    </Grid>
 
-                    <Grid item xs={12} md={12} lg={5}>
-                    <ProjectImageCarousel images={selectedHighlight.images} />
-                    </Grid>
-                    <Grid item xs={12} md={1}> </Grid>
-                    <Grid item xs={12} md={12} lg={5}>
-                    <ProjectImageCarousel images={selectedHighlight.codeImages} />
-                    </Grid>
+    {/* Conditionally render the image carousel for images or codeImages, but only display one if only one type is available */}
+    {((selectedHighlight.images && selectedHighlight.images.length > 0) || (selectedHighlight.codeImages && selectedHighlight.codeImages.length > 0)) && (
+      <Grid item p={4} xs={12} md={6} sx={{ width: '70%', margin: '0 auto' }}>
+        <ProjectImageCarousel images={selectedHighlight.images && selectedHighlight.images.length > 0 ? selectedHighlight.images : selectedHighlight.codeImages} />
+      </Grid>
+    )}
+
+    {/* Render the second carousel for codeImages if both images and codeImages are available */}
+    {selectedHighlight.images && selectedHighlight.images.length > 0 && selectedHighlight.codeImages && selectedHighlight.codeImages.length > 0 && (
+      <Grid item p={4} xs={12} md={6}>
+        <ProjectImageCarousel images={selectedHighlight.codeImages} />
+      </Grid>
+    )}
+  </Grid>
+)}
 
 
-
-
-
-                </Grid>
-            )}
 
 
 

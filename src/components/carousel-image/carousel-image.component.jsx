@@ -13,8 +13,8 @@ const CarouselImage = ({ image }) => {
             <img 
             src={image.link} 
             alt={image.description} 
-            style={{ width: '100%', maxHeight: '200px', borderRadius: '10px' }} />
-            <StyledCaption gutterBottom> {image.description} </StyledCaption>
+            style={{ width: '100%', maxHeight: '300px', borderRadius: '10px' }} />
+            <StyledCaption mt={2} gutterBottom sx={{overflow:'auto', paddingX:'4px'}}> {image.description} </StyledCaption>
         </Box>
     );
 };

@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import {Box} from '@mui/material';
 import { ThemeValuesContext } from '../../context/theme-values.context';
 
-import {TbCircleDotFilled} from 'react-icons/tb'
 import {SlArrowRight, SlArrowLeft} from 'react-icons/sl'
 
 
@@ -10,8 +9,6 @@ import {SlArrowRight, SlArrowLeft} from 'react-icons/sl'
 export const NextArrow = (props) => {
     const { className, style, onClick } = props;
     const {theme} = useContext(ThemeValuesContext);
-
-
 
     // Add conditional style based on the className
     const disabled = className.includes("slick-disabled");

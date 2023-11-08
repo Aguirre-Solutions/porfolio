@@ -110,11 +110,32 @@ export const StyledHighlightChip = styled(Chip)(({ theme }) => ({
 }));
 
 export const StyledCaption = styled(Typography)(({ theme }) => ({
-    fontFamily: 'Cormorant',
-    textAlign: 'center',
-    fontSize: '12px',
-    flex: '1',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  fontFamily: 'Cormorant',
+  textAlign: 'center',
+  fontSize: '12px',
+  flex: '1',
+  display: 'flex',
+  alignItems: 'flex-start',
+  justifyContent: 'center',
+  overflow: 'auto',
+  paddingX: '5px',
+
+  '&::-webkit-scrollbar': {
+    width: '5px',
+  },
+  '&::-webkit-scrollbar-track': {
+    background: 'transparent',
+  },
+  '&::-webkit-scrollbar-thumb': {
+    backgroundColor: '#EDAFB8',
+    borderRadius: '10px',
+    marginLeft: '5px',
+  },
+
+  // You can still add styles for other browsers if needed
+  // For example, for Firefox
+  scrollbarWidth: 'thin',
+  scrollbarColor: '#EDAFB8 transparent',
+
+  // ...any other styles you need
 }));
