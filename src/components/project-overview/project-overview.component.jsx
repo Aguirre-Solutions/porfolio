@@ -68,11 +68,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                         />
                     ))}
                 </Box>
-                
-                {/* Highlights */}
-                <Grid item xs={12} component={Grid}>
-                    <StyledTypography variant="h6">Highlights</StyledTypography>
-                </Grid>
+
             </Grid>
 
             <Grid item xs={12} display="block" justifyContent="space-between">

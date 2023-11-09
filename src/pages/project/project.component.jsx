@@ -40,7 +40,7 @@ const Project = () => {
         sx={{
             margin: 'auto',
             padding: isMobile ? '0' : '0 20px', 
-            width: '80%'
+            width: isTablet ? '100%' : '80%'
             
             }}>
             

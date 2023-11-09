@@ -10,14 +10,15 @@ export const NextArrow = (props) => {
     const { className, style, onClick } = props;
     const {theme, checks} = useContext(ThemeValuesContext);
 
-    const {isMobile} = checks;
+    const {isMobile, isTablet} = checks;
 
     // Add conditional style based on the className
     const disabled = className.includes("slick-disabled");
     const dynamicStyle = {
         ...style,
         display: "block",
-        right: '25px',
+        right: isMobile ? '40px' : isTablet ? '2px' : '25px',
+        zIndex: 1000,
         fontSize: '30px',
         color: disabled ? theme.palette.additional.lightPurple : theme.palette.additional.deepPurple, // Change color if disabled
     };
@@ -34,15 +35,19 @@ export const NextArrow = (props) => {
 
 export const PrevArrow = (props) => {
     const { className, style, onClick } = props;
-    const {theme} = useContext(ThemeValuesContext);
+    const {theme, checks} = useContext(ThemeValuesContext);
+
+    const {isMobile, isTablet} = checks;
+
 
 
     // Add conditional style based on the className
     const disabled = className.includes("slick-disabled");
     const dynamicStyle = {
         ...style,
-        left: '25px',
+        left: isMobile ? '40px' : isTablet ? '2px' : '25px',
         display: "block",
+        zIndex: 1000,
         fontSize: '30px',
         color: disabled ? theme.palette.additional.lightPurple : theme.palette.additional.deepPurple, // Change color if disabled
     };

@@ -24,7 +24,9 @@ const ProjectImageCarousel = ({images})=> {
     return (
         <Slider {...settings}>
             {images.map((image, index) => (
-                <Box key={index}>
+                <Box 
+                key={index}
+                sx={{marginTop:'20px'}}>
                     <CarouselImage image={image} />                    
                 </Box>
             ))} 
