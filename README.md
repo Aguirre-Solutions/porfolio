@@ -4,6 +4,7 @@ portfolio
 ├─ .eslintrc.cjs
 ├─ .git
 ├─ .gitignore
+├─ .hintrc
 ├─ index.html
 ├─ package.json
 ├─ public
@@ -18,8 +19,10 @@ portfolio
 │  ├─ components
 │  │  ├─ about-snippet
 │  │  │  └─ about-snippet.component.jsx
-│  │  ├─ carousel-arrows
-│  │  │  └─ carousel-arrows.component.jsx
+│  │  ├─ carousel-image
+│  │  │  └─ carousel-image.component.jsx
+│  │  ├─ carousel-ui
+│  │  │  └─ carousel-ui.component.jsx
 │  │  ├─ contact
 │  │  │  └─ contact.component.jsx
 │  │  ├─ details

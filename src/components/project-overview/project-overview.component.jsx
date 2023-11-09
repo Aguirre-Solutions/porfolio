@@ -54,9 +54,9 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                     sx={{ 
                         marginTop: '10px', 
                         display: 'flex', 
-                        justifyContent: isMobile ? 'center' : 'flex-start', 
+                        justifyContent: isMobile || isTablet ? 'center' : 'flex-start', 
                         flexWrap: 'wrap',
-                        alignContent: isMobile ? 'center' : 'flex-start',
+                        alignContent: isMobile || isTablet ? 'center' : 'flex-start',
                         flexDirection: 'row',
                         gap: 0
                     }}>

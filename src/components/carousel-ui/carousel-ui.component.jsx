@@ -17,7 +17,7 @@ export const NextArrow = (props) => {
     const dynamicStyle = {
         ...style,
         display: "block",
-        right: isMobile ? '40px' : isTablet ? '2px' : '25px',
+        right: isMobile ? '40px' : isTablet ? '-2px' : '25px',
         zIndex: 1000,
         fontSize: '30px',
         color: disabled ? theme.palette.additional.lightPurple : theme.palette.additional.deepPurple, // Change color if disabled
@@ -45,7 +45,7 @@ export const PrevArrow = (props) => {
     const disabled = className.includes("slick-disabled");
     const dynamicStyle = {
         ...style,
-        left: isMobile ? '40px' : isTablet ? '2px' : '25px',
+        left: isMobile ? '40px' : isTablet ? '-2px' : '25px',
         display: "block",
         zIndex: 1000,
         fontSize: '30px',

@@ -10,6 +10,8 @@ import CarouselImage from '../carousel-image/carousel-image.component';
 
 const ProjectImageCarousel = ({images})=> {
 
+
+
     
   const settings = {
     dots: true,
@@ -17,8 +19,8 @@ const ProjectImageCarousel = ({images})=> {
     slidesToScroll: 1,
     centerPadding: '0',
     className: 'highlight-slider',
-    nextArrow: <NextArrow size="20px"/>,
-    prevArrow: <PrevArrow size="20px"/>,
+    nextArrow: <NextArrow size="20px" />,
+    prevArrow: <PrevArrow size="20px" />,
   };
 
     return (
@@ -27,7 +29,7 @@ const ProjectImageCarousel = ({images})=> {
                 <Box 
                 key={index}
                 sx={{marginTop:'20px'}}>
-                    <CarouselImage image={image} />                    
+                    <CarouselImage image={image} checks={checks}  />                    
                 </Box>
             ))} 
         </Slider>

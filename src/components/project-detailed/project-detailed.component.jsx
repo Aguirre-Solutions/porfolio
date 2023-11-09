@@ -13,6 +13,7 @@ const ProjectDetailed = ({ project, checks, theme }) => {
     // Destructure the checks object to determine the device type
     const { isMobile, isTablet, isLaptop, isDesktop } = checks;
 
+
     // Get the keys of the highlights object
     const highlightKeys = Object.keys(highlights);
 
@@ -75,7 +76,7 @@ const ProjectDetailed = ({ project, checks, theme }) => {
 
             {/* Selected highlight */}
             {selectedHighlight && (
-            <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{ marginTop: '50px' }}>
+            <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{ marginTop: '50px', marginBottom:'50px' }}>
                 
                 {/* Display the description */}
                 <Grid item xs={12} sx={{ marginBottom: '20px' }}>
@@ -85,24 +86,18 @@ const ProjectDetailed = ({ project, checks, theme }) => {
                 {/* Conditionally render the image carousel for images or codeImages, but only display one if only one type is available */}
                 {((selectedHighlight.images && selectedHighlight.images.length > 0) || (selectedHighlight.codeImages && selectedHighlight.codeImages.length > 0)) && (
                 <Grid item xs={12} md={6} sx={{ margin: '0 auto' }}>
-                    <ProjectImageCarousel images={selectedHighlight.images && selectedHighlight.images.length > 0 ? selectedHighlight.images : selectedHighlight.codeImages} />
+                    <ProjectImageCarousel images={selectedHighlight.images && selectedHighlight.images.length > 0 ? selectedHighlight.images : selectedHighlight.codeImages} checks={checks}/>
                 </Grid>
                 )}
 
                 {/* Render the second carousel for codeImages if both images and codeImages are available */}
                 {selectedHighlight.images && selectedHighlight.images.length > 0 && selectedHighlight.codeImages && selectedHighlight.codeImages.length > 0 && (
                 <Grid item xs={12} md={6}>
-                    <ProjectImageCarousel images={selectedHighlight.codeImages} />
+                    <ProjectImageCarousel images={selectedHighlight.codeImages} checks={checks} />
                 </Grid>
                 )}
             </Grid>
             )}
-
-
-
-
-
-
           
         </Grid>
     );

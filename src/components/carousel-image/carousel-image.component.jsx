@@ -1,11 +1,17 @@
 import { Box } from "@mui/material"
 import { StyledCaption} from "../../utils/styledComponents"
 
-const CarouselImage = ({ image }) => {
+
+const CarouselImage = ({ image, checks }) => {
+
+
+    const {isMobile, isTablet, isLaptop, isDesktop} = checks;
+    
     return (
         <Box sx={{
             height: '500px', // Container height, adjust if necessary
             display: 'flex',
+            marginX: isTablet ? '20px' : 0, 
             flexDirection: 'column',
             justifyContent: 'center', // Centers content vertically within the container
             alignItems: 'center', // Centers content horizontally within the container
@@ -21,7 +27,7 @@ const CarouselImage = ({ image }) => {
                     margin: 'auto' // Centers the image horizontally within the container
                 }} 
             />
-            <StyledCaption mt={2} gutterBottom sx={{overflow:'auto', paddingX:'4px', paddingY:'20px'}}>
+            <StyledCaption mt={2} gutterBottom sx={{overflow:'auto', paddingX:'4px', paddingTop:'20px'}}>
                 {image.description}
             </StyledCaption>
         </Box>
