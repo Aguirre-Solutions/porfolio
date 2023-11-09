@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import {Box} from '@mui/material';
 import { ThemeValuesContext } from '../../context/theme-values.context';
 
 import {SlArrowRight, SlArrowLeft} from 'react-icons/sl'

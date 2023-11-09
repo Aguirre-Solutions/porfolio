@@ -21,6 +21,8 @@ portfolio
 │  │  │  └─ about-snippet.component.jsx
 │  │  ├─ carousel-image
 │  │  │  └─ carousel-image.component.jsx
+│  │  ├─ carousel-modal
+│  │  │  └─ carousel-modal.component.jsx
 │  │  ├─ carousel-ui
 │  │  │  └─ carousel-ui.component.jsx
 │  │  ├─ contact

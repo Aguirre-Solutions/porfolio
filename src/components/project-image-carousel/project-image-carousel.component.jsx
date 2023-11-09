@@ -8,7 +8,7 @@ import {PrevArrow, NextArrow} from '../carousel-ui/carousel-ui.component';
 import CarouselImage from '../carousel-image/carousel-image.component';
 
 
-const ProjectImageCarousel = ({images})=> {
+const ProjectImageCarousel = ({images, checks, theme})=> {
 
 
 
@@ -29,7 +29,7 @@ const ProjectImageCarousel = ({images})=> {
                 <Box 
                 key={index}
                 sx={{marginTop:'20px'}}>
-                    <CarouselImage image={image} checks={checks}  />                    
+                    <CarouselImage image={image} checks={checks} images={images} theme={theme}  />                    
                 </Box>
             ))} 
         </Slider>

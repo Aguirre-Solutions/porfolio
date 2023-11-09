@@ -16,9 +16,6 @@ const Home = () => {
 
     const {isMobile, isTablet, isLaptop, isDesktop} = checks;
 
-
-
-
    const [cardHeight, setCardHeight] = useState(1050);
     
     useEffect(() => {
