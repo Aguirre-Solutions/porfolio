@@ -35,7 +35,7 @@ export const StyledHorizontalDivider = styled(Divider)(({ theme }) => ({
     backgroundColor: theme.palette.secondary.main,
     marginX: '5px',
     height: '2px',
-    width: '90%',
+    width: '100%',
 }));
 
 export const StyledButton = styled(Button)(({ theme }) => ({

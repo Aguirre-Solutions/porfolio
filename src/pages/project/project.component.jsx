@@ -4,6 +4,7 @@ import { ProjectDataContext } from "../../context/project-data.component";
 import { ThemeValuesContext } from "../../context/theme-values.context";
 
 import { Grid, Box } from "@mui/material";
+import { StyledHorizontalDivider } from "../../utils/styledComponents";
 
 import ProjectOverview from "../../components/project-overview/project-overview.component";
 import ProjectDetailed from "../../components/project-detailed/project-detailed.component";
@@ -44,6 +45,11 @@ const Project = () => {
             }}>
             
             <ProjectOverview project={project} technologyIcons={technologyIcons} checks={checks} theme={theme}/>
+            {/* Horizontal divider */}
+            <Grid item xs={12} component={Grid} display="flex" justifyContent="center">
+            <StyledHorizontalDivider checks={checks} sx={{marginBottom:'30px'}} />
+            </Grid>
+    
             <ProjectDetailed project={project} theme={theme} checks={checks} />      
     
   

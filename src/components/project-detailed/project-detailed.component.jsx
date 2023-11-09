@@ -35,11 +35,7 @@ const ProjectDetailed = ({ project, checks, theme }) => {
 
             
             }} >
-            {/* Horizontal divider */}
-            <Grid item xs={12} component={Grid} display="flex" justifyContent="center">
-                <StyledHorizontalDivider checks={checks} sx={{marginBottom:'30px'}} />
-            </Grid>
-    
+
             {/* Title */}
             <Grid item xs={12}>
                 <StyledTypography variant='h4' sx={{textAlign:'Center'}}>

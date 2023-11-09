@@ -75,7 +75,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                 </Grid>
             </Grid>
 
-            <Grid item xs={12} display="flex" justifyContent="space-between">
+            <Grid item xs={12} display="block" justifyContent="space-between">
                 <StyledHorizontalDivider checks={checks} sx={{marginBottom:'30px'}} />
              </Grid>
     
