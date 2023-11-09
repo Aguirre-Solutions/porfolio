@@ -10,14 +10,11 @@ import CarouselImage from '../carousel-image/carousel-image.component';
 
 const ProjectImageCarousel = ({images, checks, theme})=> {
 
-
-
-    
+   
   const settings = {
     dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerPadding: '0',
     className: 'highlight-slider',
     nextArrow: <NextArrow size="20px" />,
     prevArrow: <PrevArrow size="20px" />,

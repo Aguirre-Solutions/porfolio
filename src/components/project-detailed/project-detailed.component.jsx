@@ -25,6 +25,8 @@ const ProjectDetailed = ({ project, checks, theme }) => {
         setSelectedHighlight(highlights[key]);
     }
 
+    console.log(theme)
+
     return (
         <Grid 
         container 

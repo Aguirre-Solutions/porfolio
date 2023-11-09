@@ -54,7 +54,9 @@ body {
 }
 
 
-
+.slick-slide div {
+  outline: none !important;
+}
 
 
 .slick-dots li button:before {

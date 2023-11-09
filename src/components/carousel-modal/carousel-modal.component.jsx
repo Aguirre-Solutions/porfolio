@@ -12,7 +12,6 @@ const CarouselModal = ({ theme, images, open, handleClose, initialSlide}) => {
         initialSlide: initialSlide,
         dots: true,
         infinite: true,
-        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         className: 'highlight-slider',
@@ -21,6 +20,7 @@ const CarouselModal = ({ theme, images, open, handleClose, initialSlide}) => {
 
         
     };
+    console.log(theme)
 
 
     return (
@@ -36,12 +36,11 @@ const CarouselModal = ({ theme, images, open, handleClose, initialSlide}) => {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           width: '80%',
+          outline:'none !important',
           borderRadius:'35px',
-          bgcolor: theme.palette.main.primary,
+          bgcolor: theme.palette.additional.lightPastelPink,
           boxShadow: 24,
           p: 4,
-          outline: 'none',
-          maxHeight: '90vh',
           overflowY: 'none',
         }}>
           <Slider {...sliderSettings}>
@@ -51,18 +50,20 @@ const CarouselModal = ({ theme, images, open, handleClose, initialSlide}) => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                maxHeight: '90vh',
+
               }}>
                 <img 
                   src={img.link} 
                   alt={img.description} 
                   style={{ 
                     width: '100%',
-                    maxHeight: '80vh',
+                    maxHeight: '70vh',
                     objectFit: 'contain',
                     borderRadius: '10px',
                   }} 
                 />
-                <StyledCaption sx={{overflow:'auto', paddingX:'4px', mt: 2, fontSize:'30px'}}>
+                <StyledCaption sx={{overflow: 'auto', maxHeight:'20vh', paddingX:'4px', mt: 2, fontSize:'25px'}}>
                   {img.description}
                 </StyledCaption>
               </Box>
