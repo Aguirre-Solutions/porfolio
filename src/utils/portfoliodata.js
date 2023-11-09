@@ -45,29 +45,125 @@ export const projectsData = [
                 description: "In creating the `AuthPage` component, I designed a user-friendly interface for both signing in and signing up. I made the decision to manage the display with a simple toggle state, allowing users to switch views with ease.  I chose a centered layout for a clean and focused user experience, with the forms adapting dynamically to the user's needs. The snackbar messages are set to appear at the top of the page, ensuring they are noticeable yet unobtrusive. I leveraged ",
                 images: [
                     {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1699488289/portfolio/Nibble%20Notebook/Authentication/Signin_j9cxr7.png",
                         description: "Sign in page"
                     
                     },
                     {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1699488289/portfolio/Nibble%20Notebook/Authentication/SignUp_nniz6r.png",
                         description: "Sign up page"
                     
                     },
                 ],
                 codeImages: [
                     {
-                        link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        link:"https://res.cloudinary.com/recipeb00k/image/upload/v1699488290/portfolio/Nibble%20Notebook/Authentication/CodeAuth_m4i53n.png",
                         description: "Both views are components on the AuthPage page. A simple react state is set to switch between the two views."
                     },
                     {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1699488291/portfolio/Nibble%20Notebook/Authentication/codeSingIn_ofpwr7.png",
                         description: "In the SignIn component, I've implemented a simple sign-in interface using Firebase for authentication, with options for email or Google login. It smartly redirects users after sign-in and provides immediate feedback on input errors. There's also a quick link for new users to switch to SignUp. The SingUp component is very similar."
                     
                     }
                 ],
                 technology: "React: Context and State, Firebase",
+                githubLink: "https://github.com/louderthanme/recipes-second-version/tree/main/src/components/Authentication"
+            },
+            dailyRecipe: {
+                description: "I developed a DailyRecipe component which enhances user engagement by showcasing a daily featured recipe. I integrated the previously mentioned favourite system that allows users to mark recipes as favourites and incorporated a social sharing functionality with a custom hook for a seamless user experience. To improve performance and responsiveness, I also implemented a utility to optimize image loading. This leads users to share it, or save it to their favorites, or even upload their own recipes.",
+                images: [
+                    {
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "In designing this UI, I prioritized clarity and visual appeal. I chose a soothing color palette to invite users into a daily culinary exploration. I decided on an intuitive layout, where the day's featured recipe is presented with accessible action buttons—'Go to Recipe' and 'Share'—to encourage user engagement. I incorporated interactive elements like the favorite icon, which animates upon interaction, to create a satisfying user experience."
+                                       
+                    },
+                ],
+                codeImages: [
+                    {
+                        link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "In the useDailyRecipeSelector custom React hook, I designed a function that takes an array of recipes and determines the 'Recipe of the Day' based on the current date. It formats the date into a reader-friendly version and uses it to cycle through the recipe list for a fresh selection every day. If the recipe list is empty, the hook adapts to display a message indicating no available recipe."
+                    },
+                ],
+                technology: "React, Custom React Hooks, Cloudinary, React Router",
                 githubLink: ""
+            },
+            favouriting: {
+                description: "Edit: Users can edit their recipes.",
+                images: [
+                    {
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "I made favouriting one click away whenever a recipe is in view."
+                    
+                    },
+                    {
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "Favourites show up in the User Profile"
+                    
+                    },
+                ],
+                codeImages: [
+                    {
+                        link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "The favorite functionality in UserProvider is the cornerstone of personalizing the user experience. It asynchronously updates the user's favorite recipes, allowing them to effortlessly curate their own collection of go-to dishes, and reflects changes in real-time, thanks to Firebase integration."
+                    },
+                    {
+                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                        description: "This function utilizes Firebase to update a user's favorite recipes list, checking for uniqueness before appending the new choice, all to create a curated culinary journey."
+                    
+                    },
+                ],
+                technology: "React: State Management, Firestore",
+                githubLink: ""
+            },
+            profile: {
+                description: "I developed a feature that allows users to manage their own recipes and favorite recipes, enhancing their experience with a personalized dashboard for all CRUD operations.",
+                images: [
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "The User Profile Interface is where you can manage your recipes, delete them, edit them or share them. You can also see your favorite recipes."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "Search functionality within the profile to quickly add more recipes to your favorites."
+                  },
+                ],
+                codeImages: [
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "I made the UserProfile component to act as a central hub for user interactions, integrating React Context for global state management and hooks to manage component lifecycle and state."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "I utilized the useEffect hook to fetch user-specific recipes upon user ID changes, which I implemented to ensure real-time data synchronization with the user's actions."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "I chose a conditional rendering approach for this component, allowing it to display content based on the active tab. This showcases my approach to efficient UI state management. A similar approach is taken to display the delete and edit buttons on the images. Edited for image size, the full code is available in the repository."
+                  },
+                  {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "I integrated programmatic navigation using the useNavigate hook from React Router to redirect users to different parts of the app, reflecting my attention to a seamless user journey."
+                  },
+                ],
+                technology: "React, React Hooks, Context API, Material UI, React Router",
+                githubLink: "https://github.com/yourusername/your-repo-name"
+            },
+            resposiveness: {
+                description: "Every single page or view in this app responds to mobile, tablet or desktop sizes.",
+                images: [
+                    {
+                        link:'',
+                        description: 'Home page'
+                    },
+                    {
+                        link:'',
+                        description: 'Upload/edit page'
+                    },
+                    {
+                        link:'',
+                        description: ''
+                    },
+                ],
             },
             search: {
                 description: "Search: Search for recipes using tags or keywords.",
@@ -136,57 +232,6 @@ export const projectsData = [
                 technology: "React, React Hooks, React Portals, React-Share",
                 githubLink: ""
             },
-            dailyRecipe: {
-                description: "I developed a DailyRecipe component which enhances user engagement by showcasing a daily featured recipe. I integrated the previously mentioned favourite system that allows users to mark recipes as favourites and incorporated a social sharing functionality with a custom hook for a seamless user experience. To improve performance and responsiveness, I also implemented a utility to optimize image loading. This leads users to share it, or save it to their favorites, or even upload their own recipes.",
-                images: [
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "In designing this UI, I prioritized clarity and visual appeal. I chose a soothing color palette to invite users into a daily culinary exploration. I decided on an intuitive layout, where the day's featured recipe is presented with accessible action buttons—'Go to Recipe' and 'Share'—to encourage user engagement. I incorporated interactive elements like the favorite icon, which animates upon interaction, to create a satisfying user experience."
-                                       
-                    },
-                ],
-                codeImages: [
-                    {
-                        link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "In the useDailyRecipeSelector custom React hook, I designed a function that takes an array of recipes and determines the 'Recipe of the Day' based on the current date. It formats the date into a reader-friendly version and uses it to cycle through the recipe list for a fresh selection every day. If the recipe list is empty, the hook adapts to display a message indicating no available recipe."
-                    },
-                ],
-                technology: "React, Custom React Hooks, Cloudinary, React Router",
-                githubLink: ""
-            },
-            profile: {
-                description: "I developed a feature that allows users to manage their own recipes and favorite recipes, enhancing their experience with a personalized dashboard for all CRUD operations.",
-                images: [
-                  {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "The User Profile Interface is where you can manage your recipes, delete them, edit them or share them. You can also see your favorite recipes."
-                  },
-                  {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Search functionality within the profile to quickly add more recipes to your favorites."
-                  },
-                ],
-                codeImages: [
-                  {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "I made the UserProfile component to act as a central hub for user interactions, integrating React Context for global state management and hooks to manage component lifecycle and state."
-                  },
-                  {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "I utilized the useEffect hook to fetch user-specific recipes upon user ID changes, which I implemented to ensure real-time data synchronization with the user's actions."
-                  },
-                  {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "I chose a conditional rendering approach for this component, allowing it to display content based on the active tab. This showcases my approach to efficient UI state management. A similar approach is taken to display the delete and edit buttons on the images. Edited for image size, the full code is available in the repository."
-                  },
-                  {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "I integrated programmatic navigation using the useNavigate hook from React Router to redirect users to different parts of the app, reflecting my attention to a seamless user journey."
-                  },
-                ],
-                technology: "React, React Hooks, Context API, Material UI, React Router",
-                githubLink: "https://github.com/yourusername/your-repo-name"
-            },
             upload: {
                 description: "Recipe Upload: Enables users to contribute their own recipes, complete with images, preparation times, ingredients, instructions, and tags for a rich culinary sharing experience. The Edit component functions similarly, allowing users to update their recipes with ease.",
                 images: [
@@ -228,34 +273,6 @@ export const projectsData = [
                 technology: "React, React Hooks, Material-UI, React Router, Cloudinary API",
                 githubLink: ""
             },            
-            favouriting: {
-                description: "Edit: Users can edit their recipes.",
-                images: [
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "I made favouriting one click away whenever a recipe is in view."
-                    
-                    },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Favourites show up in the User Profile"
-                    
-                    },
-                ],
-                codeImages: [
-                    {
-                        link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "The favorite functionality in UserProvider is the cornerstone of personalizing the user experience. It asynchronously updates the user's favorite recipes, allowing them to effortlessly curate their own collection of go-to dishes, and reflects changes in real-time, thanks to Firebase integration."
-                    },
-                    {
-                        link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "This function utilizes Firebase to update a user's favorite recipes list, checking for uniqueness before appending the new choice, all to create a curated culinary journey."
-                    
-                    },
-                ],
-                technology: "React: State Management, Firestore",
-                githubLink: ""
-            },
             convenience: {
                 description: "These are small hooks, or utils that came in handy during coding.",
                 codeImages: [
@@ -265,9 +282,13 @@ export const projectsData = [
                     
                     },                    {
                         link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                        description: "Oding a uniform authentication route for users. My decision underscores a thoughtful design choice that not only streamlines the user's journey but also simplifies the development process by aligning closely with Firebase's inherent functionality."
+                        description: "I've created a handy React component named StopPropagationWrapper to prevent click events from bubbling up the DOM tree. By wrapping elements with this, I ensure that any click event inside is contained, making it super convenient when I need to isolate interactive elements without affecting the surrounding elements."
                     
                     },
+                    {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+                    description: "I've integrated a custom React hook, useSnackbar, with the Material-UI Snackbar component to streamline displaying notifications in my app. This hook initializes with a default severity state and exposes functions to show and hide the snackbar, which are wired to the MUI Alert's properties. The complete interaction is smooth and efficient, leveraging MUI's polished visual components. For those interested in seeing the full implementation and how it fits into a larger application, the complete code is available in the repository."
+                    },                    
                 ],
                 technology: "Javascript, custom hooks, utils, and more",
                 githubLink: ""

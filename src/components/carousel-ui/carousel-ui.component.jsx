@@ -8,13 +8,16 @@ import {SlArrowRight, SlArrowLeft} from 'react-icons/sl'
 
 export const NextArrow = (props) => {
     const { className, style, onClick } = props;
-    const {theme} = useContext(ThemeValuesContext);
+    const {theme, checks} = useContext(ThemeValuesContext);
+
+    const {isMobile} = checks;
 
     // Add conditional style based on the className
     const disabled = className.includes("slick-disabled");
     const dynamicStyle = {
         ...style,
         display: "block",
+        right: '25px',
         fontSize: '30px',
         color: disabled ? theme.palette.additional.lightPurple : theme.palette.additional.deepPurple, // Change color if disabled
     };
@@ -38,6 +41,7 @@ export const PrevArrow = (props) => {
     const disabled = className.includes("slick-disabled");
     const dynamicStyle = {
         ...style,
+        left: '25px',
         display: "block",
         fontSize: '30px',
         color: disabled ? theme.palette.additional.lightPurple : theme.palette.additional.deepPurple, // Change color if disabled

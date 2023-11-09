@@ -18,6 +18,7 @@ const Project = () => {
     const {checks, theme} = useContext(ThemeValuesContext);
     const project = projects.find((p) => p.id === parseInt(id, 10));
 
+    const { isMobile, isTablet, isLaptop, isDesktop } = checks;
     
     const technologyIcons = {
         'React': <SiReact />,
@@ -31,7 +32,16 @@ const Project = () => {
     
     
     return (   
-        <Grid container spacing={3}  alignItems="center" sx={{margin: '0 auto', width: '80%'}}>
+        <Grid 
+        container 
+        spacing={3}  
+        alignItems="center" 
+        sx={{
+            margin: 'auto',
+            padding: isMobile ? '0' : '0 20px', 
+            width: '80%'
+            
+            }}>
             
             <ProjectOverview project={project} technologyIcons={technologyIcons} checks={checks} theme={theme}/>
             <ProjectDetailed project={project} theme={theme} checks={checks} />      

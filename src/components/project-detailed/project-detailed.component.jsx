@@ -25,7 +25,16 @@ const ProjectDetailed = ({ project, checks, theme }) => {
     }
 
     return (
-        <Grid container spacing={3} sx={{marginBottom:'200px'}} >
+        <Grid 
+        container 
+        spacing={3} 
+        sx={{
+            margin: 'auto',
+            marginBottom:'20px',
+            padding: isMobile ? '0' : '0 20px',
+
+            
+            }} >
             {/* Horizontal divider */}
             <Grid item xs={12} component={Grid} display="flex" justifyContent="center">
                 <StyledHorizontalDivider checks={checks} sx={{marginBottom:'30px'}} />
@@ -39,13 +48,13 @@ const ProjectDetailed = ({ project, checks, theme }) => {
             </Grid>
             
             {/* Highlight chips */}
-            <Grid item xs={12} md={6} display='flex' justifyContent='space-around' sx={{mx:'auto'}}>
+            <Grid item xs={12} md={6} lg={6} display='flex' justifyContent='space-around' sx={{mx:'auto'}}>
                 <Box 
                     sx={{ 
                         marginTop: '10px', 
                         display: 'flex', 
                         justifyContent: 'center', 
-                        flexWrap: isMobile ? 'wrap' : 'nowrap',
+                        flexWrap: isMobile? 'wrap' : 'nowrap',
                         alignContent: 'center',
                         flexDirection: 'row',
                         gap: 0

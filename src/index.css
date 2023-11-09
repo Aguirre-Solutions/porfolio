@@ -11,6 +11,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  margin: 0;
+  overflow-x: hidden; /* Hide horizontal scroll */
+  
+}
 
 @media (prefers-color-scheme: light) {
   :root {

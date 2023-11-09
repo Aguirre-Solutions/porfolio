@@ -132,10 +132,8 @@ export const StyledCaption = styled(Typography)(({ theme }) => ({
     marginLeft: '5px',
   },
 
-  // You can still add styles for other browsers if needed
-  // For example, for Firefox
+//firefox
   scrollbarWidth: 'thin',
   scrollbarColor: '#EDAFB8 transparent',
 
-  // ...any other styles you need
 }));
