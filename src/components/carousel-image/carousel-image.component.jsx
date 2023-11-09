@@ -3,7 +3,7 @@ import { Box, } from "@mui/material";
 import CarouselModal  from '../carousel-modal/carousel-modal.component';   
 import { StyledCaption } from '../../utils/styledComponents';
 
-const CarouselImage = ({ image, checks, images }) => {
+const CarouselImage = ({ image, checks, images, theme }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -42,6 +42,7 @@ const CarouselImage = ({ image, checks, images }) => {
       </Box>
 
       <CarouselModal
+        theme={theme}
         open={open}
         handleClose={handleClose}
         images={images}
