@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Grid } from '@mui/material';
 import { StyledTypography, StyledHorizontalDivider, StyledHighlightChip } from '../../utils/styledComponents';
 
 import ProjectImageCarousel from '../project-image-carousel/project-image-carousel.component';
 
 const ProjectDetailed = ({ project, checks, theme }) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
 
     
     // Destructure the highlights object from the project prop
