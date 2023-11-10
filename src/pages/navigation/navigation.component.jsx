@@ -3,8 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Box, Typography, Toolbar } from "@mui/material";
 import {StyledToolbar, StyledRouterLink, StyledAppBar} from "../../utils/styledComponents";
 import { ThemeValuesContext } from "../../context/theme-values.context";
-
-const Navigation = () => {
+ ion = () => {
 
     const {theme} = useContext(ThemeValuesContext);
 
