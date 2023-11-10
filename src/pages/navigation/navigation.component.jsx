@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState, useContext } from "react";
 import { Outlet } from "react-router-dom";
 import { Box, Typography, Toolbar } from "@mui/material";
-import {StyledToolbar, StyledLink, StyledAppBar} from "../../utils/styledComponents";
+import {StyledToolbar, StyledRouterLink, StyledAppBar} from "../../utils/styledComponents";
 import { ThemeValuesContext } from "../../context/theme-values.context";
 
 const Navigation = () => {
@@ -43,13 +43,9 @@ const Navigation = () => {
                             noWrap 
                             component="div"
                         >
-                        <StyledLink 
-                        to="/" 
-                        sx={{ color: isScrolled ? theme.palette.common.white : `${theme.palette.secondary.main}`,
-                    }}>
-                        
+                        <StyledRouterLink to="/" sx={{ color: isScrolled ? theme.palette.common.white : `${theme.palette.secondary.main}`}}>                    
                             Home
-                        </StyledLink>
+                        </StyledRouterLink>
                         </Typography>
                     </Box>
                 </StyledToolbar>

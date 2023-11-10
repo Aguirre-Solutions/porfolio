@@ -1,6 +1,7 @@
 import {styled} from "@mui/material/styles";
 
 import { Toolbar, Divider, Button, Typography, AppBar, IconButton, Chip, Link} from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 
 export const StyledIconButton = styled(IconButton)(({ theme }) => ({
@@ -76,6 +77,18 @@ export const StyledLink = styled(Link)(({ theme }) => ({
     },
     [theme.breakpoints.down("lg")]: {
         textAlign: 'center',
+    },
+}));
+
+export const StyledRouterLink = styled(RouterLink)(({ theme }) => ({
+    cursor: 'pointer',
+    display: 'block', // Make the link a block-level element
+    textAlign: 'left',
+    wordBreak: 'break-all', // Break the link at any point if necessary
+    textDecoration: 'none',
+    '&:hover': {
+        textDecoration: 'none',
+        color: theme.palette.additional.magenta,
     },
 }));
 
