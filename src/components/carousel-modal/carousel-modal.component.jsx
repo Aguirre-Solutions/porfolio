@@ -6,7 +6,9 @@ import {PrevArrow, NextArrow} from '../carousel-ui/carousel-ui.component';
 
 
 
-const CarouselModal = ({ theme, images, open, handleClose, initialSlide}) => {
+const CarouselModal = ({ theme, images, open, handleClose, initialSlide, checks}) => {
+
+    const { isMobile, isTablet } = checks;
 
     const sliderSettings = {
         initialSlide: initialSlide,
@@ -20,7 +22,6 @@ const CarouselModal = ({ theme, images, open, handleClose, initialSlide}) => {
 
         
     };
-    console.log(theme)
 
 
     return (
@@ -35,7 +36,7 @@ const CarouselModal = ({ theme, images, open, handleClose, initialSlide}) => {
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: '80%',
+          width: isMobile ? '100%' : '80%',
           outline:'none !important',
           borderRadius:'35px',
           bgcolor: theme.palette.additional.lightPastelPink,
@@ -50,7 +51,8 @@ const CarouselModal = ({ theme, images, open, handleClose, initialSlide}) => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                maxHeight: '90vh',
+                mb: 2,
+                height: '90vh',
 
               }}>
                 <img 
@@ -58,14 +60,17 @@ const CarouselModal = ({ theme, images, open, handleClose, initialSlide}) => {
                   alt={img.description} 
                   style={{ 
                     width: '100%',
-                    maxHeight: '70vh',
+                    height: '70vh',
                     objectFit: 'contain',
                     borderRadius: '10px',
                   }} 
                 />
-                <StyledCaption sx={{overflow: 'auto', maxHeight:'20vh', paddingX:'4px', mt: 2, fontSize:'25px'}}>
-                  {img.description}
-                </StyledCaption>
+                <Box mb={2}>
+                  <StyledCaption sx={{overflow: 'auto', height:'20vh', paddingX: isMobile ? '20px' : '40px', mt: 2, fontSize:'25px',  alignItems: isTablet || isMobile ? 'flex-start' : 'center'}}>
+                    {img.description} <br></br>
+                  </StyledCaption>
+                </Box>
+                  
               </Box>
             ))}
           </Slider>

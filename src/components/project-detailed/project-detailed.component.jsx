@@ -87,7 +87,7 @@ const ProjectDetailed = ({ project, checks, theme }) => {
 
                 {/* Conditionally render the image carousel for images or codeImages, but only display one if only one type is available */}
                 {((selectedHighlight.images && selectedHighlight.images.length > 0) || (selectedHighlight.codeImages && selectedHighlight.codeImages.length > 0)) && (
-                <Grid item xs={12} md={6} sx={{ margin: '0 auto' }}>
+                <Grid item xs={12} md={6} >
                     <ProjectImageCarousel images={selectedHighlight.images && selectedHighlight.images.length > 0 ? selectedHighlight.images : selectedHighlight.codeImages} checks={checks}theme={theme}/>
                 </Grid>
                 )}

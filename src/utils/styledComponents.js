@@ -115,7 +115,7 @@ export const StyledCaption = styled(Typography)(({ theme }) => ({
   fontSize: '12px',
   flex: '1',
   display: 'flex',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   justifyContent: 'center',
   overflow: 'auto',
   paddingX: '5px',
