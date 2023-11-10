@@ -26,7 +26,7 @@ const Home = () => {
 
 
     return (
-        <Grid container justifyContent="center" alignItems="center" spacing={3}>
+        <Grid container justifyContent="center" alignItems="center" spacing={3} sx={{marginBottom:'30px'}}>
             
             <Brief theme={theme} checks={checks} />
 
