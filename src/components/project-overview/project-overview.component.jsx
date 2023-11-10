@@ -7,6 +7,8 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
     const { isMobile, isTablet, isLaptop, isDesktop } = checks;
     const { title, image, link, githubLink, highlightedTechnologies, description, setup, usage, contributions, license } = project
 
+    console.log(link, githubLink)
+
     const getIcon = (tech) => {
         return technologyIcons[tech];
     }
@@ -39,13 +41,28 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                     <StyledTypography sx={{fontWeight:'500'}}>
                     Web Page: 
                     </StyledTypography>
-                    <StyledLink href={link} sx={{color:theme.palette.primary.main, fontWeight: 900 }}>{link}</StyledLink>              
+                    <StyledLink 
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    sx={{color:theme.palette.primary.main, fontWeight: 900 }}
+                    >
+                        {link}
+                    </StyledLink> 
                 </Box>
                 <Box>
                     <StyledTypography sx={{fontWeight:'500'}}>
                         Github: 
+
                     </StyledTypography>
-                    <StyledLink href={githubLink} sx={{color:theme.palette.primary.main, fontWeight: 900}}>{githubLink}</StyledLink>
+                    <StyledLink 
+                    href={githubLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    sx={{ color: theme.palette.primary.main, fontWeight: 900 }}
+                    >
+                        {githubLink}
+                    </StyledLink>
                 </Box>
 
                 {/* Tech Stack */}
