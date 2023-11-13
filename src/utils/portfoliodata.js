@@ -302,8 +302,8 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Nibble Notebook",
-    link: "https://nibblenotebook.com",
+    title: "Clothing Store",
+    link: "https://https://hilarious-concha-0e6255.netlify.app",
     githubLink: "https://github.com/louderthanme/recipes-second-version",
     image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
     shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
@@ -569,10 +569,10 @@ export const projectsData = [
 },
 {
     id: 3,
-    title: "Nibble Notebook",
+    title: "Yelp Camp",
     link: "https://nibblenotebook.com",
     githubLink: "https://github.com/louderthanme/recipes-second-version",
-    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699904373/portfolio/YelpCamp/homepage_umpgz2.jpg",
     shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
     description: [
     "This application allows users to upload and manage recipes. Users can add images, instructions, ingredients, and more to their recipes.",
@@ -824,7 +824,7 @@ export const projectsData = [
 },
 {
     id: 4,
-    title: "Nibble Notebook",
+    title: "Recipes 1.0",
     link: "https://nibblenotebook.com",
     githubLink: "https://github.com/louderthanme/recipes-second-version",
     image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
