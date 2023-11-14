@@ -21,7 +21,7 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
     }
 
     return (
-        <Card elevation={0} sx={{backgroundColor:'#efefef'}}>
+        <Card elevation={0} sx={{backgroundColor:'#efefef', }}>
             <CardMedia
                 sx={{ height: 0, paddingTop: '56.25%' }}
                 image={image}

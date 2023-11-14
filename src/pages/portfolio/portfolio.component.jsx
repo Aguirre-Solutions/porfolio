@@ -2,27 +2,16 @@ import { useContext } from 'react';
 import { Box, Grid } from '@mui/material';
 import { StyledTypography } from '../../utils/styledComponents';
 import PortfolioItem from '../../components/portfolio-item/portfolio-item.component';
-import {SiReact,SiMui, SiFirebase, SiMongodb} from 'react-icons/si';
-import {FaNodeJs} from 'react-icons/fa';
-import cloudinaryIconSrc from '../../assets/cloudinary.svg';
 
 import { ProjectDataContext } from '../../context/project-data.component';
 
 const Portfolio = ({checks}) => {
 
-    const projectsData = useContext(ProjectDataContext);
+    const {projectsData, technologyIcons} = useContext(ProjectDataContext);
 
     const {isMobile} = checks;   
     
-    const technologyIcons = {
-        'React': <SiReact />,
-        'Node.js': <FaNodeJs />,
-        'Firebase': <SiFirebase />,
-        'Material UI': <SiMui />,
-        'Cloudinary': <img src={cloudinaryIconSrc} alt="Cloudinary" style={{ width: '24px', height: '24px' }} />,
-        'MongoDB': <SiMongodb />
-      };
-      
+
     
 
 
