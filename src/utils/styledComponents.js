@@ -111,8 +111,7 @@ export const StyledHighlightChip = styled(Chip)(({ theme }) => ({
     fontWeight: 'bold',
     margin: '5px',
     marginY: '5px',
-    padding : '2px',
-    paddingY: '1px', 
+    padding : '5px',
     fontSize:'20px',
     lineHeight: '1em',
     '&:hover': {
