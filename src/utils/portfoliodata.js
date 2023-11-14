@@ -21,7 +21,7 @@ export const projectsData = [
         "Express (for the development server)",
         "Serverless functions (for deployment)"
         ],
-        highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI'],
+        highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI', 'Vercel'],
         setup: {
         dependencies: "yarn install",
         devServer: "yarn start-server",
@@ -305,7 +305,7 @@ export const projectsData = [
     title: "Clothing Store",
     link: "https://https://hilarious-concha-0e6255.netlify.app",
     githubLink: "https://github.com/louderthanme/recipes-second-version",
-    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699927325/portfolio/Clothing%20Store/Web_capture_13-11-2023_20125_hilarious-concha-0e6255.netlify.app_yiclaw.jpg",
     shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
     description: [
     "This application allows users to upload and manage recipes. Users can add images, instructions, ingredients, and more to their recipes.",
@@ -322,7 +322,7 @@ export const projectsData = [
     "Express (for the development server)",
     "Serverless functions (for deployment)"
     ],
-    highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI'],
+    highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI', 'Netlify'],
     setup: {
     dependencies: "yarn install",
     devServer: "yarn start-server",
@@ -568,258 +568,83 @@ export const projectsData = [
     }
 },
 {
-    id: 3,
-    title: "Yelp Camp",
-    link: "https://nibblenotebook.com",
-    githubLink: "https://github.com/louderthanme/recipes-second-version",
-    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699904373/portfolio/YelpCamp/homepage_umpgz2.jpg",
-    shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
+    id: 3, // Assuming this is the second project in your portfolio
+    title: "YelpCamp",
+    link: "http://yelpcamp.com", // Replace with the actual link if available
+    githubLink: "https://github.com/louderthanme/YelpCamp",
+    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699904373/portfolio/YelpCamp/homepage_umpgz2.jpg", // Replace with the actual image link
+    shortDescription: "Yelp for camping enthusiasts! Create and review campgrounds. It features user authentication, campground management, and reviews.",
     description: [
-    "This application allows users to upload and manage recipes. Users can add images, instructions, ingredients, and more to their recipes.",
-    "The application supports user authentication via email/password and Google authentication. Once authenticated, users can view their profile, showcasing all the recipes they've uploaded or saved to their favorites.",
-    "The app also features a daily recipe and a carousel of featured recipes. Each recipe showcase includes images and ingredients for quick reference.",
-    "Additionally, users can share recipes on Facebook, WhatsApp, and Twitter.",
-    "A search function is available, allowing users to search recipes by tags or keywords."
+        "YelpCamp is a platform for users to share and discover campgrounds. Users can post campgrounds with details and images, and others can leave reviews.",
+        "The application includes user authentication, allowing users to sign up, log in, and manage their campground posts.",
+        "Features include creating and editing campgrounds, posting reviews, and user profile management.",
+        "Implemented security measures like input validation, authentication, and authorization to ensure a safe user experience.",
+        "Responsive design ensures a seamless experience across various devices."
     ],
     technologyStack: [
-    "React",
-    "Vite",
-    "Firebase (for authentication and database)",
-    "Cloudinary (for image uploads)",
-    "Express (for the development server)",
-    "Serverless functions (for deployment)"
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Passport.js",
+        "EJS",
+        "Bootstrap"
     ],
-    highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI'],
+    highlightedTechnologies: ['Node.js', 'Express', 'Cloudinary','MongoDB', 'Passport.js', 'EJS', 'Bootstrap'],
     setup: {
-    dependencies: "yarn install",
-    devServer: "yarn start-server",
-    frontend: "yarn dev",
-    liveBuild: "yarn start",
-    notes: [
-        "Firebase and Cloudinary are already set up for use. This repository is intended for portfolio purposes, so no additional setup for Firebase or Cloudinary is required."
-    ]
+        dependencies: "npm install",
+        database: "MongoDB setup required",
+        devServer: "nodemon app.js",
+        notes: [
+            "Ensure to set up the .env file with the required environment variables for database and session configuration."
+        ]
     },
     usage: {
-    authentication: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
-    profile: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-    dailyRecipe: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
-    sharing: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-    search: "Search: Search for recipes using tags or keywords."
+        authentication: "User Authentication: Users can sign up and log in using email and password.",
+        campgroundManagement: "Campground Management: Authenticated users can create, edit, and delete their campground posts.",
+        reviews: "Reviews: Users can post and view reviews on campgrounds.",
+        userProfiles: "User Profiles: Users can manage their profiles and view their campground contributions."
     },
-    contributions: "This project is not open for contributions as it's intended for portfolio purposes.",
-    license: "This project is for educational and portfolio purposes. Please ensure to give credit if you use any part of the code or design.",
+    contributions: "This project is open for contributions. Please read the guidelines in the README.md file before contributing.",
+    license: "This project is licensed under the ISC license.",
     highlights: {
         authentication: {
-            description: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
+            description: "Implemented user authentication using Passport.js, allowing for secure sign-up and login functionalities.",
             images: [
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
+                    link: '',
+                    description: ''
+                }
+
             ],
             codeImages: [
                 {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
+                    link: '',
+                    description: ''
+                }
             ],
-            technology: "React: Context and State, Firebase",
-            githubLink: ""
+            technology: "Passport.js, Express, MongoDB",
+            githubLink: "https://github.com/louderthanme/YelpCamp/tree/master/controllers/users.js"
         },
-        search: {
-            description: "Search: Search for recipes using tags or keywords.",
+        campgroundManagement: {
+            description: "Implemented user authentication using Passport.js, allowing for secure sign-up and login functionalities.",
             images: [
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
+                    link: '',
+                    description: ''
+                }
             ],
             codeImages: [
                 {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],                technology: "React: Context and State, Firestore",
-            githubLink: ""
+                    link: '',
+                    description: ''
+                }
+            ],
+            technology: "Passport.js, Express, MongoDB",
+            githubLink: "https://github.com/louderthanme/YelpCamp/tree/master/controllers/users.js"
         },
-        sharing: {
-            description: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "Social Media APIs",
-            githubLink: ""
+        reviews: {
+
         },
-        dailyRecipe: {
-            description: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Carousel Components, Firebase",
-            githubLink: ""
-        },
-        profile: {
-            description: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Private Routes, Firebase Auth",
-            githubLink: ""
-        },
-        upload: {
-            description: "Upload: Users can upload recipes with images, instructions, ingredients, and more.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Forms and Validation, Firebase Storage",
-            githubLink: ""
-        },
-        edit: {
-            description: "Edit: Users can edit their recipes.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: State Management, Firestore",
-            githubLink: ""
-        },
-        convenience: {
-            description: "These are small hooks, or utils that came in handy during coding.",
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "Javascript, custom hooks, utils, and more",
-            githubLink: ""
-        }
     }
 },
 {
