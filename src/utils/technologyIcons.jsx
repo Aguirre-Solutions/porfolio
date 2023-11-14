@@ -14,6 +14,5 @@ export const technologyIcons = {
     'Express': <SiExpress />,
     'Netlify': <SiNetlify />,
     'Vercel': <SiVercel />
-
   };
   

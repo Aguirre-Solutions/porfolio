@@ -568,11 +568,11 @@ export const projectsData = [
     }
 },
 {
-    id: 3, // Assuming this is the second project in your portfolio
+    id: 3,
     title: "YelpCamp",
-    link: "http://yelpcamp.com", // Replace with the actual link if available
+    link: "http://yelpcamp.com", 
     githubLink: "https://github.com/louderthanme/YelpCamp",
-    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699904373/portfolio/YelpCamp/homepage_umpgz2.jpg", // Replace with the actual image link
+    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699904373/portfolio/YelpCamp/homepage_umpgz2.jpg", 
     shortDescription: "Yelp for camping enthusiasts! Create and review campgrounds. It features user authentication, campground management, and reviews.",
     description: [
         "YelpCamp is a platform for users to share and discover campgrounds. Users can post campgrounds with details and images, and others can leave reviews.",
@@ -916,9 +916,9 @@ export const projectsData = [
 },
 {
     id: 5,
-    title: "Nibble Notebook",
-    link: "https://nibblenotebook.com",
-    githubLink: "https://github.com/louderthanme/recipes-second-version",
+    title: "Portfolio",
+    link: "https://ruben-aguirre.com",
+    githubLink: "https://github.com/louderthanme/portfolio",
     image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
     shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
     description: [
