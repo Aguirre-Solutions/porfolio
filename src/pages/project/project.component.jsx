@@ -18,11 +18,7 @@ const Project = () => {
 
     const { isMobile, isTablet, } = checks;
     
-
-      
-    
-    
-    
+   
     return (   
         <Grid 
         container 

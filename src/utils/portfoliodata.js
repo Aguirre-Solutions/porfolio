@@ -649,27 +649,110 @@ export const projectsData = [
             technology: "Express, MongoDB",
             githubLink: "https://github.com/louderthanme/yelpcamp/blob/master/controllers/campgrounds.js",
         },
-        authentication: {
-            description: "Implemented user authentication using Passport.js, allowing for secure sign-up and login functionalities.",
-            images: [
+        reviewModel: {
+            description: "The Review Model is a streamlined yet effective component of YelpCamp, enabling users to leave feedback on campgrounds. It demonstrates my ability to create efficient data structures in a NoSQL environment.",
+            images:[
                 {
-                    link: '',
-                    description: ''
+                    link:'https://res.cloudinary.com/recipeb00k/image/upload/v1700074287/portfolio/YelpCamp/Review%20UI/Review_UI_l23mpy.jpg',
+                    description: 'Adding a review is very simple, using a form with a rating and a text area right under the campground location and next to the details. Old reviews appear below the form.'
                 }
-
             ],
             codeImages: [
                 {
-                    link: '',
-                    description: ''
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700072052/portfolio/YelpCamp/ReviewModel/ReviewSchema_qckjbc.png',
+                    description: "This snippet shows the ReviewSchema, where I've defined the essential fields for user reviews. The simplicity of the schema, with fields for the review body, rating, and author, reflects my focus on creating user-friendly and efficient data models. The author field, linked to the User model, showcases my understanding of relational data within MongoDB, ensuring that each review is associated with a specific user."
                 }
             ],
-            technology: "Passport.js, Express, MongoDB",
-            githubLink: "https://github.com/louderthanme/YelpCamp/tree/master/controllers/users.js"
+            technology: "Mongoose, MongoDB",
+            githubLink: "https://github.com/louderthanme/yelpcamp/blob/master/models/review.js",
+        },reviewControllers: {
+            description: "The Review Controllers in YelpCamp facilitate user interactions with reviews, allowing them to add and delete feedback on campgrounds. This section highlights my ability to handle database operations and user interactions efficiently.",
+            codeImages: [
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700072259/portfolio/YelpCamp/Review%20Controller/addReview_wemlys.png',
+                    description: 'In this snippet, I implemented the addReview controller. It showcases my skill in handling asynchronous operations with MongoDB. By retrieving the campground, creating a new review, and then saving both simultaneously using Promise.all, I demonstrated an efficient way to handle multiple database operations. This approach not only ensures data consistency but also optimizes performance.'
+                },
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700072259/portfolio/YelpCamp/Review%20Controller/deleteReview_qug4yj.png',
+                    description: 'Here, the deleteReview controller is illustrated. I used the $pull operator in Mongoose to remove a specific review from a campground. This operation, followed by deleting the review itself, highlights my attention to maintaining database integrity. It also shows my ability to implement clean and effective solutions for potentially complex database manipulations.'
+                }
+            ],
+            technology: "Express, MongoDB",
+            githubLink: "https://github.com/louderthanme/yelpcamp/blob/master/controllers/reviews.js",
         },
-        reviews: {
-
+        Users: {
+            description: "This feature encompasses user authentication and profile management, highlighting my ability to integrate backend authentication mechanisms with user-friendly front-end designs.",
+            images:[
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700073596/portfolio/YelpCamp/User%20Ui/RegisterWithFeedback_bqrmay.png',
+                    description: 'This image showcases the registration form UI. This is where I first learned to add form validation. The feedback enhances the user experience, guiding them through a smooth registration process.'
+                },
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700073500/portfolio/YelpCamp/Log%20In/LogIn_UI_trmxh3.gif',
+                    description: 'The log in function was something I was excited about, I liked the feedback after login. Looking back, using react, and firebase makes things much speedier.'
+                },
+            ],            
+            codeImages: [
+                {
+                    link: 'https://res.cloudinary.com/placeholder/image/upload/v1700009521/portfolio/YelpCamp/UserAuthentication/UserModel.png',
+                    description: 'The User model, as shown in this snippet, is streamlined yet functional, incorporating passport-local-mongoose for efficient authentication handling. I chose to use this plugin to add a layer of security and convenience, automatically managing user passwords and sessions. This decision reflects my commitment to creating secure and user-friendly applications.'
+                },
+                {
+                    link: 'https://res.cloudinary.com/placeholder/image/upload/v1700009521/portfolio/YelpCamp/UserAuthentication/RegistrationForm.png',
+                    description: 'This image showcases the registration form UI. I focused on creating a clean and intuitive interface, ensuring that new users can easily register. The form validation feedback enhances the user experience, guiding them through a smooth registration process. This aspect of the project highlights my skills in integrating backend functionality with a front-end that prioritizes user experience.'
+                }
+            ],
+            technology: "Express, Passport.js, Mongoose, EJS",
+            githubLink: "https://github.com/louderthanme/yelpcamp/blob/master/models/user.js",
         },
+        MapBox: {
+            description: "This feature showcases my initial foray into integrating a JavaScript library, Mapbox, into an HTML-based project. It was a significant learning experience, laying the groundwork for my understanding of how to effectively incorporate external libraries into web applications.",
+            images: [
+                {
+                    link:'https://res.cloudinary.com/recipeb00k/image/upload/v1700075692/portfolio/YelpCamp/Map%20Box/Homepage_Map_a8dscl.png',
+                    description: 'This map shows the location of the campgrounds across America, and it is interactive.'
+                },
+                {
+                    link:'https://res.cloudinary.com/recipeb00k/image/upload/v1700075690/portfolio/YelpCamp/Map%20Box/Show_Page_Map_j1edhu.png',
+                    description: 'This map shows the location of the particular campground in a much more zoomed-in view. Useful for finding the exact location of the campground.'
+                }
+            ],
+            codeImages: [
+                {
+                    link: 'https://res.cloudinary.com/placeholder/image/upload/v1700009522/portfolio/YelpCamp/Mapbox/ClusterMap.png',
+                    description: 'In the clusterMap file, I implemented Mapbox to create an interactive map that clusters campgrounds based on their geographical location. This was my first experience with a library like Mapbox, and it was both challenging and rewarding. I learned to manipulate map styles, control zoom levels, and handle cluster data, which was crucial for the project’s interactive mapping feature.'
+                },
+                {
+                    link: 'https://res.cloudinary.com/placeholder/image/upload/v1700009522/portfolio/YelpCamp/Mapbox/ShowPageMap.png',
+                    description: 'The showPageMap file demonstrates a more focused use of Mapbox, displaying individual campground locations. Here, I learned to set map markers and popups, providing users with detailed information about each campground. This part of the project was particularly insightful, as it required a precise handling of geographical coordinates and UI elements.'
+                }
+            ],
+            technology: "JavaScript, Mapbox, HTML",
+            githubLink: "https://github.com/louderthanme/yelpcamp/blob/master/public/javascripts/clusterMap.js",
+            personalReflection: "Working with Mapbox was a pivotal moment in my development journey. Although I now use React and have refined my skills, this project was a real proving ground. It taught me the importance of understanding and integrating third-party libraries, a skill that has been invaluable in my more recent projects."
+        },
+        convenience: {
+            description: "In this section, I show off some of the first middleware I ever wrote. These functions were a significant step in my development journey, teaching me the importance of writing clean, reusable code. They also highlight my ability to leverage Express.js to create robust applications. In this section I showcase two of the middleware functions I wrote, but the full code is available in the repository.",
+            codeImages: [
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700076215/portfolio/YelpCamp/Convenience/Is_Logged_In_dlxcsc.png',
+                    description: 'The isLoggedIn middleware was a key learning point for me. It utilizes Passport.js to check if a user is authenticated. I learned how to manage user sessions and redirect unauthenticated users, which was crucial for maintaining secure access to certain features of the application.'
+                },
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700076215/portfolio/YelpCamp/Convenience/Validate_Campground_d4zajl.png',
+                    description: "In validateCampground, I implemented data validation using Joi. This middleware checks the integrity of campground data before it's processed. Learning to use Joi was instrumental in understanding data validation, helping me prevent invalid data from entering the database and ensuring a robust application."
+                },
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700076368/portfolio/YelpCamp/Convenience/CatchAsync_asfqgt.png',
+                    description: 'This snippet showcases a higher-order function that I created for error handling in asynchronous middleware. By wrapping any middleware function, it automatically catches any errors and passes them to the next error-handling middleware in Express.js. This was a significant learning moment for me, as it simplified error handling across the application, making the code cleaner and more efficient.'
+                }                
+            ],
+            technology: "Express.js, Passport.js, Joi",
+            githubLink: "https://github.com/louderthanme/yelpcamp/blob/master/middleware.js",
+            personalReflection: "Creating these middleware functions was a significant step in my journey as a developer. It taught me the importance of writing clean, reusable code and gave me a deeper understanding of Express.js's capabilities. These skills have been invaluable in my subsequent projects."
+        }
+        
+                               
     }
 },
 {
