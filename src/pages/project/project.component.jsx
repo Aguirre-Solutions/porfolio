@@ -16,7 +16,7 @@ const Project = () => {
     const {checks, theme} = useContext(ThemeValuesContext);
     const project = projectsData.find((p) => p.id === parseInt(id, 10));
 
-    const { isMobile, isTablet, isLaptop, isDesktop } = checks;
+    const { isMobile, isTablet, } = checks;
     
 
       

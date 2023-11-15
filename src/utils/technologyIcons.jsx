@@ -1,4 +1,4 @@
-import {SiReact,SiMui, SiFirebase, SiMongodb, SiPassport, SiBootstrap, SiExpress, SiNetlify, SiVercel} from 'react-icons/si';
+import {SiReact,SiMui, SiAmazonaws, SiFirebase, SiMongodb, SiRender, SiPassport, SiBootstrap, SiExpress, SiNetlify, SiVercel} from 'react-icons/si';
 import {FaNodeJs} from 'react-icons/fa';
 import cloudinaryIconSrc from '../assets/cloudinary.svg'
 
@@ -13,6 +13,8 @@ export const technologyIcons = {
     'Bootstrap': <SiBootstrap />,
     'Express': <SiExpress />,
     'Netlify': <SiNetlify />,
-    'Vercel': <SiVercel />
+    'Vercel': <SiVercel />,
+    'AWS': <SiAmazonaws />,
+    'Render': <SiRender />
   };
   

@@ -5,9 +5,8 @@ import { StyledTypography, StyledLink, StyledVerticalDivider, StyledHorizontalDi
 const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
 
     const { isMobile, isTablet, isLaptop, isDesktop } = checks;
-    const { title, image, link, githubLink, highlightedTechnologies, description, setup, usage, contributions, license } = project
+    const { title, image, link, githubLink, highlightedTechnologies, description, setup, usage } = project
 
-    console.log(link, githubLink)
 
     const getIcon = (tech) => {
         return technologyIcons[tech];

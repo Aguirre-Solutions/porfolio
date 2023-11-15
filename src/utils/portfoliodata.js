@@ -587,9 +587,10 @@ export const projectsData = [
         "MongoDB",
         "Passport.js",
         "EJS",
-        "Bootstrap"
+        "Bootstrap",
+        "Render"
     ],
-    highlightedTechnologies: ['Node.js', 'Express', 'Cloudinary','MongoDB', 'Passport.js', 'EJS', 'Bootstrap'],
+    highlightedTechnologies: ['Node.js', 'Express', 'Cloudinary','MongoDB', 'Passport.js', 'EJS', 'Bootstrap', 'Render'],
     setup: {
         dependencies: "npm install",
         database: "MongoDB setup required",
@@ -607,6 +608,45 @@ export const projectsData = [
     contributions: "This project is open for contributions. Please read the guidelines in the README.md file before contributing.",
     license: "This project is licensed under the ISC license.",
     highlights: {
+        campgroundModel: {
+            description: "This feature allows users to create, update, and delete campgrounds. It includes image upload functionality and integrates with Mapbox for geocoding.",
+            codeImages: [
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009517/portfolio/YelpCamp/Campground%20Model/ImageSchema_njgn2h.png',
+                    description: 'In this snippet, I designed an ImageSchema to store image URLs and filenames. I also implemented a virtual property, thumbnail, which cleverly generates a thumbnail version of the image leveraging Cloudinary. This approach allowed me to dynamically create content without the need for additional data storage, showcasing my ability to optimize data usage.'
+                },
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009517/portfolio/YelpCamp/Campground%20Model/CampgroundSchemaDefinition_d867qs.png',
+                    description: 'Here, I defined the CampgroundSchema with various fields, including a relational setup linking campgrounds to their authors and reviews. My decision to structure the schema in this way highlights my understanding of relational database concepts and my ability to implement them effectively in a NoSQL environment.'
+                },
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009518/portfolio/YelpCamp/Campground%20Model/PopUpMarkup_vqlbtb.png',
+                    description: 'I created this virtual property to generate HTML markup for map popups directly within the database schema. This decision was a strategic move to streamline the generation of dynamic, client-side content, demonstrating my ability to integrate front-end and back-end technologies seamlessly.'
+                },
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009518/portfolio/YelpCamp/Campground%20Model/MiddlewareDeleting_sfaha8.png',
+                    description: 'In this part of the code, I implemented a middleware to handle the cascade deletion of reviews when a campground is removed. This was a crucial step to maintain database integrity and cleanliness, reflecting my attention to detail and commitment to creating robust, maintainable code.'
+                }
+            ],
+            technology: "Express, MongoDB",
+            githubLink: "https://github.com/louderthanme/yelpcamp/blob/master/models/campground.js",
+        },
+        campgroundControllers: {
+            description: "In the Campground Controllers of YelpCamp, I crafted a suite of functions essential for managing campgrounds, ranging from creating and updating campgrounds to handling deletions. By exporting each route handler as a separate function, I ensured that the code was not only maintainable but also scalable. This approach was a significant departure from the more traditional app.post or app.get methods directly in route files, marking a step forward in my coding practices. These are two interesting snippets, but the full code is available in the repository.",
+            codeImages: [
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009505/portfolio/YelpCamp/Campground%20Controller/CreatingCampground_ivjqbx.png',
+                    description: "In this function, I integrated Mapbox's geocoding service to convert campground locations into geographical coordinates. This was a key step in enabling the map functionality of YelpCamp. I chose to handle the creation of new campgrounds asynchronously, ensuring a smooth user experience even when dealing with external API calls"
+                },
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009505/portfolio/YelpCamp/Campground%20Controller/UpdatingCampground_grqime.png',
+                    description: 'Here, I implemented the logic to update campground details, including handling image uploads. I used the spread syntax to efficiently update campground data and manage image arrays. This showcases my ability to work with complex data structures and integrate third-party services like Cloudinary for image management.'
+                },
+
+            ],
+            technology: "Express, MongoDB",
+            githubLink: "https://github.com/louderthanme/yelpcamp/blob/master/controllers/campgrounds.js",
+        },
         authentication: {
             description: "Implemented user authentication using Passport.js, allowing for secure sign-up and login functionalities.",
             images: [
@@ -615,23 +655,6 @@ export const projectsData = [
                     description: ''
                 }
 
-            ],
-            codeImages: [
-                {
-                    link: '',
-                    description: ''
-                }
-            ],
-            technology: "Passport.js, Express, MongoDB",
-            githubLink: "https://github.com/louderthanme/YelpCamp/tree/master/controllers/users.js"
-        },
-        campgroundManagement: {
-            description: "Implemented user authentication using Passport.js, allowing for secure sign-up and login functionalities.",
-            images: [
-                {
-                    link: '',
-                    description: ''
-                }
             ],
             codeImages: [
                 {
