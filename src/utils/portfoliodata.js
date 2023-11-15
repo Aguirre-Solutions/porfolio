@@ -588,7 +588,9 @@ export const projectsData = [
         "Passport.js",
         "EJS",
         "Bootstrap",
-        "Render"
+        "Render",
+        "Cloudinary",
+        "Mapbox"
     ],
     highlightedTechnologies: ['Node.js', 'Express', 'Cloudinary','MongoDB', 'Passport.js', 'EJS', 'Bootstrap', 'Render'],
     setup: {
