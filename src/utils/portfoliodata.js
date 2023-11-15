@@ -614,12 +614,12 @@ export const projectsData = [
             description: "This feature allows users to create, update, and delete campgrounds. It includes image upload functionality and integrates with Mapbox for geocoding.",
             codeImages: [
                 {
-                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009517/portfolio/YelpCamp/Campground%20Model/ImageSchema_njgn2h.png',
-                    description: 'In this snippet, I designed an ImageSchema to store image URLs and filenames. I also implemented a virtual property, thumbnail, which cleverly generates a thumbnail version of the image leveraging Cloudinary. This approach allowed me to dynamically create content without the need for additional data storage, showcasing my ability to optimize data usage.'
-                },
-                {
                     link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009517/portfolio/YelpCamp/Campground%20Model/CampgroundSchemaDefinition_d867qs.png',
                     description: 'Here, I defined the CampgroundSchema with various fields, including a relational setup linking campgrounds to their authors and reviews. My decision to structure the schema in this way highlights my understanding of relational database concepts and my ability to implement them effectively in a NoSQL environment.'
+                },
+                {
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009517/portfolio/YelpCamp/Campground%20Model/ImageSchema_njgn2h.png',
+                    description: 'In this snippet, I designed an ImageSchema to store image URLs and filenames. I also implemented a virtual property, thumbnail, which cleverly generates a thumbnail version of the image leveraging Cloudinary. This approach allowed me to dynamically create content without the need for additional data storage, showcasing my ability to optimize data usage.'
                 },
                 {
                     link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700009518/portfolio/YelpCamp/Campground%20Model/PopUpMarkup_vqlbtb.png',
@@ -694,13 +694,10 @@ export const projectsData = [
             ],            
             codeImages: [
                 {
-                    link: 'https://res.cloudinary.com/placeholder/image/upload/v1700009521/portfolio/YelpCamp/UserAuthentication/UserModel.png',
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700073596/portfolio/YelpCamp/User%20Ui/RegisterWithFeedback_bqrmay.png',
                     description: 'The User model, as shown in this snippet, is streamlined yet functional, incorporating passport-local-mongoose for efficient authentication handling. I chose to use this plugin to add a layer of security and convenience, automatically managing user passwords and sessions. This decision reflects my commitment to creating secure and user-friendly applications.'
                 },
-                {
-                    link: 'https://res.cloudinary.com/placeholder/image/upload/v1700009521/portfolio/YelpCamp/UserAuthentication/RegistrationForm.png',
-                    description: 'This image showcases the registration form UI. I focused on creating a clean and intuitive interface, ensuring that new users can easily register. The form validation feedback enhances the user experience, guiding them through a smooth registration process. This aspect of the project highlights my skills in integrating backend functionality with a front-end that prioritizes user experience.'
-                }
+
             ],
             technology: "Express, Passport.js, Mongoose, EJS",
             githubLink: "https://github.com/louderthanme/yelpcamp/blob/master/models/user.js",
@@ -719,11 +716,11 @@ export const projectsData = [
             ],
             codeImages: [
                 {
-                    link: 'https://res.cloudinary.com/placeholder/image/upload/v1700009522/portfolio/YelpCamp/Mapbox/ClusterMap.png',
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700077111/portfolio/YelpCamp/Map%20Box/Cluster_Map_ivqqko.png',
                     description: 'In the clusterMap file, I implemented Mapbox to create an interactive map that clusters campgrounds based on their geographical location. This was my first experience with a library like Mapbox, and it was both challenging and rewarding. I learned to manipulate map styles, control zoom levels, and handle cluster data, which was crucial for the project’s interactive mapping feature.'
                 },
                 {
-                    link: 'https://res.cloudinary.com/placeholder/image/upload/v1700009522/portfolio/YelpCamp/Mapbox/ShowPageMap.png',
+                    link: 'https://res.cloudinary.com/recipeb00k/image/upload/v1700077110/portfolio/YelpCamp/Map%20Box/Focused_Map_k4y9sb.png',
                     description: 'The showPageMap file demonstrates a more focused use of Mapbox, displaying individual campground locations. Here, I learned to set map markers and popups, providing users with detailed information about each campground. This part of the project was particularly insightful, as it required a precise handling of geographical coordinates and UI elements.'
                 }
             ],
