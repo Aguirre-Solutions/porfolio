@@ -9,7 +9,7 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
     
     const navigate = useNavigate();
     const {image, title, shortDescription, highlightedTechnologies, link, githubLink, id} = project;
-    const {isMobile} = checks;
+    const {isMobile, isTablet} = checks;
     
 
     const goToProject = (id) => {
@@ -81,9 +81,9 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
                     sx={{ 
                         marginTop: '10px', 
                         display: 'flex', 
-                        justifyContent: isMobile ? 'center' : 'flex-start', 
+                        justifyContent: isMobile || isTablet ? 'center' : 'flex-start', 
                         flexWrap: 'wrap',
-                        alignContent: isMobile ? 'center' : 'flex-start',
+                        alignContent: isMobile || isTablet ? 'center' : 'flex-start',
                         flexDirection: 'row',
                         gap: 0
                     }}>
