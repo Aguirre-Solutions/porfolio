@@ -97,7 +97,7 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
                         />
                     ))}
                 </Box>
-                <Box sx={{ my: 2 }}>
+                <Box >
                 <StyledButton
                     variant="filled"
                     color="primary"
