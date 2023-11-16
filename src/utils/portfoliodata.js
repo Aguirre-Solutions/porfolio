@@ -306,7 +306,7 @@ export const projectsData = [
     link: "https://main--stately-rabanadas-ba7cd5.netlify.app/",
     githubLink: "https://github.com/louderthanme/Clothing-Store",
     image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699927325/portfolio/Clothing%20Store/Web_capture_13-11-2023_20125_hilarious-concha-0e6255.netlify.app_yiclaw.jpg",
-    shortDescription: "An online clothing store application allowing users to browse, select, and purchase fashion items. Features include user authentication, shopping cart functionality, and a range of product categories.",
+    shortDescription: "An online clothing store application allowing users to browse, select, and purchase fashion items. Shopping cart functionality included.",
     description: [
         "This application serves as an online platform for a clothing store, offering a variety of fashion items for users to explore and purchase.",
         "It includes user authentication, enabling users to create accounts, sign in, and manage their purchases.",
@@ -319,6 +319,7 @@ export const projectsData = [
         "Sass (for styling)",
         "React Router (for navigation)"
     ],
+    highlightedTechnologies: ['React',  'Firebase', 'Sass', 'Netlify',],
     setup: {
         dependencies: "yarn install",
         devServer: "yarn start",

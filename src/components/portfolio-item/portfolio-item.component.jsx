@@ -9,7 +9,7 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
     
     const navigate = useNavigate();
     const {image, title, shortDescription, highlightedTechnologies, link, githubLink, id} = project;
-    const {isMobile} = checks;
+    const {isMobile, isTablet} = checks;
     
 
     const goToProject = (id) => {
@@ -21,13 +21,24 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
     }
 
     return (
-        <Card elevation={0} sx={{backgroundColor:'#efefef', }}>
+        <Card elevation={0} sx={{ 
+            backgroundColor:'#efefef', 
+            height: '680px', // Fixed height
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-around' // Aligns items vertically
+        }}>
             <CardMedia
                 sx={{ height: 0, paddingTop: '56.25%' }}
                 image={image}
                 title={title}
             />
-            <CardContent sx={{paddingBottom:'5px !important'}}>
+            <CardContent sx={{ 
+                    flexGrow: 1, // Allows content to fill the space
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between' // Aligns inner content
+                }}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <StyledTypography gutterBottom variant="h5" component="h2" sx={{fontWeight:600}}>
                         {title}
@@ -62,17 +73,16 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
                         )}
                     </Box>
                 </Box>
-                <StyledTypography variant="body2" color="textSecondary" component="p" mb={1}>
+                <StyledTypography variant="body2" color="textSecondary" component="p" >
                     {shortDescription}
                 </StyledTypography>
                 <StyledTypography sx={{fontWeight: 500}}> Technologies: </StyledTypography>
                 <Box 
                     sx={{ 
-                        marginTop: '10px', 
                         display: 'flex', 
-                        justifyContent: isMobile ? 'center' : 'flex-start', 
+                        justifyContent: isMobile || isTablet ? 'center' : 'flex-start', 
                         flexWrap: 'wrap',
-                        alignContent: isMobile ? 'center' : 'flex-start',
+                        alignContent: isMobile || isTablet ? 'center' : 'flex-start',
                         flexDirection: 'row',
                         gap: 0
                     }}>
