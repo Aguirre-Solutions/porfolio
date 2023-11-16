@@ -306,42 +306,35 @@ export const projectsData = [
     link: "https://main--stately-rabanadas-ba7cd5.netlify.app/",
     githubLink: "https://github.com/louderthanme/Clothing-Store",
     image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699927325/portfolio/Clothing%20Store/Web_capture_13-11-2023_20125_hilarious-concha-0e6255.netlify.app_yiclaw.jpg",
-    shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
+    shortDescription: "An online clothing store application allowing users to browse, select, and purchase fashion items. Features include user authentication, shopping cart functionality, and a range of product categories.",
     description: [
-    "This application allows users to upload and manage recipes. Users can add images, instructions, ingredients, and more to their recipes.",
-    "The application supports user authentication via email/password and Google authentication. Once authenticated, users can view their profile, showcasing all the recipes they've uploaded or saved to their favorites.",
-    "The app also features a daily recipe and a carousel of featured recipes. Each recipe showcase includes images and ingredients for quick reference.",
-    "Additionally, users can share recipes on Facebook, WhatsApp, and Twitter.",
-    "A search function is available, allowing users to search recipes by tags or keywords."
+        "This application serves as an online platform for a clothing store, offering a variety of fashion items for users to explore and purchase.",
+        "It includes user authentication, enabling users to create accounts, sign in, and manage their purchases.",
+        "The shopping cart functionality allows users to add items to their cart, review them, and proceed to checkout.",
+        "Product categories are well-organized, making it easy for users to find specific types of clothing items."
     ],
     technologyStack: [
-    "React",
-    "Vite",
-    "Firebase (for authentication and database)",
-    "Cloudinary (for image uploads)",
-    "Express (for the development server)",
-    "Serverless functions (for deployment)"
+        "React",
+        "Firebase (for authentication and database)",
+        "Sass (for styling)",
+        "React Router (for navigation)"
     ],
-    highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI', 'Netlify'],
     setup: {
-    dependencies: "yarn install",
-    devServer: "yarn start-server",
-    frontend: "yarn dev",
-    liveBuild: "yarn start",
-    notes: [
-        "Firebase and Cloudinary are already set up for use. This repository is intended for portfolio purposes, so no additional setup for Firebase or Cloudinary is required."
-    ]
+        dependencies: "yarn install",
+        devServer: "yarn start",
+        notes: [
+            "Firebase is configured for authentication and data storage. Ensure to set up your own Firebase project and update the configuration accordingly."
+        ]
     },
     usage: {
-    authentication: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
-    profile: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-    dailyRecipe: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
-    sharing: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-    search: "Search: Search for recipes using tags or keywords."
+        authentication: "User Authentication: Users can sign up, log in, and manage their accounts.",
+        shoppingCart: "Shopping Cart: Users can add items to their cart, review them, and proceed to checkout.",
+        productCategories: "Product Categories: Easy navigation through various clothing categories.",
+        userProfile: "User Profile: Users can view and manage their profile and purchase history."
     },
-    contributions: "This project is not open for contributions as it's intended for portfolio purposes.",
-    license: "This project is for educational and portfolio purposes. Please ensure to give credit if you use any part of the code or design.",
-    highlights: {
+    contributions: "This project is open for contributions. Feel free to fork the repository and submit pull requests.",
+    license: "This project is licensed under the MIT License. Feel free to use it as per the license terms.",
+      highlights: {
         Cart: {
             description: "Cart Context: Mastering React's Context API in my first React project. Implementing CartContext was a significant learning curve, but it effectively demonstrated how global state can be managed without prop drilling, a concept that was new and intriguing to me at the time. You can also see me becoming more comfortable with ternary operators and the spread operator. Remember you can zoom in on the images, and you can also see the full code in the repository.",
             images: [
