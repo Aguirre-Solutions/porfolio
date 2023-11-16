@@ -453,7 +453,7 @@ export const projectsData = [
 {
     id: 3,
     title: "YelpCamp",
-    link: "http://yelpcamp.com", 
+    link: "https://yelpcamp-gyon.onrender.com", 
     githubLink: "https://github.com/louderthanme/YelpCamp",
     image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699904373/portfolio/YelpCamp/homepage_umpgz2.jpg", 
     shortDescription: "Yelp for camping enthusiasts! Create and review campgrounds. It features user authentication, campground management, and reviews.",
