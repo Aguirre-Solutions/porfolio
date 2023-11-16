@@ -303,8 +303,8 @@ export const projectsData = [
   {
     id: 2,
     title: "Clothing Store",
-    link: "https://https://hilarious-concha-0e6255.netlify.app",
-    githubLink: "https://github.com/louderthanme/recipes-second-version",
+    link: "https://main--stately-rabanadas-ba7cd5.netlify.app/",
+    githubLink: "https://github.com/louderthanme/Clothing-Store",
     image: "https://res.cloudinary.com/recipeb00k/image/upload/v1699927325/portfolio/Clothing%20Store/Web_capture_13-11-2023_20125_hilarious-concha-0e6255.netlify.app_yiclaw.jpg",
     shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
     description: [
@@ -342,231 +342,120 @@ export const projectsData = [
     contributions: "This project is not open for contributions as it's intended for portfolio purposes.",
     license: "This project is for educational and portfolio purposes. Please ensure to give credit if you use any part of the code or design.",
     highlights: {
-        authentication: {
-            description: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
+        Cart: {
+            description: "Cart Context: Mastering React's Context API in my first React project. Implementing CartContext was a significant learning curve, but it effectively demonstrated how global state can be managed without prop drilling, a concept that was new and intriguing to me at the time. You can also see me becoming more comfortable with ternary operators and the spread operator. Remember you can zoom in on the images, and you can also see the full code in the repository.",
             images: [
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700089757/portfolio/Clothing%20Store/Cart%20Context/Adding_item_to_cart_rtmwtz.gif",
+                    description: "The shopping cart interface is seamlessly integrated into every page of the online store, allowing users to view and edit their selected items at any moment. When a user adds a product to their cart from the store, the cart updates instantly to reflect the new item, displaying the product image, name, and price. This feature ensures a smooth and uninterrupted shopping experience."
                 },
             ],
             codeImages: [
                 {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700089755/portfolio/Clothing%20Store/Cart%20Context/Base_Cart_Functions_b9be8j.png",
+                    description: "This snippet marks my initial foray into React's Context API.  I tackled dynamic cart operations such as adding, removing, and clearing items. This was a challenging yet rewarding experience, as it deepened my understanding of state management in React and how to handle complex state logic efficiently."
+                    
+                    
                 },
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700089755/portfolio/Clothing%20Store/Cart%20Context/Use_Effects_t02q6j.png",
+                    description: "Utilizing useEffect hooks to update the cart count and total was a practical application of React's reactivity system. This part of the project was particularly enlightening, as it showcased the power of hooks and how they can be used to keep the application's state synchronized with the UI."
                 },
+                {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700089755/portfolio/Clothing%20Store/Cart%20Context/Cart_Functions_dlurxc.png",
+                    description: "I then implemented the dynamic cart operations and passed them on to the CartContext. This was a crucial step in ensuring a smooth user experience, as it allowed me to manage the cart's visibility and contents with ease."
+                }
             ],
-            technology: "React: Context and State, Firebase",
-            githubLink: ""
+            technology: "React: Context API, useState, useEffect",
+            githubLink: "[Link to the specific file or section in your GitHub repository]"
         },
-        search: {
-            description: "Search: Search for recipes using tags or keywords.",
+        User: {
+            description: "User Context: Integrating Firebase with React Context for user authentication. Throughout the code you can see my comments helping me better understand the use of context and how it interacted with Firebase",
             images: [
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700091691/portfolio/Clothing%20Store/User%20Context/Sign_In_rc553z.gif",
+                    description:"Sign in page"
                 },
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700091621/portfolio/Clothing%20Store/User%20Context/UI_change_gngly5.gif",
+                    description:"Sign In or Sign Out button in the navigation bar. Displayed conditionally."
+                }
             ],
             codeImages: [
                 {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700091620/portfolio/Clothing%20Store/User%20Context/Conditional_rendering_wdfuwn.png",
+                    description: "I learned how to use the ternary operator to conditionally render components based on the user's authentication status"
                 },
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700091619/portfolio/Clothing%20Store/User%20Context/Firebase_eaajbr.png",
+                    description: "This code represents my initial steps in integrating Firebase authentication into a project. Setting up firebase was a little hard to comprehend, but now I prefer it to passport.js. I can add a lot of useful information into the User metadata."
                 },
-            ],                technology: "React: Context and State, Firestore",
-            githubLink: ""
+                {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700091620/portfolio/Clothing%20Store/User%20Context/Use_Effect_zsgy6o.png",
+                    description: "The use of useEffect to listen for authentication state changes was a key learning point. It was fascinating to see how React hooks could be combined with Firebase to create a responsive and dynamic user authentication system."
+                },
+                {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700091620/portfolio/Clothing%20Store/User%20Context/Wrapper_isa95a.png",
+                    description: "Learning to set up the UserProvider to wrap around the application's components was a fascinating process to manage the user's authentication state. This  allowed me to provide the current user's state universally. This was a practical application of React Context that significantly improved the scalability and maintainability of the user authentication system."
+                }
+            ],
+            technology: "React: Context API, useState, useEffect, Firebase",
+            githubLink: "https://github.com/louderthanme/Clothing-Store/blob/main/src/context/cart.context.jsx"
         },
-        sharing: {
-            description: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
+        categoriesContext: {
+            description: "Categories Context: Managing product categories using React Context and Firebase.",
             codeImages: [
                 {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700092749/portfolio/Clothing%20Store/Categories%20Context/Categories_Context_a9ltpb.png",
+                    description: "Utilizing useEffect to fetch category data from Firebase was a significant learning curve. It was intriguing to see how asynchronous operations could be seamlessly integrated within React's lifecycle methods to update the application's state. Creating the  CategoriesProvider was a strategic implementation to encapsulate and provide the categories data to the entire application.  Eliminating the need for prop drilling"
                 },
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700092659/portfolio/Clothing%20Store/Categories%20Context/Products_Injection_tkwakr.png",
+                    description: "I then consumed the context in the Category component."
+                }
             ],
-            technology: "Social Media APIs",
-            githubLink: ""
+            technology: "React: Context API, useState, useEffect, Firebase",
+            githubLink: "https://github.com/louderthanme/Clothing-Store/blob/main/src/context/categories.context.jsx"
         },
-        dailyRecipe: {
-            description: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
+        Checkout: {
+            description: "Checkout: In this page a user can see all the items in their cart and the total. They can also remove items from the cart. This syncs up right away with the cart context.",
             images: [
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700094424/portfolio/Clothing%20Store/Checkout/Checkout_Page_o73mvd.jpg",
+                    description: "The user can see their total and head to the checkout process."
                 },
             ],
             codeImages: [
                 {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Carousel Components, Firebase",
-            githubLink: ""
+                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1700094424/portfolio/Clothing%20Store/Checkout/Checkout_Style_wchlba.png",
+                    description: "Every view in this app is a styled component. I learned how to use styled components to create reusable components and to style them."
+                }
+            ]
         },
-        profile: {
-            description: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
+            technology: "Styled Components, React, React Router",
+            githubLink: "https://github.com/louderthanme/Clothing-Store/blob/main/src/routes/checkout/checkout.component.jsx"
+
+        }, 
+        modularity: {
+            description: "Modularity in Components: Demonstrating the use of modular components to build a cohesive and interactive shopping cart feature.",
             codeImages: [
                 {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700094474/portfolio/Clothing%20Store/Modularity/Cart_Dropdown_ipwh52.png",
+                    description: "The CartDropdown component is a testament to my understanding of modularity and context in React. It uses the CartContext to access and display cart items, and integrates navigation with React Router for a seamless user experience."
                 },
                 {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700094473/portfolio/Clothing%20Store/Modularity/Cart_Icon_nwkzqp.png",
+                    description: "In the CartIcon component, I learned the power of concise and focused components. This component not only displays the cart icon and item count but also toggles the cart's visibility, showcasing the effective use of context for state management."
                 },
+                {
+                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1700094473/portfolio/Clothing%20Store/Modularity/Cart_Item_hdzz2c.png",
+                    description: "The CartItem component is a clear example of a reusable and independent module. It takes a cart item as a prop and displays its details, demonstrating how breaking down the UI into smaller components can enhance maintainability and readability."
+                }
             ],
-            technology: "React: Private Routes, Firebase Auth",
-            githubLink: ""
-        },
-        upload: {
-            description: "Upload: Users can upload recipes with images, instructions, ingredients, and more.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Forms and Validation, Firebase Storage",
-            githubLink: ""
-        },
-        edit: {
-            description: "Edit: Users can edit their recipes.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: State Management, Firestore",
-            githubLink: ""
-        },
-        convenience: {
-            description: "These are small hooks, or utils that came in handy during coding.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "Javascript, custom hooks, utils, and more",
-            githubLink: ""
-        }
-    }
-},
+            technology: "React, React Router",
+            githubLink: "https://github.com/louderthanme/Clothing-Store/tree/main/src/components"
+        }       
+    },    
 {
     id: 3,
     title: "YelpCamp",
