@@ -21,13 +21,24 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
     }
 
     return (
-        <Card elevation={0} sx={{backgroundColor:'#efefef', }}>
+        <Card elevation={0} sx={{ 
+            backgroundColor:'#efefef', 
+            height: '680px', // Fixed height
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-around' // Aligns items vertically
+        }}>
             <CardMedia
                 sx={{ height: 0, paddingTop: '56.25%' }}
                 image={image}
                 title={title}
             />
-            <CardContent sx={{paddingBottom:'5px !important'}}>
+            <CardContent sx={{ 
+                    flexGrow: 1, // Allows content to fill the space
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between' // Aligns inner content
+                }}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <StyledTypography gutterBottom variant="h5" component="h2" sx={{fontWeight:600}}>
                         {title}
@@ -87,7 +98,7 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
                         />
                     ))}
                 </Box>
-                <Box sx={{ my: 2 }}>
+                <Box >
                 <StyledButton
                     variant="filled"
                     color="primary"
