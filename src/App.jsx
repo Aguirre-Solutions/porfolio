@@ -13,7 +13,7 @@ const App = () => {
       <Navigation />
       <Box style={{ paddingTop: '60px' }}>
         <Grid container justifyContent="center" alignItems="center" style={{ width: '100%' }}>
-          <Grid item xs={false} sm={1} md={1} />
+          <Grid item xs={false} sm={1} md={1} /> {/* Empty grid item to push content to center */}
           <Grid item xs={12} sm={10} style={{ width: '100%' }}>
             <Grid container justifyContent="center" alignItems="center">
               <Routes>
@@ -25,7 +25,7 @@ const App = () => {
               </Routes>
             </Grid>
           </Grid>
-          <Grid item xs={false} sm={1} md={1} />
+          <Grid item xs={false} sm={1} md={1} /> {/* Empty grid item to push content to center */}
         </Grid>
       </Box>
     </Router>

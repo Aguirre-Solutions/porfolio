@@ -19,9 +19,11 @@ export const projectsData = [
         "Firebase (for authentication and database)",
         "Cloudinary (for image uploads)",
         "Express (for the development server)",
-        "Serverless functions (for deployment)"
+        "Serverless functions (for deployment)",
+        "React Router",
+        "Vite"
         ],
-        highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI', 'Vercel'],
+        highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI', 'Vercel', "React Router", "Vite"],
         setup: {
         dependencies: "yarn install",
         devServer: "yarn start-server",
@@ -317,9 +319,11 @@ export const projectsData = [
         "React",
         "Firebase (for authentication and database)",
         "Sass (for styling)",
-        "React Router (for navigation)"
+        "React Router (for navigation)",
+        "Netlify (for deployment)",
+        "Create React App"
     ],
-    highlightedTechnologies: ['React',  'Firebase', 'Sass', 'Netlify',],
+    highlightedTechnologies: ['React',  'Firebase', 'Sass', 'Netlify', "Create React App"],
     setup: {
         dependencies: "yarn install",
         devServer: "yarn start",
@@ -637,269 +641,47 @@ export const projectsData = [
 },
 {
     id: 4,
-    title: "Recipes 1.0",
-    link: "https://nibblenotebook.com",
-    githubLink: "https://github.com/louderthanme/recipes-second-version",
-    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-    shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
+    title: "WordFlash",
+    link: "https://word-flash.vercel.app/", 
+    githubLink: "https://github.com/louderthanme/WordFlash",
+    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1701795724/portfolio/WordFlash/Main_Page_pfkbkp.jpg",
+    shortDescription: "An interactive flashcard application for language learning, featuring user authentication, Openai integration, and various modes of learning.",
     description: [
-    "This application allows users to upload and manage recipes. Users can add images, instructions, ingredients, and more to their recipes.",
-    "The application supports user authentication via email/password and Google authentication. Once authenticated, users can view their profile, showcasing all the recipes they've uploaded or saved to their favorites.",
-    "The app also features a daily recipe and a carousel of featured recipes. Each recipe showcase includes images and ingredients for quick reference.",
-    "Additionally, users can share recipes on Facebook, WhatsApp, and Twitter.",
-    "A search function is available, allowing users to search recipes by tags or keywords."
+        "WordFlash is an educational tool designed to assist in language learning through interactive flashcards.",
+        "The application includes user authentication, allowing users to create personalized accounts for saving their word collection.",
+        "It features a chat component where users can look up certain words getting a flash card back, the flash card is saved automatically for later use.",
+        "The flashcards can be viewed in different modes, including a word view and a flashcard view, sorted either alphabetically or by word classification.",
     ],
     technologyStack: [
-    "React",
-    "Vite",
-    "Firebase (for authentication and database)",
-    "Cloudinary (for image uploads)",
-    "Express (for the development server)",
-    "Serverless functions (for deployment)"
+        "React",
+        "OpenAi",
+        "Node.js",
+        "Express",
+        "Firebase",
+        "Mui/Joy",
+        "Vite",
+        "Render",
+        "Vercel",
+        "React Router"	
     ],
-    highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI'],
+    highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Vite', 'OpenAi', 'Mui/Joy', 'Render', 'Vercel', 'React Router'],
     setup: {
-    dependencies: "yarn install",
-    devServer: "yarn start-server",
-    frontend: "yarn dev",
-    liveBuild: "yarn start",
-    notes: [
-        "Firebase and Cloudinary are already set up for use. This repository is intended for portfolio purposes, so no additional setup for Firebase or Cloudinary is required."
-    ]
+        dependencies: "yarn install",
+        devServer: "yarn start",
+        notes: [
+            "Ensure to set up Firebase for authentication and backend services. Update the Firebase configuration in the project accordingly."
+        ]
     },
     usage: {
-    authentication: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
-    profile: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-    dailyRecipe: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
-    sharing: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-    search: "Search: Search for recipes using tags or keywords."
+        authentication: "User Authentication: Users can sign up and log in to track their learning progress.",
+        chatFunctionality: "Chat Functionality: Interactive chat component for user discussions.",
+        learningModes: "Learning Modes: Multiple modes of learning including flashcards and word views.",
+        progressTracking: "Progress Tracking: Users can track their learning progress over time."
     },
-    contributions: "This project is not open for contributions as it's intended for portfolio purposes.",
-    license: "This project is for educational and portfolio purposes. Please ensure to give credit if you use any part of the code or design.",
+    contributions: "This project is open for contributions. Please feel free to contribute to the development.",
+    license: "This project is licensed under the MIT License. Feel free to use and modify it as per the license terms.",
     highlights: {
-        authentication: {
-            description: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Context and State, Firebase",
-            githubLink: ""
-        },
-        search: {
-            description: "Search: Search for recipes using tags or keywords.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],                technology: "React: Context and State, Firestore",
-            githubLink: ""
-        },
-        sharing: {
-            description: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "Social Media APIs",
-            githubLink: ""
-        },
-        dailyRecipe: {
-            description: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Carousel Components, Firebase",
-            githubLink: ""
-        },
-        profile: {
-            description: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Private Routes, Firebase Auth",
-            githubLink: ""
-        },
-        upload: {
-            description: "Upload: Users can upload recipes with images, instructions, ingredients, and more.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Forms and Validation, Firebase Storage",
-            githubLink: ""
-        },
-        edit: {
-            description: "Edit: Users can edit their recipes.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: State Management, Firestore",
-            githubLink: ""
-        },
-        convenience: {
-            description: "These are small hooks, or utils that came in handy during coding.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "Javascript, custom hooks, utils, and more",
-            githubLink: ""
-        }
+        // Your highlights content here
     }
 },
 {

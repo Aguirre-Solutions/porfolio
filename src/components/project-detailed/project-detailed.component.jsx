@@ -12,20 +12,12 @@ const ProjectDetailed = ({ project, checks, theme }) => {
       
 
     
-    // Destructure the highlights object from the project prop
     const { highlights } = project;
-
-    // Destructure the checks object to determine the device type
     const { isMobile, isTablet, isLaptop, isDesktop } = checks;
 
-
-    // Get the keys of the highlights object
     const highlightKeys = Object.keys(highlights);
-
-    // Initialize the selectedHighlight state with the first highlight
     const [selectedHighlight, setSelectedHighlight] = useState(highlights[highlightKeys[0]]);
 
-    // Function to handle the click event of a highlight chip
     const handleChipClick = (key) => {
         setSelectedHighlight(highlights[key]);
     }
@@ -62,7 +54,6 @@ const ProjectDetailed = ({ project, checks, theme }) => {
                         gap: 0
                     }}>
                     {highlightKeys.map((key, index) => {
-                        // Determine if this chip is the selected one
                         const isSelected = selectedHighlight === highlights[key];
                         
                         return (
@@ -70,7 +61,6 @@ const ProjectDetailed = ({ project, checks, theme }) => {
                                 key={index} 
                                 label={key}
                                 onClick={() => handleChipClick(key)}
-                                // Apply the background color only to the selected chip
                                 sx={{
                                     backgroundColor: isSelected ? theme.palette.additional.deepPurple : '',
                                     color: isSelected ? 'white' : ''

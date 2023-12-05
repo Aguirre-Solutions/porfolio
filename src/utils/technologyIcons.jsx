@@ -1,4 +1,4 @@
-import {SiReact,SiMui, SiAmazonaws, SiFirebase, SiSass , SiMapbox, SiMongodb, SiRender, SiPassport, SiBootstrap, SiExpress, SiNetlify, SiVercel} from 'react-icons/si';
+import {SiReact,SiMui, SiReactrouter, SiOpenai, SiVite,SiCreatereactapp, SiAmazonaws, SiFirebase, SiSass , SiMapbox, SiMongodb, SiRender, SiPassport, SiBootstrap, SiExpress, SiNetlify, SiVercel} from 'react-icons/si';
 import {FaNodeJs} from 'react-icons/fa';
 import cloudinaryIconSrc from '../assets/cloudinary.svg'
 
@@ -18,5 +18,10 @@ export const technologyIcons = {
     'Render': <SiRender />,
     'Mapbox': <SiMapbox />,
     'Sass': <SiSass />,
+    'OpenAi': <SiOpenai />,
+    'Vite': <SiVite />,
+    'Mui/Joy': <SiMui />,
+    "Create React App": <SiCreatereactapp />,
+    "React Router": <SiReactrouter />,
   };
   
