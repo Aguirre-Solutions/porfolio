@@ -689,7 +689,7 @@ export const projectsData = [
     title: "Portfolio",
     link: "https://ruben-aguirre.com",
     githubLink: "https://github.com/louderthanme/portfolio",
-    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1701797194/portfolio/Portfolio/Main_Page_syeaa0.png",
     shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
     description: [
     "This application allows users to upload and manage recipes. Users can add images, instructions, ingredients, and more to their recipes.",
