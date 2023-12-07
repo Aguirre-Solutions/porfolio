@@ -21,13 +21,14 @@ const Portfolio = ({checks}) => {
                 Portfolio
             </StyledTypography>            
             <Grid container spacing={4}>
-                {projectsData.map((project) => (
-                <Grid item xs={12} md={6} lg={4} key={project.id}>
-                    <PortfolioItem project={project} checks={checks} technologyIcons={technologyIcons}/>
-                </Grid>
-                ))
+                {
+                    projectsData.sort((a, b) => a.id - b.id).map((project) => (
+                        <Grid item xs={12} md={6} lg={4} key={project.id}>
+                            <PortfolioItem project={project} checks={checks} technologyIcons={technologyIcons}/>
+                        </Grid>
+                    ))
                 }
-            </Grid>      
+            </Grid>    
         </Box>   
     )
     
