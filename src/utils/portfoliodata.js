@@ -640,7 +640,7 @@ export const projectsData = [
     }
 },
 {
-    id: 1,
+    id: 2,
     title: "WordFlash",
     link: "https://word-flash.vercel.app/", 
     githubLink: "https://github.com/louderthanme/WordFlash",
@@ -766,7 +766,7 @@ export const projectsData = [
         }
     },
 {
-    id:2,
+    id:3,
     title: "Portfolio",
     link: "https://ruben-aguirre.com",
     githubLink: "https://github.com/louderthanme/portfolio",
@@ -1033,269 +1033,58 @@ export const projectsData = [
     }
 },
 {
-    id: 6,
-    title: "Nibble Notebook",
-    link: "https://nibblenotebook.com",
-    githubLink: "https://github.com/louderthanme/recipes-second-version",
-    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-    shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
+    id: 1,
+    title: "Hunter Herald Helper",
+    link: "https://hunters-herald-helper.onrender.com",
+    githubLink: "https://github.com/louderthanme/HuntersHeraldHelper",
+    image: "", // Add a relevant image URL if available
+    shortDescription: "A background service that monitors a hunting reservation calendar for updates, manages image comparisons, and sends notifications.",
     description: [
-    "This application allows users to upload and manage recipes. Users can add images, instructions, ingredients, and more to their recipes.",
-    "The application supports user authentication via email/password and Google authentication. Once authenticated, users can view their profile, showcasing all the recipes they've uploaded or saved to their favorites.",
-    "The app also features a daily recipe and a carousel of featured recipes. Each recipe showcase includes images and ingredients for quick reference.",
-    "Additionally, users can share recipes on Facebook, WhatsApp, and Twitter.",
-    "A search function is available, allowing users to search recipes by tags or keywords."
+      "Hunter Herald Helper is designed to monitor a specific webpage for updates. It takes screenshots of the calendar, compares them for changes, and handles updates accordingly.",
+      "The application uses Cloudinary for image storage and Google Firestore for URL management. When a change is detected, it updates the stored image and sends out email notifications.",
+      "The process involves downloading the stored image URL, comparing it with a new screenshot, and executing actions based on the comparison result.",
+      "This service operates in the background without a user interface, continuously monitoring and updating as needed."
     ],
     technologyStack: [
-    "React",
-    "Vite",
-    "Firebase (for authentication and database)",
-    "Cloudinary (for image uploads)",
-    "Express (for the development server)",
-    "Serverless functions (for deployment)"
+      "Node.js",
+      "Cloudinary",
+      "Google Firestore",
+      "Puppeteer",
+      "Nodemailer",
+      "Cron Jobs"
     ],
-    highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI'],
+    highlightedTechnologies: ['Node.js', 'Cloudinary', 'Google Firestore', 'Puppeteer', 'Nodemailer', 'Cron Jobs'],
     setup: {
-    dependencies: "yarn install",
-    devServer: "yarn start-server",
-    frontend: "yarn dev",
-    liveBuild: "yarn start",
-    notes: [
-        "Firebase and Cloudinary are already set up for use. This repository is intended for portfolio purposes, so no additional setup for Firebase or Cloudinary is required."
-    ]
+      notes: [
+        "This project is a background service and is not intended for local setup or deployment. It is showcased here for portfolio purposes."
+      ]
     },
     usage: {
-    authentication: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
-    profile: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-    dailyRecipe: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
-    sharing: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-    search: "Search: Search for recipes using tags or keywords."
+      description: "The Hunter Herald Helper runs as a background service, automatically monitoring a hunting reservation calendar for updates. It uses image comparison to detect changes and sends email notifications when updates are detected."
     },
     contributions: "This project is not open for contributions as it's intended for portfolio purposes.",
-    license: "This project is for educational and portfolio purposes. Please ensure to give credit if you use any part of the code or design.",
+    license: "This project is licensed under the MIT License.",
     highlights: {
-        authentication: {
-            description: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Context and State, Firebase",
-            githubLink: ""
-        },
-        search: {
-            description: "Search: Search for recipes using tags or keywords.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],                technology: "React: Context and State, Firestore",
-            githubLink: ""
-        },
-        sharing: {
-            description: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "Social Media APIs",
-            githubLink: ""
-        },
-        dailyRecipe: {
-            description: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Carousel Components, Firebase",
-            githubLink: ""
-        },
-        profile: {
-            description: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Private Routes, Firebase Auth",
-            githubLink: ""
-        },
-        upload: {
-            description: "Upload: Users can upload recipes with images, instructions, ingredients, and more.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Forms and Validation, Firebase Storage",
-            githubLink: ""
-        },
-        edit: {
-            description: "Edit: Users can edit their recipes.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: State Management, Firestore",
-            githubLink: ""
-        },
-        convenience: {
-            description: "These are small hooks, or utils that came in handy during coding.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "Javascript, custom hooks, utils, and more",
-            githubLink: ""
-        }
+      imageComparison: {
+        description: "The core functionality involves comparing two images of a calendar to detect updates. This process uses Puppeteer for taking screenshots and a custom image comparison algorithm.",
+        technology: "Puppeteer, Custom Image Comparison"
+      },
+      cloudinaryIntegration: {
+        description: "Images are stored and managed using Cloudinary, providing a reliable and efficient way to handle image data.",
+        technology: "Cloudinary"
+      },
+      firestoreDatabase: {
+        description: "Google Firestore is used for storing and retrieving image URLs, enabling efficient data management and retrieval.",
+        technology: "Google Firestore"
+      },
+      emailNotifications: {
+        description: "Upon detecting changes, the application sends out email notifications using Nodemailer, keeping users informed about calendar updates.",
+        technology: "Nodemailer"
+      },
+      cronJobScheduling: {
+        description: "The application uses cron jobs to schedule regular checks of the calendar, ensuring timely updates and monitoring.",
+        technology: "Cron Jobs"
+      }
     }
-}]
+  }
+]
