@@ -1054,7 +1054,7 @@ export const projectsData = [
       "Pixelmatch",
       "Cron Jobs"
     ],
-    highlightedTechnologies: ['Node.js', 'Cloudinary', 'Google Firestore', 'Puppeteer', 'Nodemailer', 'Cron Jobs'],
+    highlightedTechnologies: ['Node.js', 'Cloudinary', 'Firestore', 'Puppeteer', 'Nodemailer', 'Cron Jobs'],
     setup: {
       notes: [
         "This project is a background service and is not intended for local setup or deployment. It is showcased here for portfolio purposes."
