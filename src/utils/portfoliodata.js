@@ -1037,7 +1037,7 @@ export const projectsData = [
     title: "Hunter Herald Helper",
     link: "https://hunters-herald-helper.onrender.com",
     githubLink: "https://github.com/louderthanme/HuntersHeraldHelper",
-    image: "", // Add a relevant image URL if available
+    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1704222772/portfolio/Hunters%20Herald%20Helper/Hunters_Herald_Helper_sbedsf.png",
     shortDescription: "A background service that monitors a hunting reservation calendar for updates, manages image comparisons, and sends notifications.",
     description: [
       "Hunter Herald Helper is designed to monitor a specific webpage for updates. It takes screenshots of the calendar, compares them for changes, and handles updates accordingly.",
@@ -1048,9 +1048,10 @@ export const projectsData = [
     technologyStack: [
       "Node.js",
       "Cloudinary",
-      "Google Firestore",
+      "Firestore",
       "Puppeteer",
       "Nodemailer",
+      "Pixelmatch",
       "Cron Jobs"
     ],
     highlightedTechnologies: ['Node.js', 'Cloudinary', 'Google Firestore', 'Puppeteer', 'Nodemailer', 'Cron Jobs'],
