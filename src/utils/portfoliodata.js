@@ -1066,26 +1066,88 @@ export const projectsData = [
     contributions: "This project is not open for contributions as it's intended for portfolio purposes.",
     license: "This project is licensed under the MIT License.",
     highlights: {
-      imageComparison: {
-        description: "The core functionality involves comparing two images of a calendar to detect updates. This process uses Puppeteer for taking screenshots and a custom image comparison algorithm.",
-        technology: "Puppeteer, Custom Image Comparison"
-      },
-      cloudinaryIntegration: {
-        description: "Images are stored and managed using Cloudinary, providing a reliable and efficient way to handle image data.",
-        technology: "Cloudinary"
-      },
-      firestoreDatabase: {
-        description: "Google Firestore is used for storing and retrieving image URLs, enabling efficient data management and retrieval.",
-        technology: "Google Firestore"
-      },
-      emailNotifications: {
-        description: "Upon detecting changes, the application sends out email notifications using Nodemailer, keeping users informed about calendar updates.",
-        technology: "Nodemailer"
-      },
-      cronJobScheduling: {
-        description: "The application uses cron jobs to schedule regular checks of the calendar, ensuring timely updates and monitoring.",
-        technology: "Cron Jobs"
+        howItWorks: {
+            description: "The application automates the process of monitoring a web-based calendar for updates, notifying the client of any changes. It leverages a combination of web scraping, image processing, and cloud services.",
+            technology: "Puppeteer, Pixelmatch, PNG.js, Google Firestore, Cloudinary, Nodemailer",
+            images: [
+              {
+                link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239415/portfolio/Hunters%20Herald%20Helper/Main_Process_l6poqs.png",
+                description: "The `runProcess` function orchestrates the entire workflow. Initially, it retrieves the last saved image URL from Firestore and downloads it for comparison. Using Puppeteer, the app takes a new screenshot of the calendar. These two images are then compared. If a difference is detected, the new image is uploaded to Cloudinary, the Firestore database is updated with the new image URL, and an email notification is sent to the client using Nodemailer. The old image is then deleted from Cloudinary. This process ensures that the client is always informed about the most recent state of the calendar."
+              },
+              {
+                link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704240437/portfolio/Hunters%20Herald%20Helper/Download_Images_d25d1y.png",
+                description: "In `downloadImage.js`, I implemented a function to download images using Axios. This function is crucial for retrieving the last known state of the calendar from Firestore, setting the stage for the comparison process."
+              },
+              {
+                link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704240471/portfolio/Hunters%20Herald%20Helper/Clean_Up_tekrx0.png",
+                description: "The `updateSendCleanup` function in 'updateSendCleanup.js' handles the post-comparison steps. It uploads the new image to Cloudinary, updates Firestore, sends an email notification, and cleans up the old image. This function encapsulates the critical actions taken when a change is detected, ensuring the client receives timely updates."
+              }
+            ]
+          },          
+        puppeteerIntegration: {
+            description: "To capture up-to-date images of the calendar from a website, I integrated Puppeteer into the project. I had to learn how to use puppeteer to take screenshots, then save said screenshots for later comparison..",
+            technology: "Puppeteer",
+            images: [
+              {
+                link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239416/portfolio/Hunters%20Herald%20Helper/Puppeteer_reqciw.png",
+                description: "In the `takeScreenshot` function, I utilized Puppeteer to launch a headless browser and navigate to the target website. I learned to manage browser instances, handle page navigation, and wait for specific elements (like the calendar) to render. The function captures a screenshot of the calendar and saves it, demonstrating my ability to apply new tools and libraries effectively."
+              }
+            ]
+          },          
+        imageComparison: {
+            description: "The core functionality involves comparing two images of a calendar to detect updates. This process uses Puppeteer for taking screenshots and a custom image comparison algorithm.",
+            technology: "Puppeteer, Custom Image Comparison",
+            images: [
+              {
+                link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239416/portfolio/Hunters%20Herald%20Helper/Are_Images_The_Same_wp2pb7.png",
+                description: "I implemented the `areImagesTheSame` function to compare two calendar images. To handle this, I integrated Pixelmatch and PNG.js for precise image analysis. My approach was to first read and parse both images, then compare them pixel by pixel. This method is crucial for detecting any changes in the calendar, ensuring accurate notifications to the client."
+              },
+              {
+                link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239415/portfolio/Hunters%20Herald%20Helper/Read_and_Parse_y2pd0z.png",
+                description: "In `imageParser.js`, I created the `readAndParseImage` function to efficiently load and parse image data. This function forms the backbone of the image comparison process, preparing the images for a detailed pixel-level comparison."
+              },
+              {
+                link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239416/portfolio/Hunters%20Herald%20Helper/Remove_Red_dvi2ay.png",
+                description: "To address the challenge of false positives in image comparison due to date changes, I devised the `removeRedShades` function. This function specifically targets and neutralizes certain shades of red in the images. By doing so, I ensured that only significant changes in the calendar trigger notifications, enhancing the accuracy and reliability of the application."
+              }
+            ]
+          },
+        cloudinaryIntegration: {
+          description: "Images are stored and managed using Cloudinary, providing a reliable and efficient way to handle image data.",
+          technology: "Cloudinary",
+          images: [
+            {
+              link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239640/portfolio/Hunters%20Herald%20Helper/Cloudinary_yvqb8q.png",
+              description: "The 'cloudinary.js' file contains functions for uploading and deleting images to/from Cloudinary. It showcases the integration and management of image data using Cloudinary's API."
+            }
+          ]
+        },
+        firestoreDatabase: {
+            description: "Google Firestore is used for storing and retrieving image URLs, enabling efficient data management and retrieval.",
+            technology: "Google Firestore",
+            images: [
+              {
+                link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239695/portfolio/Hunters%20Herald%20Helper/Firestore_mwk5ha.png",
+                description: "I chose Google Firestore for its real-time data syncing capabilities. In 'firebase.js', I implemented functions like `getImageInFirestore` and `deleteImageFromFirestore` to handle image data. This approach streamlined the process of storing and retrieving image URLs, ensuring efficient data management."
+              }
+            ]
+          },
+        emailNotifications: {
+          description: "Upon detecting changes, the application sends out email notifications using Nodemailer, keeping users informed about calendar updates.",
+          technology: "Nodemailer",
+          images: [] 
+        },
+        cronJobScheduling: {
+          description: "The application uses cron jobs to schedule regular checks of the calendar, ensuring timely updates and monitoring.",
+          technology: "Cron Jobs",
+          images: [
+            {
+              link: "https://github.com/louderthanme/HuntersHeraldHelper/blob/main/app.js",
+              description: "This snippet from 'app.js' shows the scheduling of a cron job that triggers the 'runProcess' function every X minutes. It's a crucial part of the application's functionality, ensuring regular checks and updates."
+            }
+          ]
+        }
       }
-    }
+      
   }
 ]
