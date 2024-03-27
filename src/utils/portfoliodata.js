@@ -767,10 +767,10 @@ export const projectsData = [
 },
 {
   id: 2,
-  title: "Personal Portfolio",
+  title: "Portfolio",
   link: "https://ruben-aguirre.com/",
   githubLink: "https://github.com/louderthanme/porfolio",
-  image: "https://louderthanme.github.io/portfolio/public/portfolio.svg",
+  image: "https://res.cloudinary.com/recipeb00k/image/upload/v1701797194/portfolio/Portfolio/Main_Page_syeaa0.png",
   shortDescription: "A personal portfolio showcasing projects, skills, and experiences.",
   description: [
     "This portfolio is a comprehensive showcase of my skills, projects, and experiences as a developer. It includes detailed project overviews, experiences, education, and contact information.",
