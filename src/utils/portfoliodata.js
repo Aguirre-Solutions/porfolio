@@ -763,274 +763,54 @@ export const projectsData = [
             ],
 
         },
-        }
-    },
-{
-    id:3,
-    title: "Portfolio",
-    link: "https://ruben-aguirre.com",
-    githubLink: "https://github.com/louderthanme/portfolio",
-    image: "https://res.cloudinary.com/recipeb00k/image/upload/v1701797194/portfolio/Portfolio/Main_Page_syeaa0.png",
-    shortDescription: "This application allows users to upload, manage and recipes. Users can add images, instructions, ingredients, and more to their recipes.",
-    description: [
-    "This application allows users to upload and manage recipes. Users can add images, instructions, ingredients, and more to their recipes.",
-    "The application supports user authentication via email/password and Google authentication. Once authenticated, users can view their profile, showcasing all the recipes they've uploaded or saved to their favorites.",
-    "The app also features a daily recipe and a carousel of featured recipes. Each recipe showcase includes images and ingredients for quick reference.",
-    "Additionally, users can share recipes on Facebook, WhatsApp, and Twitter.",
-    "A search function is available, allowing users to search recipes by tags or keywords."
-    ],
-    technologyStack: [
-    "React",
-    "Vite",
-    "Firebase (for authentication and database)",
-    "Cloudinary (for image uploads)",
-    "Express (for the development server)",
-    "Serverless functions (for deployment)"
-    ],
-    highlightedTechnologies: ['React', 'Node.js', 'Express', 'Firebase', 'Cloudinary', 'Material UI'],
-    setup: {
-    dependencies: "yarn install",
-    devServer: "yarn start-server",
-    frontend: "yarn dev",
-    liveBuild: "yarn start",
-    notes: [
-        "Firebase and Cloudinary are already set up for use. This repository is intended for portfolio purposes, so no additional setup for Firebase or Cloudinary is required."
-    ]
-    },
-    usage: {
-    authentication: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
-    profile: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-    dailyRecipe: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
-    sharing: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-    search: "Search: Search for recipes using tags or keywords."
-    },
-    contributions: "This project is not open for contributions as it's intended for portfolio purposes.",
-    license: "This project is for educational and portfolio purposes. Please ensure to give credit if you use any part of the code or design.",
-    highlights: {
-        authentication: {
-            description: "User Authentication: Users can sign up and log in using email/password or Google authentication.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Context and State, Firebase",
-            githubLink: ""
-        },
-        search: {
-            description: "Search: Search for recipes using tags or keywords.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],                technology: "React: Context and State, Firestore",
-            githubLink: ""
-        },
-        sharing: {
-            description: "Sharing: Users can share recipes on Facebook, WhatsApp, and Twitter.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "Social Media APIs",
-            githubLink: ""
-        },
-        dailyRecipe: {
-            description: "Daily Recipe & Featured Carousel: The app showcases a daily recipe and a carousel of featured recipes.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Carousel Components, Firebase",
-            githubLink: ""
-        },
-        profile: {
-            description: "Profile: Authenticated users can view their profile to see all their uploaded recipes and favorites.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Private Routes, Firebase Auth",
-            githubLink: ""
-        },
-        upload: {
-            description: "Upload: Users can upload recipes with images, instructions, ingredients, and more.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: Forms and Validation, Firebase Storage",
-            githubLink: ""
-        },
-        edit: {
-            description: "Edit: Users can edit their recipes.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "React: State Management, Firestore",
-            githubLink: ""
-        },
-        convenience: {
-            description: "These are small hooks, or utils that came in handy during coding.",
-            images: [
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            codeImages: [
-                {
-                    link:"https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                },
-                {
-                    link: "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
-                    description: "Firebase Authentication"
-                
-                },
-            ],
-            technology: "Javascript, custom hooks, utils, and more",
-            githubLink: ""
-        }
     }
+},
+{
+  id: 2,
+  title: "Personal Portfolio",
+  link: "https://ruben-aguirre.com/",
+  githubLink: "https://github.com/louderthanme/porfolio",
+  image: "https://louderthanme.github.io/portfolio/public/portfolio.svg",
+  shortDescription: "A personal portfolio showcasing projects, skills, and experiences.",
+  description: [
+    "This portfolio is a comprehensive showcase of my skills, projects, and experiences as a developer. It includes detailed project overviews, experiences, education, and contact information.",
+    "The portfolio leverages modern web technologies to provide a responsive and interactive user experience. Highlights include dynamic project presentations, detailed descriptions, and a clean, engaging UI."
+  ],
+  technologyStack: [
+    "React",
+    "Material UI",
+    "React Router",
+    "Cloudinary",
+    "Slick Carousel"
+  ],
+  highlightedTechnologies: ['React', 'Material UI', 'Cloudinary'],
+  setup: {
+    notes: [
+      "This project can be set up locally for development purposes. It requires Node.js and npm installed. Clone the repository, install dependencies with npm install, and run with npm start."
+    ]
+  },
+  usage: {
+    description: "The portfolio serves as an interactive resume, detailing projects I've worked on, my skill set, and my career experiences. It's designed to be intuitive, allowing users to explore my professional journey and contact me for opportunities."
+  },
+  contributions: "Feedback and suggestions on the portfolio are welcome. Feel free to raise an issue or submit a pull request on GitHub.",
+  license: "This project is licensed under the MIT License.",
+  highlights: {
+    dynamicProjectPresentation: {
+      description: "Projects are showcased with detailed overviews, including technologies used, project objectives, and outcomes. Interactive carousels allow for engaging exploration of project images.",
+      technology: "React, Material UI, Slick Carousel",
+      images: []
+    },
+    responsiveDesign: {
+      description: "The portfolio is fully responsive, ensuring a seamless experience across all device sizes. It adapts gracefully from desktop to mobile screens, highlighting my skills in responsive web design.",
+      technology: "CSS, Media Queries, Material UI",
+      images: []
+    },
+    contentManagement: {
+      description: "Project and experience data are managed through a centralized context, facilitating easy updates and maintenance of the portfolio's content.",
+      technology: "React Context API, JavaScript",
+      images: []
+    }
+  }
 },
 {
     id: 1,
