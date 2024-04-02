@@ -150,7 +150,7 @@ export const projectsData = [
                 technology: "React, React Hooks, Context API, Material UI, React Router",
                 githubLink: "https://github.com/louderthanme/recipes-second-version/blob/main/src/pages/user-profile/user-profile.component.jsx"
             },
-            resposiveness: {
+            responsiveness: {
                 description: "Every single page or view in this app responds to mobile, tablet or desktop sizes.",
                 images: [
                     {
@@ -781,7 +781,6 @@ export const projectsData = [
     "Material UI",
     "React Router",
     "Cloudinary",
-    "Slick Carousel"
   ],
   highlightedTechnologies: ['React', 'Material UI', 'Cloudinary'],
   setup: {
@@ -790,14 +789,14 @@ export const projectsData = [
     ]
   },
   usage: {
-    description: "The portfolio serves as an interactive resume, detailing projects I've worked on, my skill set, and my career experiences. It's designed to be intuitive, allowing users to explore my professional journey and contact me for opportunities."
+    description: "The portfolio serves as an interactive resume, detailing projects I've worked on, my skill set, and my career experiences. It's designed to be intuitive, allowing users to explore my professional journey and contact me for opportunities. I also learned MUI Joy and made a custom theme to work with it"
   },
   contributions: "Feedback and suggestions on the portfolio are welcome. Feel free to raise an issue or submit a pull request on GitHub.",
   license: "This project is licensed under the MIT License.",
   highlights: {
     dynamicProjectPresentation: {
       description: "Projects are showcased with detailed overviews, including technologies used, project objectives, and outcomes. Interactive carousels allow for engaging exploration of project images.",
-      technology: "React, Material UI, Slick Carousel",
+      technology: "React, Material UI",
       images: []
     },
     responsiveDesign: {
