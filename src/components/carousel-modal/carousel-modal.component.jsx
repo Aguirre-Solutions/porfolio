@@ -66,7 +66,7 @@ const CarouselModal = ({ theme, images, open, handleClose, initialSlide, checks}
                   }} 
                 />
                 <Box mb={2}>
-                  <StyledCaption sx={{overflow: 'auto', height:'20vh', paddingX: isMobile ? '20px' : '40px', mt: 2, fontSize:'25px',  alignItems: isTablet || isMobile ? 'flex-start' : 'center'}}>
+                  <StyledCaption sx={{overflow: 'auto', height:'20vh', paddingX: isMobile ? '20px' : '40px', mt: 2, fontSize:'25px',  alignItems: isTablet || isMobile ? 'flex-start' : 'center', color:theme.palette.primary.contrastText}}>
                     {img.description} <br></br>
                   </StyledCaption>
                 </Box>
