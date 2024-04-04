@@ -42,7 +42,7 @@ const ProjectDetailed = ({ project, checks, theme }) => {
             </Grid>
             
             {/* Highlight chips */}
-            <Grid item xs={12} md={6} lg={6} display='flex' justifyContent='space-around' sx={{mx:'auto'}}>
+            <Grid item xs={12} md={6} lg={4} display='flex' justifyContent='space-around' sx={{mx:'auto'}}>
                 <Box 
                     sx={{ 
                         marginTop: '10px', 
