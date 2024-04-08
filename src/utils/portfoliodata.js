@@ -1,6 +1,6 @@
 export const projectsData = [ 
     {
-        id: 3,
+        id: 4,
         title: "Nibble Notebook",
         link: "https://nibblenotebook.com",
         githubLink: "https://github.com/louderthanme/recipes-second-version",
@@ -303,7 +303,7 @@ export const projectsData = [
         }
   },
   {
-    id: 4,
+    id: 5,
     title: "Clothing Store",
     link: "https://main--stately-rabanadas-ba7cd5.netlify.app/",
     githubLink: "https://github.com/louderthanme/Clothing-Store",
@@ -455,7 +455,7 @@ export const projectsData = [
         }       
     },    
 {
-    id: 5,
+    id: 6,
     title: "YelpCamp",
     link: "https://yelpcamp-gyon.onrender.com", 
     githubLink: "https://github.com/louderthanme/YelpCamp",
@@ -766,7 +766,7 @@ export const projectsData = [
     }
 },
 {
-  id: 2,
+  id: 3,
   title: "Portfolio",
   link: "https://ruben-aguirre.com/",
   githubLink: "https://github.com/louderthanme/porfolio",
