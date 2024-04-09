@@ -42,17 +42,6 @@ const Contact = ({theme}) => {
                         <EmailIcon sx={{fontSize:iconSize}}/>
                     </StyledIconButton>
                 </Tooltip>
-                <Tooltip title='Get in touch'>
-                    <StyledIconButton 
-                        component={Link}
-                        href=''
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        sx={{ padding: padding,  }}
-                        >
-                        <WhatsAppIcon sx={{fontSize:iconSize}}/>
-                    </StyledIconButton>
-                </Tooltip>
             </Box>
         </Box>
     )
