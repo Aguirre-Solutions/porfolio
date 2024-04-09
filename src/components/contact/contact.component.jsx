@@ -2,6 +2,7 @@ import { Box, Tooltip, Link, Grid} from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
+import { LinkedIn } from '@mui/icons-material';
 import { StyledIconButton, StyledLegend } from '../../utils/styledComponents';
 
 const Contact = ({theme}) => {
@@ -40,6 +41,17 @@ const Contact = ({theme}) => {
                         sx={{ padding: padding,}}
                         >
                         <EmailIcon sx={{fontSize:iconSize}}/>
+                    </StyledIconButton>
+                </Tooltip>
+                <Tooltip title='Connect on LinkedIn'>
+                    <StyledIconButton 
+                        component={Link}
+                        href='https://www.linkedin.com/in/ruben-aguirre-917278145/'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{ padding: padding,  }}
+                        >
+                        <LinkedIn sx={{fontSize:iconSize}}/>
                     </StyledIconButton>
                 </Tooltip>
             </Box>

@@ -1,4 +1,4 @@
-import {SiReact,SiMui, SiReactrouter, SiOpenai, SiVite,SiCreatereactapp, SiAmazonaws, SiFirebase, SiSass , SiMapbox, SiMongodb, SiRender, SiPassport, SiBootstrap, SiExpress, SiNetlify, SiVercel, SiPuppeteer} from 'react-icons/si';
+import {SiReact,SiMui, SiReactrouter, SiOpenai, SiVite,SiCreatereactapp, SiAmazonaws, SiFirebase, SiSass , SiMapbox, SiMongodb, SiRender, SiPassport, SiBootstrap, SiExpress, SiNetlify, SiVercel, SiPuppeteer, SiLinkedin} from 'react-icons/si';
 import {FaNodeJs} from 'react-icons/fa';
 import cloudinaryIconSrc from '../assets/cloudinary.svg'
 
@@ -25,5 +25,6 @@ export const technologyIcons = {
     "Create React App": <SiCreatereactapp />,
     "React Router": <SiReactrouter />,
     "Puppeteer": <SiPuppeteer />,
+    "LinkedIn": <SiLinkedin/>
   };
   
