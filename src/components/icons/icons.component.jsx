@@ -1,5 +1,5 @@
 import {TbBrandNodejs} from 'react-icons/tb';
-import {SiMongodb, SiFirebase, SiReact, SiTypescript, SiRedux, SiMui, SiAmazonaws} from 'react-icons/si';
+import {SiMongodb, SiFirebase, SiReact, SiTypescript, SiRedux, SiMui, SiNextdotjs} from 'react-icons/si';
 import { Box  } from "@mui/material";
 
 
@@ -14,9 +14,10 @@ const Icons = ({checks}) => {
             <SiRedux size={iconSize} />
             <SiTypescript size={iconSize} />
             <TbBrandNodejs size={iconSize} />
+            <SiNextdotjs size={iconSize} />            
             <SiMongodb size={iconSize} />
             <SiFirebase size={iconSize} />
-            <SiAmazonaws size={iconSize} />
+            
         </Box>
     )
 }

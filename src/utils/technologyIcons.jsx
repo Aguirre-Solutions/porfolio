@@ -1,10 +1,11 @@
-import {SiReact,SiMui, SiReactrouter, SiOpenai, SiVite,SiCreatereactapp, SiAmazonaws, SiFirebase, SiSass , SiMapbox, SiMongodb, SiRender, SiPassport, SiBootstrap, SiExpress, SiNetlify, SiVercel, SiPuppeteer, SiLinkedin} from 'react-icons/si';
+import {SiReact,SiMui, SiReactrouter, SiOpenai, SiVite,SiCreatereactapp, SiAmazonaws, SiFirebase, SiSass , SiMapbox, SiMongodb, SiRender, SiPassport, SiBootstrap, SiExpress, SiNetlify, SiVercel, SiPuppeteer, SiLinkedin, SiTailwindcss, SiNextdotjs} from 'react-icons/si';
 import {FaNodeJs} from 'react-icons/fa';
 import cloudinaryIconSrc from '../assets/cloudinary.svg'
 
 export const technologyIcons = {
     'React': <SiReact />,
     'Node.js': <FaNodeJs />,
+    'Next.js': <SiNextdotjs />,
     'Firebase': <SiFirebase />,
     'Firestore': <SiFirebase />,
     'Material UI': <SiMui />,
@@ -17,6 +18,7 @@ export const technologyIcons = {
     'Vercel': <SiVercel />,
     'AWS': <SiAmazonaws />,
     'Render': <SiRender />,
+    'Tailwind CSS': <SiTailwindcss />,
     'Mapbox': <SiMapbox />,
     'Sass': <SiSass />,
     'OpenAi': <SiOpenai />,
