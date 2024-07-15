@@ -1131,7 +1131,7 @@ export const projectsData = [
     },
   },
   {
-    id: 1,
+    id: 7,
     title: "Docx to PDF",
     link: "https://frontend-docxtopdf.vercel.app",
     githubLink: "https://github.com/louderthanme/DocxToPdf",
@@ -1288,6 +1288,125 @@ export const projectsData = [
         ],
         technology: "JavaScript",
         githubLink: "https://github.com/louderthanme/DocxToPdf",
+      },
+    },
+  },
+  {
+    id: 8,
+    title: "OCR Application",
+    link: "https://ocr-app-tawny.vercel.app/",
+    githubLink: "https://github.com/louderthanme/ocr-app",
+    image:
+      "https://res.cloudinary.com/ocrapp/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+    shortDescription:
+      "This application uses Google Cloud Vision for OCR processing, allowing users to upload images or documents for text extraction.",
+    description: [
+      "This application utilizes Google Cloud Vision for OCR processing. Users can upload images or documents (PDF/TIFF) to extract text content.",
+      "The client wanted to use Google Cloud Vision to integrate OCR capabilities into their project.",
+      "The client was very pleased with the results and the speed of development, particularly appreciating the thorough comments and documentation provided, which enabled quick and efficient integration into their project.",
+    ],
+    technologyStack: [
+      "Next.js 14",
+      "Chakra UI",
+      "Google Cloud Vision API",
+      "Google Cloud Storage",
+      "Vercel",
+      "TypeScript",
+    ],
+    highlightedTechnologies: [
+      "Next.js 14",
+      "Google Cloud Vision API",
+      "Google Cloud Storage",
+      "Chakra UI",
+      "TypeScript",
+      "Vercel",
+    ],
+    setup: {
+      dependencies: "yarn install",
+      devServer: "yarn dev",
+      liveBuild: "yarn build",
+      notes: [
+        "Google Cloud Vision API and Storage are already set up for use. This repository is intended for a specific client who has access to these services.",
+      ],
+    },
+    usage: {
+      upload: "Users can upload image, PDF, or TIFF files for OCR processing.",
+      viewResults:
+        "Processed text results are displayed on the UI and can be downloaded.",
+    },
+    contributions:
+      "This project is not open for contributions as it was developed for a specific client.",
+    license: "MIT license",
+    highlights: {
+      nextJsAppRouter: {
+        description:
+          "Implemented the new Next.js 14 App Router for the first time, managing the application structure and routing. This was a challenging but rewarding experience, as it added a powerful tool to my skillset.",
+        codeImages: [
+          {
+            link: "", // Placeholder for code image link
+            description:
+              "Example of the Next.js 14 App Router implementation in the application.",
+          },
+        ],
+        technology: "Next.js 14 App Router",
+        githubLink: "https://github.com/louderthanme/ocr-app",
+      },
+      chakraUi: {
+        description:
+          "Utilized Chakra UI for building a responsive and visually appealing frontend. The VStack and HStack components were particularly useful for creating structured layouts, making the development process smoother.",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/UploadingFile_khdwij.png",
+            description: "UI for selecting the file.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/OCRRESULT_f40mun.png",
+            description: "UI for simple image OCR result.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/OCRPAGEDRESULT_nfhn89.png",
+            description:
+              "UI for paginated OCR results, usually resulting from a pdf or a tiff",
+          },
+        ],
+        codeImages: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080421/OCRAPP/Paged_Result_Chakra_UI_bp1jrf.png",
+            description:
+              "Handling multi-page OCR results with navigation buttons using Chakra UI. This snippet demonstrates how the application manages text extracted from PDFs or TIFFs, including displaying page numbers and navigation controls.",
+          },
+        ],
+        technology: "Chakra UI",
+        githubLink: "https://github.com/louderthanme/ocr-app",
+      },
+      fileUploadAndConversion: {
+        description:
+          "Implemented file upload and conversion using Google Cloud Storage and Vision API. The process includes validating the file type, handling file storage, managing the OCR process, and ensuring the correct response is sent back to the client.",
+        codeImages: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/Google_Cloud_Blob_Creation_nzzqqf.png",
+            description:
+              "Parsing the uploaded file, creating a buffer, and defining the blob in Google Cloud Storage.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/Google_Credentials_sxylxw.png", // Placeholder for code image link
+            description:
+              "Initializing the Google Cloud Storage and Vision Client with credentials, showcasing secure and effective setup and configuration.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/OCR_PDF_REQUEST_OBJECT_shsblu.png",
+            description:
+              "Handling POST requests for initiating OCR on PDF/TIFF files, including setting up the request payload and handling multiple pages.",
+          },
+
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/OCR_IMAGE_REQUEST_OBJECT_sutmjm.png", // Placeholder for code image link
+            description:
+              "Preparing the OCR request payload and specifying features for image files.",
+          },
+        ],
+        technology: "Google Cloud Storage, Google Cloud Vision API",
+        githubLink: "https://github.com/louderthanme/ocr-app",
       },
     },
   },

@@ -23,6 +23,7 @@ import {
   SiDocker,
   SiExpress,
   SiLibreoffice,
+  SiGooglecloud,
 } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import cloudinaryIconSrc from "../assets/cloudinary.svg";
@@ -62,4 +63,5 @@ export const technologyIcons = {
   "Chakra UI": <SiChakraui />,
   Docker: <SiDocker />,
   LibreOffice: <SiLibreoffice />,
+  GoogleCloud: <SiGooglecloud />,
 };
