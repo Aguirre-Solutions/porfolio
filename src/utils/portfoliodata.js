@@ -1136,7 +1136,7 @@ export const projectsData = [
     link: "https://frontend-docxtopdf.vercel.app",
     githubLink: "https://github.com/louderthanme/DocxToPdf",
     image:
-      "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png", // Update with a relevant screenshot
+      "https://res.cloudinary.com/recipeb00k/image/upload/v1721064598/Docx%20To%20Pdf/UI_Selecting_a_File_qgf2em.png", // Update with a relevant screenshot
     shortDescription:
       "A web application to convert DOCX files to PDF, ensuring proper formatting for Hebrew-speaking users.",
     description: [
@@ -1297,7 +1297,7 @@ export const projectsData = [
     link: "https://ocr-app-tawny.vercel.app/",
     githubLink: "https://github.com/louderthanme/ocr-app",
     image:
-      "https://res.cloudinary.com/ocrapp/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
+      "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/UploadingFile_khdwij.png",
     shortDescription:
       "This application uses Google Cloud Vision for OCR processing, allowing users to upload images or documents for text extraction.",
     description: [
@@ -1338,19 +1338,6 @@ export const projectsData = [
       "This project is not open for contributions as it was developed for a specific client.",
     license: "MIT license",
     highlights: {
-      nextJsAppRouter: {
-        description:
-          "Implemented the new Next.js 14 App Router for the first time, managing the application structure and routing. This was a challenging but rewarding experience, as it added a powerful tool to my skillset.",
-        codeImages: [
-          {
-            link: "", // Placeholder for code image link
-            description:
-              "Example of the Next.js 14 App Router implementation in the application.",
-          },
-        ],
-        technology: "Next.js 14 App Router",
-        githubLink: "https://github.com/louderthanme/ocr-app",
-      },
       chakraUi: {
         description:
           "Utilized Chakra UI for building a responsive and visually appealing frontend. The VStack and HStack components were particularly useful for creating structured layouts, making the development process smoother.",
@@ -1389,7 +1376,7 @@ export const projectsData = [
               "Parsing the uploaded file, creating a buffer, and defining the blob in Google Cloud Storage.",
           },
           {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/Google_Credentials_sxylxw.png", // Placeholder for code image link
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/Google_Credentials_sxylxw.png",
             description:
               "Initializing the Google Cloud Storage and Vision Client with credentials, showcasing secure and effective setup and configuration.",
           },
@@ -1400,7 +1387,7 @@ export const projectsData = [
           },
 
           {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/OCR_IMAGE_REQUEST_OBJECT_sutmjm.png", // Placeholder for code image link
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/OCR_IMAGE_REQUEST_OBJECT_sutmjm.png",
             description:
               "Preparing the OCR request payload and specifying features for image files.",
           },
