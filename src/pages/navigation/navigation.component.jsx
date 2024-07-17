@@ -9,8 +9,9 @@ import {
 import { ThemeValuesContext } from "../../context/theme-values.context";
 
 const Navigation = () => {
-  const { theme } = useContext(ThemeValuesContext);
+  const { theme, checks } = useContext(ThemeValuesContext);
 
+  const { isMobile } = checks;
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -48,7 +49,8 @@ const Navigation = () => {
                 sx={{
                   color: isScrolled
                     ? theme.palette.common.white
-                    : `${theme.palette.secondary.main}`,
+                    : theme.palette.secondary.main,
+                  textAlign: isMobile ? "center" : "left",
                 }}
               >
                 Home
