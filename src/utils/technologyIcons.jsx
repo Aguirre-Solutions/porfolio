@@ -25,7 +25,7 @@ import {
   SiLibreoffice,
   SiGooglecloud,
   SiGooglecalendar,
-  SiGooglecloudstorage,
+  SiGooglecloudstorage ,
 } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -70,5 +70,5 @@ export const technologyIcons = {
   GoogleCloud: <SiGooglecloud />,
   FullCalendar: <SiGooglecalendar />,
   SendGrid: <MdEmail />,
-  GoogleCloudStorage: <SiGooglecloudstorage />,
+  "Google Cloud Storage": <SiGooglecloudstorage />,
 };
