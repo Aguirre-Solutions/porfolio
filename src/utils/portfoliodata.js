@@ -1511,17 +1511,17 @@ export const projectsData = [
         ],
         codeImages: [
           {
-            link: "",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178861/Synaptic%20Landing%20Page/Clear_Feedback_for_Success_and_Errors_pgbabc.png",
             description:
               "Clear feedback for successful and failed new appointments is managed using Toast notifications.",
           },
           {
-            link: "",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178858/Synaptic%20Landing%20Page/Events_In_Local_Time_viu2rt.png",
             description:
               "Events are fetched and created keeping in mind the local time zone of the therapist and the client, ensuring accurate scheduling and notifications.",
           },
           {
-            link: "",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178858/Synaptic%20Landing%20Page/Google_Calendar_Reminders_pr6fpf.png",
             description:
               "Events are created with an automatic reminder to the client, the day before the appointment, ensuring they don't forget about it.",
           },
@@ -1534,12 +1534,12 @@ export const projectsData = [
           "Implemented a comprehensive email notification system using SendGrid. This includes sending branded emails to both the therapist and the client with session details, and ensuring all necessary information is conveyed effectively. Branded emails match the site's design and provide a professional touch to the communication process.",
         images: [
           {
-            link: "",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178859/Synaptic%20Landing%20Page/Onboarding_Client_Email_atrdzk.png",
             description:
               "An onboarding email for new clients welcomes them to therapy sessions, includes essential details and instructions for accessing online sessions, provides a way to contact the therapist with questions or concerns, and offers a direct link to the meeting room in addition to the Google Calendar invite, accommodating clients who do not use Google.",
           },
           {
-            link: "",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178858/Synaptic%20Landing%20Page/New_Client_Email_alert_vkf3dh.png",
             description:
               "An email is also sent to the therapist with the client's details and the reason for therapy, ensuring they are prepared for the session and can provide the best support possible.",
           },
@@ -1571,9 +1571,16 @@ export const projectsData = [
           "Created custom SVG elements like hexagons with rounded corners to enhance the visual appeal of the site. These elements are used in various sections of the site to create a unique and engaging design.",
         images: [
           {
-            link: "",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178860/Synaptic%20Landing%20Page/SVG_Hexagons_xdoiah.png",
             description:
               "Custom SVG hexagons with rounded corners create a visually appealing design, applied to images and used as backgrounds. They adjust in size to accommodate different viewports.",
+          },
+        ],
+        codeImages: [
+          {
+            link: "",
+            description:
+              "The hexagons are created using SVG elements with custom dimensions and styles, ensuring a consistent and visually appealing design.",
           },
         ],
         technology: "SVG, CSS",
