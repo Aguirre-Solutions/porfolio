@@ -48,7 +48,7 @@ const Portfolio = ({ checks }) => {
       </StyledTypography>
       <Grid container spacing={4}>
         {currentProjects.map((project) => (
-          <Grid item xs={12} md={6} lg={4} key={project.uuid}>
+          <Grid item xs={12} md={6} lg={4} key={project.id}>
             <PortfolioItem
               project={project}
               checks={checks}

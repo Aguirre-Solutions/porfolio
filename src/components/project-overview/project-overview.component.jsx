@@ -8,6 +8,8 @@ import {
 } from "../../utils/styledComponents";
 
 const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
+  console.log(project);
+
   const { isMobile, isTablet, isLaptop, isDesktop } = checks;
   const {
     title,
@@ -18,6 +20,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
     description,
     setup,
     usage,
+    paid,
   } = project;
 
   const getIcon = (tech) => {
@@ -61,6 +64,29 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
         >
           {title}
         </StyledTypography>
+
+        {paid && (
+          <Box
+            mt={1}
+            mb={1}
+            sx={{
+              display: "flex",
+              justifyContent: isMobile || isTablet ? "center" : "center",
+              flexWrap: "wrap",
+              alignContent: isMobile || isTablet ? "center" : "flex-start",
+              flexDirection: "row",
+              gap: 0,
+            }}
+          >
+            <Chip
+              label="Paid Project"
+              sx={{
+                backgroundColor: theme.palette.additional.gold,
+                color: "#fff",
+              }}
+            />
+          </Box>
+        )}
 
         {/* Links */}
         <Box>
@@ -127,15 +153,9 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
           >
             Description
           </StyledTypography>
-          {description.map((paragraph, index) => (
-            <StyledTypography
-              key={index}
-              paragraph
-              sx={{ textAlign: "center" }}
-            >
-              {paragraph}
-            </StyledTypography>
-          ))}
+          <StyledTypography paragraph sx={{ textAlign: "left", lineHeight: 1 }}>
+            {description.join(" ")}
+          </StyledTypography>
         </Box>
 
         {/* Usage Information */}
@@ -158,7 +178,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
                     .trim() //trim any whitespace
                 }
                 :
-              </strong>{" "}
+              </strong>
               {value}
             </StyledTypography>
           ))}
@@ -186,8 +206,7 @@ const ProjectOverview = ({ project, technologyIcons, checks, theme }) => {
           </StyledTypography>
           <Box sx={{ marginTop: "5px" }}>
             <StyledTypography variant="h6" sx={{ textAlign: "center" }}>
-              {" "}
-              Notes:{" "}
+              Notes:
             </StyledTypography>
             {setup.notes.map((note, index) => (
               <StyledTypography key={index} paragraph>
