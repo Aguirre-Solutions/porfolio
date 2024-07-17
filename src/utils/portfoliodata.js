@@ -1499,7 +1499,7 @@ export const projectsData = [
               "Full calendar displays a custom range of dates and times according to the client's specifications and availability.",
           },
           {
-            link: "",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721238539/Synaptic%20Landing%20Page/Mobile_Calendar_Page_ftfmot.png",
             description:
               "Mobile friendly design reduces the amount of information displayed to ensure a clean and focused user experience.",
           },
@@ -1558,9 +1558,16 @@ export const projectsData = [
           "Ensured all pages and features are mobile-friendly, including custom backgrounds and special UI elements like SVG hexagons with rounded corners. This involved extensive use of media queries and responsive design principles.",
         images: [
           {
-            link: "",
-            description:
-              "The dynamic background adapts to show a similar design on mobile devices, but with adjustments based on screensize",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721238539/Synaptic%20Landing%20Page/Mobile_Home_Page_qk9nwl.jpg",
+            description: "Mobile Home Page",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721238539/Synaptic%20Landing%20Page/Mobile_Calendar_Page_ftfmot.png",
+            description: "Mobile Calendar Page",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721238539/Synaptic%20Landing%20Page/Mobile_About_Page_jqz5cn.jpg",
+            description: "Mobile About Page",
           },
         ],
         technology: "CSS, Media Queries, SVG",
@@ -1578,7 +1585,7 @@ export const projectsData = [
         ],
         codeImages: [
           {
-            link: "",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721236565/Synaptic%20Landing%20Page/SVG_Hexagon_qynjpl.png",
             description:
               "The hexagons are created using SVG elements with custom dimensions and styles, ensuring a consistent and visually appealing design.",
           },
