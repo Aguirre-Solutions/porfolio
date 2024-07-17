@@ -24,8 +24,12 @@ import {
   SiExpress,
   SiLibreoffice,
   SiGooglecloud,
+  SiGooglecalendar,
+  SiGooglecloudstorage,
 } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 import cloudinaryIconSrc from "../assets/cloudinary.svg";
 
 export const technologyIcons = {
@@ -64,4 +68,7 @@ export const technologyIcons = {
   Docker: <SiDocker />,
   LibreOffice: <SiLibreoffice />,
   GoogleCloud: <SiGooglecloud />,
+  FullCalendar: <SiGooglecalendar />,
+  SendGrid: <MdEmail />,
+  GoogleCloudStorage: <SiGooglecloudstorage />,
 };

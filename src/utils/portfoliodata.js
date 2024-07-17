@@ -1397,4 +1397,188 @@ export const projectsData = [
       },
     },
   },
+  {
+    id: 9,
+    title: "Synaptic Landing Page",
+    link: "https://synaptic.clinic",
+    githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+    image:
+      "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/SynapticLandingPage/HomePage_ui.png",
+    shortDescription:
+      "A multi-page landing website for a therapist, featuring dynamic backgrounds, appointment scheduling, and email notifications.",
+    description: [
+      "The Synaptic Landing Page is a multi-page website created for a therapist, featuring a main landing page, a calendar scheduling page, and an about page.",
+      "Users can schedule appointments, and receive Google Calendar invites and custom email notifications via SendGrid.",
+      "Dynamic backgrounds change based on the current page, enhancing the visual appeal and user experience.",
+    ],
+    technologyStack: [
+      "Next.js 14",
+      "Chakra UI",
+      "FullCalendar",
+      "SendGrid",
+      "Google Calendar",
+      "Vercel",
+      "TypeScript",
+    ],
+    highlightedTechnologies: [
+      "Next.js 14",
+      "Chakra UI",
+      "FullCalendar",
+      "SendGrid",
+      "Google Calendar",
+      "TypeScript",
+      "Vercel",
+    ],
+    setup: {
+      dependencies: "yarn install",
+      devServer: "yarn dev",
+      liveBuild: "yarn build",
+      notes: [
+        "Ensure that you have the necessary API keys for SendGrid and Google Calendar.",
+      ],
+    },
+    usage: {
+      upload: "Users can upload image, PDF, or TIFF files for OCR processing.",
+      viewResults:
+        "Processed text results are displayed on the UI and can be downloaded.",
+    },
+    contributions:
+      "This project is not open for contributions as it was developed for a specific client.",
+    license: "MIT license",
+
+    highlights: {
+      dynamicBackground: {
+        description:
+          "Designed and implemented dynamic backgrounds that change based on the page using CSS clip paths and the Particles.js library. Each page has a unique visual representation, including dynamic triangles and gradients, creating an engaging and responsive user experience. The dynamic background and particles background are combined in the layout using Next.js 14 App Router, ensuring smooth client-side and server-side rendering.",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178859/Synaptic%20Landing%20Page/Home_Page_tvtglq.jpg",
+            description: "This is the home page design",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178860/Synaptic%20Landing%20Page/Calendar_Page_jmqlss.jpg",
+            description: "This is the calendar page design.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178861/Synaptic%20Landing%20Page/About_Page_cynkqm.jpg",
+            description:
+              "This is the about page design, with image placeholders since the client wanted to add their own.",
+          },
+        ],
+        codeImages: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178859/Synaptic%20Landing%20Page/Triangle_CSS_Clip_Paths_ivpsub.png",
+            description: "CSS clip paths for creating polygons and triangles.",
+          },
+          {
+            link: "hhttps://res.cloudinary.com/recipeb00k/image/upload/v1721178860/Synaptic%20Landing%20Page/Background_Change_With_Page_z9jsyc.png",
+            description:
+              "Background changing based on the current page, demonstrating the responsive design tailored for different sections of the site.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178859/Synaptic%20Landing%20Page/Particle_JS_cvkhcr.png",
+            description:
+              "Particles.js implementation to represent synaptic connections, adding a dynamic and thematic element to the landing page. The Particles.js component is memoized to enhance performance.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178858/Synaptic%20Landing%20Page/Integration_Into_Next_JS_wqvsny.png",
+            description:
+              "Integration of dynamic background and particles background in the layout using Next.js 14 App Router, highlighting the client-side and server-side rendering considerations.",
+          },
+        ],
+        technology: "CSS, Particles.js, Clip paths, Next.js 14 App Router",
+        githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+      },
+      Calendar: {
+        description:
+          "Used FullCalendar.js and Google Calendar API to create a scheduling system for appointments. The calendar allows users to view available slots, select a time, and schedule an appointment. The Google Calendar API integration ensures that appointments are synced with the therapist's calendar, providing real-time updates and notifications. It also elegantly displays the therapist availability and booked slots with attention to privacy and data protection, this way new users can see the therapist's availability without seeing the details of the appointments.",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721179690/Synaptic%20Landing%20Page/Calendar_mn99hq.jpg",
+            description:
+              "Full calendar displays a custom range of dates and times according to the client's specifications and availability.",
+          },
+          {
+            link: "",
+            description:
+              "Mobile friendly design reduces the amount of information displayed to ensure a clean and focused user experience.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178858/Synaptic%20Landing%20Page/EventForm_New_Client_ixksla.png",
+            description:
+              "Using modals to display appointment details and confirmations allows the user to make last-minute changes to their appointment, and provide the therapist with useful information about why the client is seeking therapy.",
+          },
+        ],
+        codeImages: [
+          {
+            link: "",
+            description:
+              "Clear feedback for successful and failed new appointments is managed using Toast notifications.",
+          },
+          {
+            link: "",
+            description:
+              "Events are fetched and created keeping in mind the local time zone of the therapist and the client, ensuring accurate scheduling and notifications.",
+          },
+          {
+            link: "",
+            description:
+              "Events are created with an automatic reminder to the client, the day before the appointment, ensuring they don't forget about it.",
+          },
+        ],
+        technology: "Google Calendar API, OAuth2, Node.js",
+        githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+      },
+      emailNotifications: {
+        description:
+          "Implemented a comprehensive email notification system using SendGrid. This includes sending branded emails to both the therapist and the client with session details, and ensuring all necessary information is conveyed effectively. Branded emails match the site's design and provide a professional touch to the communication process.",
+        images: [
+          {
+            link: "",
+            description:
+              "An onboarding email for new clients welcomes them to therapy sessions, includes essential details and instructions for accessing online sessions, provides a way to contact the therapist with questions or concerns, and offers a direct link to the meeting room in addition to the Google Calendar invite, accommodating clients who do not use Google.",
+          },
+          {
+            link: "",
+            description:
+              "An email is also sent to the therapist with the client's details and the reason for therapy, ensuring they are prepared for the session and can provide the best support possible.",
+          },
+        ],
+        codeImages: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/SynapticLandingPage/EmailNotification_Setup.png",
+            description: "Setup of SendGrid for sending branded emails.",
+          },
+        ],
+        technology: "SendGrid, Node.js",
+        githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+      },
+      mobileFriendlyDesign: {
+        description:
+          "Ensured all pages and features are mobile-friendly, including custom backgrounds and special UI elements like SVG hexagons with rounded corners. This involved extensive use of media queries and responsive design principles.",
+        images: [
+          {
+            link: "",
+            description:
+              "The dynamic background adapts to show a similar design on mobile devices, but with adjustments based on screensize",
+          },
+        ],
+        technology: "CSS, Media Queries, SVG",
+        githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+      },
+      customSVGElements: {
+        description:
+          "Created custom SVG elements like hexagons with rounded corners to enhance the visual appeal of the site. These elements are used in various sections of the site to create a unique and engaging design.",
+        images: [
+          {
+            link: "",
+            description:
+              "Custom SVG hexagons with rounded corners create a visually appealing design, applied to images and used as backgrounds. They adjust in size to accommodate different viewports.",
+          },
+        ],
+        technology: "SVG, CSS",
+        githubLink: "",
+      },
+    },
+  },
 ];
