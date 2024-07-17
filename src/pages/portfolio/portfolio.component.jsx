@@ -12,14 +12,23 @@ const Portfolio = ({ checks }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 6;
 
+  // Sorting projects: paid first, then by date
+  const sortedProjects = projectsData.sort((a, b) => {
+    if (a.paid === b.paid) {
+      return new Date(a.date) - new Date(b.date);
+    }
+    return a.paid ? -1 : 1;
+  });
+
   // Calculate the indices of the first and last projects on the current page
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
 
-  // Slice the projectsData array to get only the projects for the current page
-  const currentProjects = projectsData
-    .sort((a, b) => a.id - b.id)
-    .slice(indexOfFirstProject, indexOfLastProject);
+  // Slice the sortedProjects array to get only the projects for the current page
+  const currentProjects = sortedProjects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => prevPage + 1);
@@ -39,7 +48,7 @@ const Portfolio = ({ checks }) => {
       </StyledTypography>
       <Grid container spacing={4}>
         {currentProjects.map((project) => (
-          <Grid item xs={12} md={6} lg={4} key={project.id}>
+          <Grid item xs={12} md={6} lg={4} key={project.uuid}>
             <PortfolioItem
               project={project}
               checks={checks}

@@ -1,6 +1,368 @@
+import { v4 as uuidv4 } from "uuid";
+
 export const projectsData = [
   {
-    id: 4,
+    id: uuidv4(),
+    paid: true,
+    date: "2023-12-12",
+    title: "Hunter Herald Helper",
+    link: "https://hunters-herald-helper.onrender.com",
+    githubLink: "https://github.com/louderthanme/HuntersHeraldHelper",
+    image:
+      "https://res.cloudinary.com/recipeb00k/image/upload/v1704222772/portfolio/Hunters%20Herald%20Helper/Hunters_Herald_Helper_sbedsf.png",
+    shortDescription:
+      "A background service that monitors a hunting reservation calendar for updates, manages image comparisons, and sends notifications.",
+    description: [
+      "Hunter Herald Helper is designed to monitor a specific webpage for updates. It takes screenshots of the calendar, compares them for changes, and handles updates accordingly.",
+      "The application uses Cloudinary for image storage and Google Firestore for URL management. When a change is detected, it updates the stored image and sends out email notifications.",
+      "The process involves downloading the stored image URL, comparing it with a new screenshot, and executing actions based on the comparison result.",
+      "This service operates in the background without a user interface, continuously monitoring and updating as needed.",
+    ],
+    technologyStack: [
+      "Node.js",
+      "Cloudinary",
+      "Firestore",
+      "Puppeteer",
+      "Nodemailer",
+      "Pixelmatch",
+      "Cron Jobs",
+    ],
+    highlightedTechnologies: [
+      "Node.js",
+      "Cloudinary",
+      "Firestore",
+      "Puppeteer",
+      "Nodemailer",
+      "Cron Jobs",
+    ],
+    setup: {
+      notes: [
+        "This project is a background service and is not intended for local setup or deployment. It is showcased here for portfolio purposes.",
+      ],
+    },
+    usage: {
+      description:
+        "The Hunter Herald Helper runs as a background service, automatically monitoring a hunting reservation calendar for updates. It uses image comparison to detect changes and sends email notifications when updates are detected.",
+    },
+    contributions:
+      "This project is not open for contributions as it's intended for portfolio purposes.",
+    license: "This project is licensed under the MIT License.",
+    highlights: {
+      howItWorks: {
+        description:
+          "The application automates the process of monitoring a web-based calendar for updates, notifying the client of any changes. It leverages a combination of web scraping, image processing, and cloud services.",
+        technology:
+          "Puppeteer, Pixelmatch, PNG.js, Google Firestore, Cloudinary, Nodemailer",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239415/portfolio/Hunters%20Herald%20Helper/Main_Process_l6poqs.png",
+            description:
+              "The `runProcess` function orchestrates the entire workflow. Initially, it retrieves the last saved image URL from Firestore and downloads it for comparison. Using Puppeteer, the app takes a new screenshot of the calendar. These two images are then compared. If a difference is detected, the new image is uploaded to Cloudinary, the Firestore database is updated with the new image URL, and an email notification is sent to the client using Nodemailer. The old image is then deleted from Cloudinary. This process ensures that the client is always informed about the most recent state of the calendar.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704240437/portfolio/Hunters%20Herald%20Helper/Download_Images_d25d1y.png",
+            description:
+              "In `downloadImage.js`, I implemented a function to download images using Axios. This function is crucial for retrieving the last known state of the calendar from Firestore, setting the stage for the comparison process.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704240471/portfolio/Hunters%20Herald%20Helper/Clean_Up_tekrx0.png",
+            description:
+              "The `updateSendCleanup` function in 'updateSendCleanup.js' handles the post-comparison steps. It uploads the new image to Cloudinary, updates Firestore, sends an email notification, and cleans up the old image. This function encapsulates the critical actions taken when a change is detected, ensuring the client receives timely updates.",
+          },
+        ],
+      },
+      puppeteerIntegration: {
+        description:
+          "To capture up-to-date images of the calendar from a website, I integrated Puppeteer into the project. I had to learn how to use puppeteer to take screenshots, then save said screenshots for later comparison..",
+        technology: "Puppeteer",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239416/portfolio/Hunters%20Herald%20Helper/Puppeteer_reqciw.png",
+            description:
+              "In the `takeScreenshot` function, I utilized Puppeteer to launch a headless browser and navigate to the target website. I learned to manage browser instances, handle page navigation, and wait for specific elements (like the calendar) to render. The function captures a screenshot of the calendar and saves it, demonstrating my ability to apply new tools and libraries effectively.",
+          },
+        ],
+      },
+      imageComparison: {
+        description:
+          "The core functionality involves comparing two images of a calendar to detect updates. This process uses Puppeteer for taking screenshots and a custom image comparison algorithm.",
+        technology: "Puppeteer, Custom Image Comparison",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239416/portfolio/Hunters%20Herald%20Helper/Are_Images_The_Same_wp2pb7.png",
+            description:
+              "I implemented the `areImagesTheSame` function to compare two calendar images. To handle this, I integrated Pixelmatch and PNG.js for precise image analysis. My approach was to first read and parse both images, then compare them pixel by pixel. This method is crucial for detecting any changes in the calendar, ensuring accurate notifications to the client.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239415/portfolio/Hunters%20Herald%20Helper/Read_and_Parse_y2pd0z.png",
+            description:
+              "In `imageParser.js`, I created the `readAndParseImage` function to efficiently load and parse image data. This function forms the backbone of the image comparison process, preparing the images for a detailed pixel-level comparison.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239416/portfolio/Hunters%20Herald%20Helper/Remove_Red_dvi2ay.png",
+            description:
+              "To address the challenge of false positives in image comparison due to date changes, I devised the `removeRedShades` function. This function specifically targets and neutralizes certain shades of red in the images. By doing so, I ensured that only significant changes in the calendar trigger notifications, enhancing the accuracy and reliability of the application.",
+          },
+        ],
+      },
+      cloudinaryIntegration: {
+        description:
+          "Images are stored and managed using Cloudinary, providing a reliable and efficient way to handle image data.",
+        technology: "Cloudinary",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239640/portfolio/Hunters%20Herald%20Helper/Cloudinary_yvqb8q.png",
+            description:
+              "The 'cloudinary.js' file contains functions for uploading and deleting images to/from Cloudinary. It showcases the integration and management of image data using Cloudinary's API.",
+          },
+        ],
+      },
+      firestoreDatabase: {
+        description:
+          "Google Firestore is used for storing and retrieving image URLs, enabling efficient data management and retrieval.",
+        technology: "Google Firestore",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239695/portfolio/Hunters%20Herald%20Helper/Firestore_mwk5ha.png",
+            description:
+              "I chose Google Firestore for its real-time data syncing capabilities. In 'firebase.js', I implemented functions like `getImageInFirestore` and `deleteImageFromFirestore` to handle image data. This approach streamlined the process of storing and retrieving image URLs, ensuring efficient data management.",
+          },
+        ],
+      },
+      emailNotifications: {
+        description:
+          "Upon detecting changes, the application sends out email notifications using Nodemailer, keeping users informed about calendar updates.",
+        technology: "Nodemailer",
+        images: [],
+      },
+      cronJobScheduling: {
+        description:
+          "The application uses cron jobs to schedule regular checks of the calendar, ensuring timely updates and monitoring.",
+        technology: "Cron Jobs",
+        images: [
+          {
+            link: "https://github.com/louderthanme/HuntersHeraldHelper/blob/main/app.js",
+            description:
+              "This snippet from 'app.js' shows the scheduling of a cron job that triggers the 'runProcess' function every X minutes. It's a crucial part of the application's functionality, ensuring regular checks and updates.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: uuidv4(),
+    paid: false,
+    date: "2023-11-17",
+    title: "WordFlash",
+    link: "https://word-flash.vercel.app/",
+    githubLink: "https://github.com/louderthanme/WordFlash",
+    image:
+      "https://res.cloudinary.com/recipeb00k/image/upload/v1701795724/portfolio/WordFlash/Main_Page_pfkbkp.jpg",
+    shortDescription:
+      "An interactive flashcard application for language learning, featuring user authentication, Openai integration, and various modes of learning.",
+    description: [
+      "WordFlash is an educational tool designed to assist in language learning through interactive flashcards.",
+      "The application includes user authentication, allowing users to create personalized accounts for saving their word collection.",
+      "It features a chat component where users can look up certain words getting a flash card back, the flash card is saved automatically for later use.",
+      "The flashcards can be viewed in different modes, including a word view and a flashcard view, sorted either alphabetically or by word classification.",
+    ],
+    technologyStack: [
+      "React",
+      "OpenAi",
+      "Node.js",
+      "Express",
+      "Firebase",
+      "Mui/Joy",
+      "Vite",
+      "Render",
+      "Vercel",
+      "React Router",
+    ],
+    highlightedTechnologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "Firebase",
+      "Vite",
+      "OpenAi",
+      "Mui/Joy",
+      "Render",
+      "Vercel",
+      "React Router",
+    ],
+    setup: {
+      dependencies: "yarn install",
+      devServer: "yarn start",
+      notes: [
+        "Ensure to set up Firebase for authentication and backend services. Update the Firebase configuration in the project accordingly.",
+      ],
+    },
+    usage: {
+      authentication:
+        "User Authentication: Users can sign up and log in to track their learning progress.",
+      chatFunctionality:
+        "Chat Functionality: Interactive chat component for user discussions.",
+      learningModes:
+        "Learning Modes: Multiple modes of learning including flashcards and word views.",
+      progressTracking:
+        "Progress Tracking: Users can track their learning progress over time.",
+    },
+    contributions:
+      "This project is open for contributions. Please feel free to contribute to the development.",
+    license:
+      "This project is licensed under the MIT License. Feel free to use and modify it as per the license terms.",
+    highlights: {
+      openAI: {
+        description:
+          "'WordFlash' utilizes OpenAI's API for an interactive Spanish learning experience. Users enter Spanish words to receive flashcards featuring translations, definitions, examples, and related words. The system also offers alternatives for unrecognized inputs. Key challenges included ensuring accurate responses and avoiding non-target languages, enhancing both learning and user experience.",
+        codeImages: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967739/portfolio/WordFlash/openai/Prompt_ouzxd3.png",
+            description:
+              "In this part of the code, I've implemented the getWordInformation function, which is central to the OpenAI API integration. It sends the user's input to the OpenAI API and processes the response to return structured data. This function demonstrates how I've utilized the API to generate meaningful and contextually relevant information for the application. Note that the prompt shown here has been reduced for brevity; the full code, including the complete prompt, is available in the repository.",
+          },
+        ],
+        technology: "React, Node.js, Express.js, OpenAI API",
+        githubLink: "https://github.com/louderthanme/WordFlash",
+      },
+    },
+    highlights: {
+      Chat: {
+        description: "",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967790/portfolio/WordFlash/chat/Responsive_r5pjbm.gif",
+            description:
+              "I designed this chat interface to allow users to easily input words, showcasing the simplicity and user-friendliness of the application. It is aimed at a predominantly a mobile audience, however due to its responsive design I can ensure a seamless experience across various devices.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967787/portfolio/WordFlash/chat/Flashcard_fetch_b5gakj.gif",
+            description:
+              "When the query first goes through a loading spinner is shown. Then the flashcard shows up populated by the response from the Openai API.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967787/portfolio/WordFlash/chat/Wrong_input_kxwgxz.gif",
+            description:
+              "If the input is not a Spanish word or phrase, it will show words the user might have meant related in phonetics or morphology to the input.",
+          },
+        ],
+        codeImages: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967786/portfolio/WordFlash/chat/JSX-_CHAT_yibcnj.png",
+            description:
+              "The Chat component is modular for easier upkeep. This is a quick gif of the code, feel free to look for the rest in the repo.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701975703/portfolio/WordFlash/chat/handleSubmit_jbn724.png",
+            description:
+              "This screenshot displays the handleSubmit function in its entirety, emphasizing its dual functionality. It showcases how the function is designed to handle both form submission events and direct word inputs. This part of the code exemplifies the function's adaptability and my ability to create versatile and reusable components in a React application.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967786/portfolio/WordFlash/chat/Question_Box_qfeudx.png",
+            description:
+              "Here, handleSubmit is integrated into the QuestionBox component. This screenshot demonstrates how the function processes user-submitted queries via a form. It highlights the event-driven aspect of the function, dealing with user interactions and dynamic data handling in the application.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967786/portfolio/WordFlash/chat/SearchError_nr8btg.png",
+            description:
+              "SearchError component inside the Flashcard component, where the same handleSubmit is employed for direct word processing and handling alternative word suggestions during search errors. It illustrates the function's flexibility and its crucial role in enhancing user experience by offering interactive solutions in different scenarios.",
+          },
+        ],
+        technology: "React, Node.js, Express.js, OpenAI API",
+        githubLink: "https://github.com/louderthanme/WordFlash",
+      },
+      collection: {
+        description:
+          "The Collection component in 'WordFlash' serves as a user's personal repository of words they have looked up.They are automatically saved after every query, provided that the word isn't repeated. It displays words saved by the user in either a list view or as flashcards, offering flexibility in how the information is presented and reviewed. Users can sort their collection alphabetically or by classification, enhancing the ease of navigation and study. The component also allows users to delete words from their collection, ensuring that their learning material remains relevant and tailored to their needs.",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967802/portfolio/WordFlash/collection/Views_rohpzm.gif",
+            description:
+              "This shows the collection page cycling through the List and Flashcard view.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967801/portfolio/WordFlash/collection/Classifications_usfsex.gif",
+            description:
+              "The user can also sort either view the collection by alphabetical order or by classification.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701975862/portfolio/WordFlash/collection/Delete_pbcqgh.gif",
+            description:
+              "The user can delete words from their collection, ensuring that their learning material remains relevant and tailored to their needs.",
+          },
+        ],
+      },
+      Authentication: {
+        description:
+          "In creating the `AuthPage` component, I designed a user-friendly interface for both signing in and signing up. I made the decision to manage the display with a simple toggle state, allowing users to switch views with ease.  I chose a centered layout for a clean and focused user experience, with the forms adapting dynamically to the user's needs. The snackbar messages are set to appear at the top of the page, ensuring they are noticeable yet unobtrusive. I leveraged",
+        images: [
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701976171/portfolio/WordFlash/Authentication/SignInUp_uk876k.gif",
+            description: "The Sign In or Sign Up views are a button a way.",
+          },
+          {
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701968036/portfolio/WordFlash/Authentication/Snackbar_x8nxrl.gif",
+            description:
+              "I implemented snackbars for succestul or unsuccessful login attempts.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: uuidv4(),
+    paid: false,
+    date: "2023-10-16",
+    title: "Portfolio",
+    link: "https://ruben-aguirre.com/",
+    githubLink: "https://github.com/louderthanme/porfolio",
+    image:
+      "https://res.cloudinary.com/recipeb00k/image/upload/v1701797194/portfolio/Portfolio/Main_Page_syeaa0.png",
+    shortDescription:
+      "A personal portfolio showcasing projects, skills, and experiences.",
+    description: [
+      "This portfolio is a comprehensive showcase of my skills, projects, and experiences as a developer. It includes detailed project overviews, experiences, education, and contact information.",
+      "The portfolio leverages modern web technologies to provide a responsive and interactive user experience. Highlights include dynamic project presentations, detailed descriptions, and a clean, engaging UI.",
+    ],
+    technologyStack: ["React", "Material UI", "React Router", "Cloudinary"],
+    highlightedTechnologies: ["React", "Material UI", "Cloudinary"],
+    setup: {
+      notes: [
+        "This project can be set up locally for development purposes. It requires Node.js and npm installed. Clone the repository, install dependencies with npm install, and run with npm start.",
+      ],
+    },
+    usage: {
+      description:
+        "The portfolio serves as an interactive resume, detailing projects I've worked on, my skill set, and my career experiences. It's designed to be intuitive, allowing users to explore my professional journey and contact me for opportunities. I also learned MUI Joy and made a custom theme to work with it",
+    },
+    contributions:
+      "Feedback and suggestions on the portfolio are welcome. Feel free to raise an issue or submit a pull request on GitHub.",
+    license: "This project is licensed under the MIT License.",
+    highlights: {
+      dynamicProjectPresentation: {
+        description:
+          "Projects are showcased with detailed overviews, including technologies used, project objectives, and outcomes. Interactive carousels allow for engaging exploration of project images.",
+        technology: "React, Material UI",
+        images: [],
+      },
+      responsiveDesign: {
+        description:
+          "The portfolio is fully responsive, ensuring a seamless experience across all device sizes. It adapts gracefully from desktop to mobile screens, highlighting my skills in responsive web design.",
+        technology: "CSS, Media Queries, Material UI",
+        images: [],
+      },
+      contentManagement: {
+        description:
+          "Project and experience data are managed through a centralized context, facilitating easy updates and maintenance of the portfolio's content.",
+        technology: "React Context API, JavaScript",
+        images: [],
+      },
+    },
+  },
+  {
+    id: uuidv4(),
+    paid: false,
+    date: "2023-07-19",
     title: "Nibble Notebook",
     link: "https://nibblenotebook.com",
     githubLink: "https://github.com/louderthanme/recipes-second-version",
@@ -357,7 +719,9 @@ export const projectsData = [
     },
   },
   {
-    id: 5,
+    id: uuidv4(),
+    paid: false,
+    date: "2023-04-26",
     title: "Clothing Store",
     link: "https://main--stately-rabanadas-ba7cd5.netlify.app/",
     githubLink: "https://github.com/louderthanme/Clothing-Store",
@@ -546,7 +910,9 @@ export const projectsData = [
     },
   },
   {
-    id: 6,
+    id: uuidv4(),
+    paid: false,
+    date: "2022-10-16",
     title: "YelpCamp",
     link: "https://yelpcamp-gyon.onrender.com",
     githubLink: "https://github.com/louderthanme/YelpCamp",
@@ -779,359 +1145,9 @@ export const projectsData = [
     },
   },
   {
-    id: 2,
-    title: "WordFlash",
-    link: "https://word-flash.vercel.app/",
-    githubLink: "https://github.com/louderthanme/WordFlash",
-    image:
-      "https://res.cloudinary.com/recipeb00k/image/upload/v1701795724/portfolio/WordFlash/Main_Page_pfkbkp.jpg",
-    shortDescription:
-      "An interactive flashcard application for language learning, featuring user authentication, Openai integration, and various modes of learning.",
-    description: [
-      "WordFlash is an educational tool designed to assist in language learning through interactive flashcards.",
-      "The application includes user authentication, allowing users to create personalized accounts for saving their word collection.",
-      "It features a chat component where users can look up certain words getting a flash card back, the flash card is saved automatically for later use.",
-      "The flashcards can be viewed in different modes, including a word view and a flashcard view, sorted either alphabetically or by word classification.",
-    ],
-    technologyStack: [
-      "React",
-      "OpenAi",
-      "Node.js",
-      "Express",
-      "Firebase",
-      "Mui/Joy",
-      "Vite",
-      "Render",
-      "Vercel",
-      "React Router",
-    ],
-    highlightedTechnologies: [
-      "React",
-      "Node.js",
-      "Express",
-      "Firebase",
-      "Vite",
-      "OpenAi",
-      "Mui/Joy",
-      "Render",
-      "Vercel",
-      "React Router",
-    ],
-    setup: {
-      dependencies: "yarn install",
-      devServer: "yarn start",
-      notes: [
-        "Ensure to set up Firebase for authentication and backend services. Update the Firebase configuration in the project accordingly.",
-      ],
-    },
-    usage: {
-      authentication:
-        "User Authentication: Users can sign up and log in to track their learning progress.",
-      chatFunctionality:
-        "Chat Functionality: Interactive chat component for user discussions.",
-      learningModes:
-        "Learning Modes: Multiple modes of learning including flashcards and word views.",
-      progressTracking:
-        "Progress Tracking: Users can track their learning progress over time.",
-    },
-    contributions:
-      "This project is open for contributions. Please feel free to contribute to the development.",
-    license:
-      "This project is licensed under the MIT License. Feel free to use and modify it as per the license terms.",
-    highlights: {
-      openAI: {
-        description:
-          "'WordFlash' utilizes OpenAI's API for an interactive Spanish learning experience. Users enter Spanish words to receive flashcards featuring translations, definitions, examples, and related words. The system also offers alternatives for unrecognized inputs. Key challenges included ensuring accurate responses and avoiding non-target languages, enhancing both learning and user experience.",
-        codeImages: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967739/portfolio/WordFlash/openai/Prompt_ouzxd3.png",
-            description:
-              "In this part of the code, I've implemented the getWordInformation function, which is central to the OpenAI API integration. It sends the user's input to the OpenAI API and processes the response to return structured data. This function demonstrates how I've utilized the API to generate meaningful and contextually relevant information for the application. Note that the prompt shown here has been reduced for brevity; the full code, including the complete prompt, is available in the repository.",
-          },
-        ],
-        technology: "React, Node.js, Express.js, OpenAI API",
-        githubLink: "https://github.com/louderthanme/WordFlash",
-      },
-    },
-    highlights: {
-      Chat: {
-        description: "",
-        images: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967790/portfolio/WordFlash/chat/Responsive_r5pjbm.gif",
-            description:
-              "I designed this chat interface to allow users to easily input words, showcasing the simplicity and user-friendliness of the application. It is aimed at a predominantly a mobile audience, however due to its responsive design I can ensure a seamless experience across various devices.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967787/portfolio/WordFlash/chat/Flashcard_fetch_b5gakj.gif",
-            description:
-              "When the query first goes through a loading spinner is shown. Then the flashcard shows up populated by the response from the Openai API.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967787/portfolio/WordFlash/chat/Wrong_input_kxwgxz.gif",
-            description:
-              "If the input is not a Spanish word or phrase, it will show words the user might have meant related in phonetics or morphology to the input.",
-          },
-        ],
-        codeImages: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967786/portfolio/WordFlash/chat/JSX-_CHAT_yibcnj.png",
-            description:
-              "The Chat component is modular for easier upkeep. This is a quick gif of the code, feel free to look for the rest in the repo.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701975703/portfolio/WordFlash/chat/handleSubmit_jbn724.png",
-            description:
-              "This screenshot displays the handleSubmit function in its entirety, emphasizing its dual functionality. It showcases how the function is designed to handle both form submission events and direct word inputs. This part of the code exemplifies the function's adaptability and my ability to create versatile and reusable components in a React application.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967786/portfolio/WordFlash/chat/Question_Box_qfeudx.png",
-            description:
-              "Here, handleSubmit is integrated into the QuestionBox component. This screenshot demonstrates how the function processes user-submitted queries via a form. It highlights the event-driven aspect of the function, dealing with user interactions and dynamic data handling in the application.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967786/portfolio/WordFlash/chat/SearchError_nr8btg.png",
-            description:
-              "SearchError component inside the Flashcard component, where the same handleSubmit is employed for direct word processing and handling alternative word suggestions during search errors. It illustrates the function's flexibility and its crucial role in enhancing user experience by offering interactive solutions in different scenarios.",
-          },
-        ],
-        technology: "React, Node.js, Express.js, OpenAI API",
-        githubLink: "https://github.com/louderthanme/WordFlash",
-      },
-      collection: {
-        description:
-          "The Collection component in 'WordFlash' serves as a user's personal repository of words they have looked up.They are automatically saved after every query, provided that the word isn't repeated. It displays words saved by the user in either a list view or as flashcards, offering flexibility in how the information is presented and reviewed. Users can sort their collection alphabetically or by classification, enhancing the ease of navigation and study. The component also allows users to delete words from their collection, ensuring that their learning material remains relevant and tailored to their needs.",
-        images: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967802/portfolio/WordFlash/collection/Views_rohpzm.gif",
-            description:
-              "This shows the collection page cycling through the List and Flashcard view.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701967801/portfolio/WordFlash/collection/Classifications_usfsex.gif",
-            description:
-              "The user can also sort either view the collection by alphabetical order or by classification.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701975862/portfolio/WordFlash/collection/Delete_pbcqgh.gif",
-            description:
-              "The user can delete words from their collection, ensuring that their learning material remains relevant and tailored to their needs.",
-          },
-        ],
-      },
-      Authentication: {
-        description:
-          "In creating the `AuthPage` component, I designed a user-friendly interface for both signing in and signing up. I made the decision to manage the display with a simple toggle state, allowing users to switch views with ease.  I chose a centered layout for a clean and focused user experience, with the forms adapting dynamically to the user's needs. The snackbar messages are set to appear at the top of the page, ensuring they are noticeable yet unobtrusive. I leveraged",
-        images: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701976171/portfolio/WordFlash/Authentication/SignInUp_uk876k.gif",
-            description: "The Sign In or Sign Up views are a button a way.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1701968036/portfolio/WordFlash/Authentication/Snackbar_x8nxrl.gif",
-            description:
-              "I implemented snackbars for succestul or unsuccessful login attempts.",
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: 3,
-    title: "Portfolio",
-    link: "https://ruben-aguirre.com/",
-    githubLink: "https://github.com/louderthanme/porfolio",
-    image:
-      "https://res.cloudinary.com/recipeb00k/image/upload/v1701797194/portfolio/Portfolio/Main_Page_syeaa0.png",
-    shortDescription:
-      "A personal portfolio showcasing projects, skills, and experiences.",
-    description: [
-      "This portfolio is a comprehensive showcase of my skills, projects, and experiences as a developer. It includes detailed project overviews, experiences, education, and contact information.",
-      "The portfolio leverages modern web technologies to provide a responsive and interactive user experience. Highlights include dynamic project presentations, detailed descriptions, and a clean, engaging UI.",
-    ],
-    technologyStack: ["React", "Material UI", "React Router", "Cloudinary"],
-    highlightedTechnologies: ["React", "Material UI", "Cloudinary"],
-    setup: {
-      notes: [
-        "This project can be set up locally for development purposes. It requires Node.js and npm installed. Clone the repository, install dependencies with npm install, and run with npm start.",
-      ],
-    },
-    usage: {
-      description:
-        "The portfolio serves as an interactive resume, detailing projects I've worked on, my skill set, and my career experiences. It's designed to be intuitive, allowing users to explore my professional journey and contact me for opportunities. I also learned MUI Joy and made a custom theme to work with it",
-    },
-    contributions:
-      "Feedback and suggestions on the portfolio are welcome. Feel free to raise an issue or submit a pull request on GitHub.",
-    license: "This project is licensed under the MIT License.",
-    highlights: {
-      dynamicProjectPresentation: {
-        description:
-          "Projects are showcased with detailed overviews, including technologies used, project objectives, and outcomes. Interactive carousels allow for engaging exploration of project images.",
-        technology: "React, Material UI",
-        images: [],
-      },
-      responsiveDesign: {
-        description:
-          "The portfolio is fully responsive, ensuring a seamless experience across all device sizes. It adapts gracefully from desktop to mobile screens, highlighting my skills in responsive web design.",
-        technology: "CSS, Media Queries, Material UI",
-        images: [],
-      },
-      contentManagement: {
-        description:
-          "Project and experience data are managed through a centralized context, facilitating easy updates and maintenance of the portfolio's content.",
-        technology: "React Context API, JavaScript",
-        images: [],
-      },
-    },
-  },
-  {
-    id: 1,
-    title: "Hunter Herald Helper",
-    link: "https://hunters-herald-helper.onrender.com",
-    githubLink: "https://github.com/louderthanme/HuntersHeraldHelper",
-    image:
-      "https://res.cloudinary.com/recipeb00k/image/upload/v1704222772/portfolio/Hunters%20Herald%20Helper/Hunters_Herald_Helper_sbedsf.png",
-    shortDescription:
-      "A background service that monitors a hunting reservation calendar for updates, manages image comparisons, and sends notifications.",
-    description: [
-      "Hunter Herald Helper is designed to monitor a specific webpage for updates. It takes screenshots of the calendar, compares them for changes, and handles updates accordingly.",
-      "The application uses Cloudinary for image storage and Google Firestore for URL management. When a change is detected, it updates the stored image and sends out email notifications.",
-      "The process involves downloading the stored image URL, comparing it with a new screenshot, and executing actions based on the comparison result.",
-      "This service operates in the background without a user interface, continuously monitoring and updating as needed.",
-    ],
-    technologyStack: [
-      "Node.js",
-      "Cloudinary",
-      "Firestore",
-      "Puppeteer",
-      "Nodemailer",
-      "Pixelmatch",
-      "Cron Jobs",
-    ],
-    highlightedTechnologies: [
-      "Node.js",
-      "Cloudinary",
-      "Firestore",
-      "Puppeteer",
-      "Nodemailer",
-      "Cron Jobs",
-    ],
-    setup: {
-      notes: [
-        "This project is a background service and is not intended for local setup or deployment. It is showcased here for portfolio purposes.",
-      ],
-    },
-    usage: {
-      description:
-        "The Hunter Herald Helper runs as a background service, automatically monitoring a hunting reservation calendar for updates. It uses image comparison to detect changes and sends email notifications when updates are detected.",
-    },
-    contributions:
-      "This project is not open for contributions as it's intended for portfolio purposes.",
-    license: "This project is licensed under the MIT License.",
-    highlights: {
-      howItWorks: {
-        description:
-          "The application automates the process of monitoring a web-based calendar for updates, notifying the client of any changes. It leverages a combination of web scraping, image processing, and cloud services.",
-        technology:
-          "Puppeteer, Pixelmatch, PNG.js, Google Firestore, Cloudinary, Nodemailer",
-        images: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239415/portfolio/Hunters%20Herald%20Helper/Main_Process_l6poqs.png",
-            description:
-              "The `runProcess` function orchestrates the entire workflow. Initially, it retrieves the last saved image URL from Firestore and downloads it for comparison. Using Puppeteer, the app takes a new screenshot of the calendar. These two images are then compared. If a difference is detected, the new image is uploaded to Cloudinary, the Firestore database is updated with the new image URL, and an email notification is sent to the client using Nodemailer. The old image is then deleted from Cloudinary. This process ensures that the client is always informed about the most recent state of the calendar.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704240437/portfolio/Hunters%20Herald%20Helper/Download_Images_d25d1y.png",
-            description:
-              "In `downloadImage.js`, I implemented a function to download images using Axios. This function is crucial for retrieving the last known state of the calendar from Firestore, setting the stage for the comparison process.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704240471/portfolio/Hunters%20Herald%20Helper/Clean_Up_tekrx0.png",
-            description:
-              "The `updateSendCleanup` function in 'updateSendCleanup.js' handles the post-comparison steps. It uploads the new image to Cloudinary, updates Firestore, sends an email notification, and cleans up the old image. This function encapsulates the critical actions taken when a change is detected, ensuring the client receives timely updates.",
-          },
-        ],
-      },
-      puppeteerIntegration: {
-        description:
-          "To capture up-to-date images of the calendar from a website, I integrated Puppeteer into the project. I had to learn how to use puppeteer to take screenshots, then save said screenshots for later comparison..",
-        technology: "Puppeteer",
-        images: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239416/portfolio/Hunters%20Herald%20Helper/Puppeteer_reqciw.png",
-            description:
-              "In the `takeScreenshot` function, I utilized Puppeteer to launch a headless browser and navigate to the target website. I learned to manage browser instances, handle page navigation, and wait for specific elements (like the calendar) to render. The function captures a screenshot of the calendar and saves it, demonstrating my ability to apply new tools and libraries effectively.",
-          },
-        ],
-      },
-      imageComparison: {
-        description:
-          "The core functionality involves comparing two images of a calendar to detect updates. This process uses Puppeteer for taking screenshots and a custom image comparison algorithm.",
-        technology: "Puppeteer, Custom Image Comparison",
-        images: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239416/portfolio/Hunters%20Herald%20Helper/Are_Images_The_Same_wp2pb7.png",
-            description:
-              "I implemented the `areImagesTheSame` function to compare two calendar images. To handle this, I integrated Pixelmatch and PNG.js for precise image analysis. My approach was to first read and parse both images, then compare them pixel by pixel. This method is crucial for detecting any changes in the calendar, ensuring accurate notifications to the client.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239415/portfolio/Hunters%20Herald%20Helper/Read_and_Parse_y2pd0z.png",
-            description:
-              "In `imageParser.js`, I created the `readAndParseImage` function to efficiently load and parse image data. This function forms the backbone of the image comparison process, preparing the images for a detailed pixel-level comparison.",
-          },
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239416/portfolio/Hunters%20Herald%20Helper/Remove_Red_dvi2ay.png",
-            description:
-              "To address the challenge of false positives in image comparison due to date changes, I devised the `removeRedShades` function. This function specifically targets and neutralizes certain shades of red in the images. By doing so, I ensured that only significant changes in the calendar trigger notifications, enhancing the accuracy and reliability of the application.",
-          },
-        ],
-      },
-      cloudinaryIntegration: {
-        description:
-          "Images are stored and managed using Cloudinary, providing a reliable and efficient way to handle image data.",
-        technology: "Cloudinary",
-        images: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239640/portfolio/Hunters%20Herald%20Helper/Cloudinary_yvqb8q.png",
-            description:
-              "The 'cloudinary.js' file contains functions for uploading and deleting images to/from Cloudinary. It showcases the integration and management of image data using Cloudinary's API.",
-          },
-        ],
-      },
-      firestoreDatabase: {
-        description:
-          "Google Firestore is used for storing and retrieving image URLs, enabling efficient data management and retrieval.",
-        technology: "Google Firestore",
-        images: [
-          {
-            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1704239695/portfolio/Hunters%20Herald%20Helper/Firestore_mwk5ha.png",
-            description:
-              "I chose Google Firestore for its real-time data syncing capabilities. In 'firebase.js', I implemented functions like `getImageInFirestore` and `deleteImageFromFirestore` to handle image data. This approach streamlined the process of storing and retrieving image URLs, ensuring efficient data management.",
-          },
-        ],
-      },
-      emailNotifications: {
-        description:
-          "Upon detecting changes, the application sends out email notifications using Nodemailer, keeping users informed about calendar updates.",
-        technology: "Nodemailer",
-        images: [],
-      },
-      cronJobScheduling: {
-        description:
-          "The application uses cron jobs to schedule regular checks of the calendar, ensuring timely updates and monitoring.",
-        technology: "Cron Jobs",
-        images: [
-          {
-            link: "https://github.com/louderthanme/HuntersHeraldHelper/blob/main/app.js",
-            description:
-              "This snippet from 'app.js' shows the scheduling of a cron job that triggers the 'runProcess' function every X minutes. It's a crucial part of the application's functionality, ensuring regular checks and updates.",
-          },
-        ],
-      },
-    },
-  },
-  {
-    id: 7,
+    id: uuidv4(),
+    paid: true,
+    date: "2024-05-08",
     title: "Docx to PDF",
     link: "https://frontend-docxtopdf.vercel.app",
     githubLink: "https://github.com/louderthanme/DocxToPdf",
@@ -1292,7 +1308,9 @@ export const projectsData = [
     },
   },
   {
-    id: 8,
+    id: uuidv4(),
+    paid: true,
+    date: "2024-05-16",
     title: "OCR Application",
     link: "https://ocr-app-tawny.vercel.app/",
     githubLink: "https://github.com/louderthanme/ocr-app",
@@ -1398,7 +1416,9 @@ export const projectsData = [
     },
   },
   {
-    id: 9,
+    id: uuidv4(),
+    paid: true,
+    date: "2024-05-28",
     title: "Synaptic Landing Page",
     link: "https://synaptic.clinic",
     githubLink: "https://github.com/louderthanme/synaptic-landing-page",
