@@ -12,10 +12,10 @@ const Portfolio = ({ checks }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 6;
 
-  // Sorting projects: paid first, then by date
+  // Sorting projects: paid first, then by date, newest to oldest
   const sortedProjects = projectsData.sort((a, b) => {
     if (a.paid === b.paid) {
-      return new Date(a.date) - new Date(b.date);
+      return new Date(b.date) - new Date(a.date);
     }
     return a.paid ? -1 : 1;
   });
