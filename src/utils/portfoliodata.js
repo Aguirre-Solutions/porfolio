@@ -1403,7 +1403,7 @@ export const projectsData = [
     link: "https://synaptic.clinic",
     githubLink: "https://github.com/louderthanme/synaptic-landing-page",
     image:
-      "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/SynapticLandingPage/HomePage_ui.png",
+      "https://res.cloudinary.com/recipeb00k/image/upload/v1721178859/Synaptic%20Landing%20Page/Home_Page_tvtglq.jpg",
     shortDescription:
       "A multi-page landing website for a therapist, featuring dynamic backgrounds, appointment scheduling, and email notifications.",
     description: [
@@ -1471,7 +1471,7 @@ export const projectsData = [
             description: "CSS clip paths for creating polygons and triangles.",
           },
           {
-            link: "hhttps://res.cloudinary.com/recipeb00k/image/upload/v1721178860/Synaptic%20Landing%20Page/Background_Change_With_Page_z9jsyc.png",
+            link: "https://res.cloudinary.com/recipeb00k/image/upload/v1721178860/Synaptic%20Landing%20Page/Background_Change_With_Page_z9jsyc.png",
             description:
               "Background changing based on the current page, demonstrating the responsive design tailored for different sections of the site.",
           },
