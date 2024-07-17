@@ -1487,7 +1487,8 @@ export const projectsData = [
           },
         ],
         technology: "CSS, Particles.js, Clip paths, Next.js 14 App Router",
-        githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+        githubLink:
+          "https://github.com/louderthanme/synaptic-landing-page/blob/main/src/app/_components/DynamicBackground/DynamicBackground.tsx",
       },
       Calendar: {
         description:
@@ -1527,7 +1528,8 @@ export const projectsData = [
           },
         ],
         technology: "Google Calendar API, OAuth2, Node.js",
-        githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+        githubLink:
+          "https://github.com/louderthanme/synaptic-landing-page/tree/main/src/app/calendar",
       },
       emailNotifications: {
         description:
@@ -1551,7 +1553,8 @@ export const projectsData = [
           },
         ],
         technology: "SendGrid, Node.js",
-        githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+        githubLink:
+          "https://github.com/louderthanme/synaptic-landing-page/blob/main/src/app/api/calendar-events/route.ts",
       },
       mobileFriendlyDesign: {
         description:
@@ -1571,7 +1574,8 @@ export const projectsData = [
           },
         ],
         technology: "CSS, Media Queries, SVG",
-        githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+        githubLink:
+          "https://github.com/louderthanme/synaptic-landing-page/blob/main/src/app/calendar/fullcalendar.css",
       },
       customSVGElements: {
         description:
@@ -1591,7 +1595,8 @@ export const projectsData = [
           },
         ],
         technology: "SVG, CSS",
-        githubLink: "",
+        githubLink:
+          "https://github.com/louderthanme/synaptic-landing-page/blob/main/src/app/_components/Hexagon/HexagonClippedBox.tsx",
       },
     },
   },
