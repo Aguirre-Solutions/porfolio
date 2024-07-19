@@ -119,7 +119,11 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
           </Box>
         </Box>
 
-        <StyledTypography variant="body1" color="textSecondary" component="p">
+        <StyledTypography
+          variant="body1"
+          component="p"
+          sx={{ color: isDarkMode ? "#efefef" : "#242424" }}
+        >
           {shortDescription}
         </StyledTypography>
         <StyledTypography variant="h5" sx={{ fontWeight: 500 }}>
