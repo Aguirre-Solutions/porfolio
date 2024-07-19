@@ -17,7 +17,7 @@ import {
 } from "../../utils/styledComponents";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
-import { MdPaid } from "react-icons/md";
+import commissionedIconSrc from "../../assets/commissioned.svg";
 
 const PortfolioItem = ({ project, checks, technologyIcons }) => {
   const navigate = useNavigate();
@@ -54,7 +54,10 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
       }}
     >
       <CardMedia
-        sx={{ height: 0, paddingTop: "56.25%" }}
+        sx={{
+          height: 0,
+          paddingTop: "56.25%",
+        }}
         image={image}
         title={title}
       />
@@ -75,9 +78,12 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
         >
           <StyledTypography
             gutterBottom
-            variant="h5"
+            variant="h4"
             component="h2"
-            sx={{ fontWeight: 600 }}
+            sx={{
+              fontWeight: 600,
+              paddingY: "8px", // Add vertical padding if necessary
+            }}
           >
             {title}
           </StyledTypography>
@@ -90,9 +96,9 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  sx={{ padding: "2px" }}
+                  sx={{ padding: "2px", verticalAlign: "middle" }}
                 >
-                  <LanguageIcon />
+                  <LanguageIcon sx={{ fontSize: "1.8em" }} />
                 </StyledIconButton>
               </Tooltip>
             )}
@@ -103,20 +109,20 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  sx={{ padding: "2px" }}
+                  sx={{ padding: "2px", verticalAlign: "middle" }}
                 >
-                  <GitHubIcon />
+                  <GitHubIcon sx={{ fontSize: "1.8em" }} />
                 </StyledIconButton>
               </Tooltip>
             )}
           </Box>
         </Box>
-        <StyledTypography variant="body2" color="textSecondary" component="p">
+
+        <StyledTypography variant="body1" color="textSecondary" component="p">
           {shortDescription}
         </StyledTypography>
-        <StyledTypography sx={{ fontWeight: 500 }}>
-          {" "}
-          Technologies:{" "}
+        <StyledTypography variant="h5" sx={{ fontWeight: 500 }}>
+          Technologies:
         </StyledTypography>
         <Box
           sx={{
@@ -153,26 +159,29 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
           </StyledButton>
         </Box>
       </CardContent>
+
       {paid && (
         <Box
           sx={{
             position: "absolute",
-            top: "7px",
-            right: "7px",
-            width: "32px",
-            height: "32px",
-            backgroundColor: "#FFF", // Background color for the circle
-            borderRadius: "50%",
+            top: "0px",
+            right: "0px",
+            zIndex: 1000,
+            padding: 0,
+            margin: 0,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: 1000,
           }}
         >
-          <MdPaid
+          <img
+            src={commissionedIconSrc}
+            alt="Commissioned"
             style={{
-              color: "#C8A200",
-              fontSize: "32px", // Adjust fontSize if needed
+              width: "100px",
+              height: "100px",
+              padding: 0,
+              margin: 0,
             }}
           />
         </Box>
