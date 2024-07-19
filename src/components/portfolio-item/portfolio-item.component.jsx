@@ -31,7 +31,7 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
     id,
     paid, // Add this to access the paid property
   } = project;
-  const { isMobile, isTablet } = checks;
+  const { isMobile, isTablet, isDarkMode } = checks;
 
   const goToProject = (id) => {
     navigate(`/Project/${id}`);
@@ -45,12 +45,13 @@ const PortfolioItem = ({ project, checks, technologyIcons }) => {
     <Card
       elevation={0}
       sx={{
-        backgroundColor: "#efefef",
+        backgroundColor: isDarkMode ? "#242424" : "#efefef",
         height: "680px", // Fixed height
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around", // Aligns items vertically
         position: "relative", // Make sure the card is the relative parent
+        color: isDarkMode ? "#efefef" : "#242424",
       }}
     >
       <CardMedia
