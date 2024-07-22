@@ -1,8 +1,6 @@
-import { v4 as uuidv4 } from "uuid";
-
 export const projectsData = [
   {
-    id: uuidv4(),
+    id: "1",
     paid: true,
     date: "2023-12-12",
     title: "Hunter Herald Helper",
@@ -150,7 +148,7 @@ export const projectsData = [
     },
   },
   {
-    id: uuidv4(),
+    id: "2",
     paid: false,
     date: "2023-11-17",
     title: "WordFlash",
@@ -310,7 +308,7 @@ export const projectsData = [
     },
   },
   {
-    id: uuidv4(),
+    id: "3",
     paid: false,
     date: "2023-10-16",
     title: "Portfolio",
@@ -360,7 +358,7 @@ export const projectsData = [
     },
   },
   {
-    id: uuidv4(),
+    id: "4",
     paid: false,
     date: "2023-07-19",
     title: "Nibble Notebook",
@@ -719,7 +717,7 @@ export const projectsData = [
     },
   },
   {
-    id: uuidv4(),
+    id: "5",
     paid: false,
     date: "2023-04-26",
     title: "Clothing Store",
@@ -910,7 +908,7 @@ export const projectsData = [
     },
   },
   {
-    id: uuidv4(),
+    id: "6",
     paid: false,
     date: "2022-10-16",
     title: "YelpCamp",
@@ -1145,7 +1143,7 @@ export const projectsData = [
     },
   },
   {
-    id: uuidv4(),
+    id: "7",
     paid: true,
     date: "2024-05-08",
     title: "Docx to PDF",
@@ -1308,7 +1306,7 @@ export const projectsData = [
     },
   },
   {
-    id: uuidv4(),
+    id: "8",
     paid: true,
     date: "2024-05-16",
     title: "OCR Application",
@@ -1416,7 +1414,7 @@ export const projectsData = [
     },
   },
   {
-    id: uuidv4(),
+    id: "9",
     paid: true,
     date: "2024-05-28",
     title: "Synaptic Landing Page",
