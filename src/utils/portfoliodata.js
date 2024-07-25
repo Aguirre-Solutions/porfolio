@@ -5,7 +5,7 @@ export const projectsData = [
     date: "2023-12-12",
     title: "Hunter Herald Helper",
     link: "https://hunters-herald-helper.onrender.com",
-    githubLink: "https://github.com/louderthanme/HuntersHeraldHelper",
+    githubLink: "https://github.com/Aguirre-Solutions/HuntersHeraldHelper",
     image:
       "https://res.cloudinary.com/recipeb00k/image/upload/v1704222772/portfolio/Hunters%20Herald%20Helper/Hunters_Herald_Helper_sbedsf.png",
     shortDescription:
@@ -139,7 +139,7 @@ export const projectsData = [
         technology: "Cron Jobs",
         images: [
           {
-            link: "https://github.com/louderthanme/HuntersHeraldHelper/blob/main/app.js",
+            link: "https://github.com/Aguirre-Solutions/HuntersHeraldHelper/blob/main/app.js",
             description:
               "This snippet from 'app.js' shows the scheduling of a cron job that triggers the 'runProcess' function every X minutes. It's a crucial part of the application's functionality, ensuring regular checks and updates.",
           },
@@ -153,7 +153,7 @@ export const projectsData = [
     date: "2023-11-17",
     title: "WordFlash",
     link: "https://word-flash.vercel.app/",
-    githubLink: "https://github.com/louderthanme/WordFlash",
+    githubLink: "https://github.com/Aguirre-Solutions/WordFlash",
     image:
       "https://res.cloudinary.com/recipeb00k/image/upload/v1701795724/portfolio/WordFlash/Main_Page_pfkbkp.jpg",
     shortDescription:
@@ -221,7 +221,7 @@ export const projectsData = [
           },
         ],
         technology: "React, Node.js, Express.js, OpenAI API",
-        githubLink: "https://github.com/louderthanme/WordFlash",
+        githubLink: "https://github.com/Aguirre-Solutions/WordFlash",
       },
     },
     highlights: {
@@ -267,7 +267,7 @@ export const projectsData = [
           },
         ],
         technology: "React, Node.js, Express.js, OpenAI API",
-        githubLink: "https://github.com/louderthanme/WordFlash",
+        githubLink: "https://github.com/Aguirre-Solutions/WordFlash",
       },
       collection: {
         description:
@@ -313,7 +313,7 @@ export const projectsData = [
     date: "2023-10-16",
     title: "Portfolio",
     link: "https://ruben-aguirre.com/",
-    githubLink: "https://github.com/louderthanme/porfolio",
+    githubLink: "https://github.com/Aguirre-Solutions/porfolio",
     image:
       "https://res.cloudinary.com/recipeb00k/image/upload/v1701797194/portfolio/Portfolio/Main_Page_syeaa0.png",
     shortDescription:
@@ -363,7 +363,7 @@ export const projectsData = [
     date: "2023-07-19",
     title: "Nibble Notebook",
     link: "https://nibblenotebook.com",
-    githubLink: "https://github.com/louderthanme/recipes-second-version",
+    githubLink: "https://github.com/Aguirre-Solutions/recipes-second-version",
     image:
       "https://res.cloudinary.com/recipeb00k/image/upload/v1698694402/portfolio/Screenshot_2023-10-30_133158_uf8eax.png",
     shortDescription:
@@ -448,7 +448,7 @@ export const projectsData = [
         ],
         technology: "React: Context and State, Firebase",
         githubLink:
-          "https://github.com/louderthanme/recipes-second-version/tree/main/src/components/Authentication",
+          "https://github.com/Aguirre-Solutions/recipes-second-version/tree/main/src/components/Authentication",
       },
       dailyRecipe: {
         description:
@@ -469,7 +469,7 @@ export const projectsData = [
         ],
         technology: "React, Custom React Hooks, Cloudinary, React Router",
         githubLink:
-          "https://github.com/louderthanme/recipes-second-version/tree/main/src/components/Recipe/daily-recipe",
+          "https://github.com/Aguirre-Solutions/recipes-second-version/tree/main/src/components/Recipe/daily-recipe",
       },
       favouriting: {
         description: "Edit: Users can edit their recipes.",
@@ -498,7 +498,7 @@ export const projectsData = [
         ],
         technology: "React: State Management, Firestore",
         githubLink:
-          "https://github.com/louderthanme/recipes-second-version/blob/main/src/contexts/user.context.jsx",
+          "https://github.com/Aguirre-Solutions/recipes-second-version/blob/main/src/contexts/user.context.jsx",
       },
       profile: {
         description:
@@ -540,7 +540,7 @@ export const projectsData = [
         technology:
           "React, React Hooks, Context API, Material UI, React Router",
         githubLink:
-          "https://github.com/louderthanme/recipes-second-version/blob/main/src/pages/user-profile/user-profile.component.jsx",
+          "https://github.com/Aguirre-Solutions/recipes-second-version/blob/main/src/pages/user-profile/user-profile.component.jsx",
       },
       responsiveness: {
         description:
@@ -598,7 +598,7 @@ export const projectsData = [
         ],
         technology: "React: Context and State, Firestore",
         githubLink:
-          "https://github.com/louderthanme/recipes-second-version/tree/main/src/components/Home/search-bar",
+          "https://github.com/Aguirre-Solutions/recipes-second-version/tree/main/src/components/Home/search-bar",
       },
       sharing: {
         description:
@@ -633,7 +633,7 @@ export const projectsData = [
         ],
         technology: "React, React Hooks, React Portals, React-Share",
         githubLink:
-          "https://github.com/louderthanme/recipes-second-version/blob/main/src/components/ui/share-window/share-window.component.jsx",
+          "https://github.com/Aguirre-Solutions/recipes-second-version/blob/main/src/components/ui/share-window/share-window.component.jsx",
       },
       upload: {
         description:
@@ -690,7 +690,7 @@ export const projectsData = [
         technology:
           "React, React Hooks, Material-UI, React Router, Cloudinary API",
         githubLink:
-          "https://github.com/louderthanme/recipes-second-version/tree/main/src/pages/recipe-upload",
+          "https://github.com/Aguirre-Solutions/recipes-second-version/tree/main/src/pages/recipe-upload",
       },
       convenience: {
         description:
@@ -722,7 +722,7 @@ export const projectsData = [
     date: "2023-04-26",
     title: "Clothing Store",
     link: "https://main--stately-rabanadas-ba7cd5.netlify.app/",
-    githubLink: "https://github.com/louderthanme/Clothing-Store",
+    githubLink: "https://github.com/Aguirre-Solutions/Clothing-Store",
     image:
       "https://res.cloudinary.com/recipeb00k/image/upload/v1699927325/portfolio/Clothing%20Store/Web_capture_13-11-2023_20125_hilarious-concha-0e6255.netlify.app_yiclaw.jpg",
     shortDescription:
@@ -839,7 +839,7 @@ export const projectsData = [
         ],
         technology: "React: Context API, useState, useEffect, Firebase",
         githubLink:
-          "https://github.com/louderthanme/Clothing-Store/blob/main/src/context/cart.context.jsx",
+          "https://github.com/Aguirre-Solutions/Clothing-Store/blob/main/src/context/cart.context.jsx",
       },
       categoriesContext: {
         description:
@@ -858,7 +858,7 @@ export const projectsData = [
         ],
         technology: "React: Context API, useState, useEffect, Firebase",
         githubLink:
-          "https://github.com/louderthanme/Clothing-Store/blob/main/src/context/categories.context.jsx",
+          "https://github.com/Aguirre-Solutions/Clothing-Store/blob/main/src/context/categories.context.jsx",
       },
       Checkout: {
         description:
@@ -880,7 +880,7 @@ export const projectsData = [
       },
       technology: "Styled Components, React, React Router",
       githubLink:
-        "https://github.com/louderthanme/Clothing-Store/blob/main/src/routes/checkout/checkout.component.jsx",
+        "https://github.com/Aguirre-Solutions/Clothing-Store/blob/main/src/routes/checkout/checkout.component.jsx",
     },
     modularity: {
       description:
@@ -904,7 +904,7 @@ export const projectsData = [
       ],
       technology: "React, React Router",
       githubLink:
-        "https://github.com/louderthanme/Clothing-Store/tree/main/src/components",
+        "https://github.com/Aguirre-Solutions/Clothing-Store/tree/main/src/components",
     },
   },
   {
@@ -913,7 +913,7 @@ export const projectsData = [
     date: "2022-10-16",
     title: "YelpCamp",
     link: "https://yelpcamp-gyon.onrender.com",
-    githubLink: "https://github.com/louderthanme/YelpCamp",
+    githubLink: "https://github.com/Aguirre-Solutions/YelpCamp",
     image:
       "https://res.cloudinary.com/recipeb00k/image/upload/v1699904373/portfolio/YelpCamp/homepage_umpgz2.jpg",
     shortDescription:
@@ -994,7 +994,7 @@ export const projectsData = [
         ],
         technology: "Express, MongoDB",
         githubLink:
-          "https://github.com/louderthanme/yelpcamp/blob/master/models/campground.js",
+          "https://github.com/Aguirre-Solutions/yelpcamp/blob/master/models/campground.js",
       },
       campgroundControllers: {
         description:
@@ -1013,7 +1013,7 @@ export const projectsData = [
         ],
         technology: "Express, MongoDB",
         githubLink:
-          "https://github.com/louderthanme/yelpcamp/blob/master/controllers/campgrounds.js",
+          "https://github.com/Aguirre-Solutions/yelpcamp/blob/master/controllers/campgrounds.js",
       },
       reviewModel: {
         description:
@@ -1034,7 +1034,7 @@ export const projectsData = [
         ],
         technology: "Mongoose, MongoDB",
         githubLink:
-          "https://github.com/louderthanme/yelpcamp/blob/master/models/review.js",
+          "https://github.com/Aguirre-Solutions/yelpcamp/blob/master/models/review.js",
       },
       reviewControllers: {
         description:
@@ -1053,7 +1053,7 @@ export const projectsData = [
         ],
         technology: "Express, MongoDB",
         githubLink:
-          "https://github.com/louderthanme/yelpcamp/blob/master/controllers/reviews.js",
+          "https://github.com/Aguirre-Solutions/yelpcamp/blob/master/controllers/reviews.js",
       },
       Users: {
         description:
@@ -1079,7 +1079,7 @@ export const projectsData = [
         ],
         technology: "Express, Passport.js, Mongoose, EJS",
         githubLink:
-          "https://github.com/louderthanme/yelpcamp/blob/master/models/user.js",
+          "https://github.com/Aguirre-Solutions/yelpcamp/blob/master/models/user.js",
       },
       MapBox: {
         description:
@@ -1110,7 +1110,7 @@ export const projectsData = [
         ],
         technology: "JavaScript, Mapbox, HTML",
         githubLink:
-          "https://github.com/louderthanme/yelpcamp/blob/master/public/javascripts/clusterMap.js",
+          "https://github.com/Aguirre-Solutions/yelpcamp/blob/master/public/javascripts/clusterMap.js",
         personalReflection:
           "Working with Mapbox was a pivotal moment in my development journey. Although I now use React and have refined my skills, this project was a real proving ground. It taught me the importance of understanding and integrating third-party libraries, a skill that has been invaluable in my more recent projects.",
       },
@@ -1136,7 +1136,7 @@ export const projectsData = [
         ],
         technology: "Express.js, Passport.js, Joi",
         githubLink:
-          "https://github.com/louderthanme/yelpcamp/blob/master/middleware.js",
+          "https://github.com/Aguirre-Solutions/yelpcamp/blob/master/middleware.js",
         personalReflection:
           "Creating these middleware functions was a significant step in my journey as a developer. It taught me the importance of writing clean, reusable code and gave me a deeper understanding of Express.js's capabilities. These skills have been invaluable in my subsequent projects.",
       },
@@ -1148,7 +1148,7 @@ export const projectsData = [
     date: "2024-05-08",
     title: "Docx to PDF",
     link: "https://frontend-docxtopdf.vercel.app",
-    githubLink: "https://github.com/louderthanme/DocxToPdf",
+    githubLink: "https://github.com/Aguirre-Solutions/DocxToPdf",
     image:
       "https://res.cloudinary.com/recipeb00k/image/upload/v1721064598/Docx%20To%20Pdf/UI_Selecting_a_File_qgf2em.png", // Update with a relevant screenshot
     shortDescription:
@@ -1208,7 +1208,7 @@ export const projectsData = [
           },
         ],
         technology: "Docker",
-        githubLink: "https://github.com/louderthanme/DocxToPdf",
+        githubLink: "https://github.com/Aguirre-Solutions/DocxToPdf",
       },
       chakraUi: {
         description:
@@ -1239,7 +1239,7 @@ export const projectsData = [
           },
         ],
         technology: "Chakra UI",
-        githubLink: "https://github.com/louderthanme/DocxToPdf",
+        githubLink: "https://github.com/Aguirre-Solutions/DocxToPdf",
       },
       fileOperations: {
         description:
@@ -1257,7 +1257,7 @@ export const projectsData = [
           },
         ],
         technology: "Node.js fs module",
-        githubLink: "https://github.com/louderthanme/DocxToPdf",
+        githubLink: "https://github.com/Aguirre-Solutions/DocxToPdf",
       },
       libreOfficeConvert: {
         description:
@@ -1270,7 +1270,7 @@ export const projectsData = [
           },
         ],
         technology: "libreoffice-convert",
-        githubLink: "https://github.com/louderthanme/DocxToPdf",
+        githubLink: "https://github.com/Aguirre-Solutions/DocxToPdf",
       },
       fileUploadAndConversion: {
         description:
@@ -1288,7 +1288,7 @@ export const projectsData = [
           },
         ],
         technology: "Express, Multer, Node.js",
-        githubLink: "https://github.com/louderthanme/DocxToPdf",
+        githubLink: "https://github.com/Aguirre-Solutions/DocxToPdf",
       },
       attentionToDetail: {
         description:
@@ -1301,7 +1301,7 @@ export const projectsData = [
           },
         ],
         technology: "JavaScript",
-        githubLink: "https://github.com/louderthanme/DocxToPdf",
+        githubLink: "https://github.com/Aguirre-Solutions/DocxToPdf",
       },
     },
   },
@@ -1311,7 +1311,7 @@ export const projectsData = [
     date: "2024-05-16",
     title: "OCR Application",
     link: "https://ocr-app-tawny.vercel.app/",
-    githubLink: "https://github.com/louderthanme/ocr-app",
+    githubLink: "https://github.com/Aguirre-Solutions/ocr-app",
     image:
       "https://res.cloudinary.com/recipeb00k/image/upload/v1721080233/OCRAPP/UploadingFile_khdwij.png",
     shortDescription:
@@ -1380,7 +1380,7 @@ export const projectsData = [
           },
         ],
         technology: "Chakra UI",
-        githubLink: "https://github.com/louderthanme/ocr-app",
+        githubLink: "https://github.com/Aguirre-Solutions/ocr-app",
       },
       fileUploadAndConversion: {
         description:
@@ -1409,7 +1409,7 @@ export const projectsData = [
           },
         ],
         technology: "Google Cloud Storage, Google Cloud Vision API",
-        githubLink: "https://github.com/louderthanme/ocr-app",
+        githubLink: "https://github.com/Aguirre-Solutions/ocr-app",
       },
     },
   },
@@ -1419,7 +1419,7 @@ export const projectsData = [
     date: "2024-05-28",
     title: "Synaptic Landing Page",
     link: "https://synaptic.clinic",
-    githubLink: "https://github.com/louderthanme/synaptic-landing-page",
+    githubLink: "https://github.com/Aguirre-Solutions/synaptic-landing-page",
     image:
       "https://res.cloudinary.com/recipeb00k/image/upload/v1721178859/Synaptic%20Landing%20Page/Home_Page_tvtglq.jpg",
     shortDescription:
@@ -1506,7 +1506,7 @@ export const projectsData = [
         ],
         technology: "CSS, Particles.js, Clip paths, Next.js 14 App Router",
         githubLink:
-          "https://github.com/louderthanme/synaptic-landing-page/blob/main/src/app/_components/DynamicBackground/DynamicBackground.tsx",
+          "https://github.com/Aguirre-Solutions/synaptic-landing-page/blob/main/src/app/_components/DynamicBackground/DynamicBackground.tsx",
       },
       Calendar: {
         description:
@@ -1547,7 +1547,7 @@ export const projectsData = [
         ],
         technology: "Google Calendar API, OAuth2, Node.js",
         githubLink:
-          "https://github.com/louderthanme/synaptic-landing-page/tree/main/src/app/calendar",
+          "https://github.com/Aguirre-Solutions/synaptic-landing-page/tree/main/src/app/calendar",
       },
       emailNotifications: {
         description:
@@ -1572,7 +1572,7 @@ export const projectsData = [
         ],
         technology: "SendGrid, Node.js",
         githubLink:
-          "https://github.com/louderthanme/synaptic-landing-page/blob/main/src/app/api/calendar-events/route.ts",
+          "https://github.com/Aguirre-Solutions/synaptic-landing-page/blob/main/src/app/api/calendar-events/route.ts",
       },
       mobileFriendlyDesign: {
         description:
@@ -1593,7 +1593,7 @@ export const projectsData = [
         ],
         technology: "CSS, Media Queries, SVG",
         githubLink:
-          "https://github.com/louderthanme/synaptic-landing-page/blob/main/src/app/calendar/fullcalendar.css",
+          "https://github.com/Aguirre-Solutions/synaptic-landing-page/blob/main/src/app/calendar/fullcalendar.css",
       },
       customSVGElements: {
         description:
@@ -1614,7 +1614,7 @@ export const projectsData = [
         ],
         technology: "SVG, CSS",
         githubLink:
-          "https://github.com/louderthanme/synaptic-landing-page/blob/main/src/app/_components/Hexagon/HexagonClippedBox.tsx",
+          "https://github.com/Aguirre-Solutions/synaptic-landing-page/blob/main/src/app/_components/Hexagon/HexagonClippedBox.tsx",
       },
     },
   },
