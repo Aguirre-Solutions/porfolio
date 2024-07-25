@@ -40,7 +40,7 @@ const Contact = ({ theme }) => {
         <Tooltip title="Check out my GitHub">
           <StyledIconButton
             component={Link}
-            href="https://github.com/Aguirre-Solutions/"
+            href="https://github.com/wanderwayward/"
             target="_blank"
             el="noopener noreferrer"
             sx={{ padding: padding }}
